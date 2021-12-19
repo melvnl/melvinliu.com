@@ -10,7 +10,8 @@ module.exports = {
         primaryWhite: '#FFFEFC',
         primaryBlack: '#111111',
         primaryGray: '#666665',
-        secondaryGray: '#E5E4E2'
+        secondaryGray: '#E5E4E2',
+        bgHovered: '#F7F6F4',
       },
       fontFamily: {
         sans: ['Inter']

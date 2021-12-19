@@ -13,7 +13,7 @@ const ExternalLink = ({ href, children }) => (
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8">
+    <footer className="flex flex-col justify-center items-start mx-auto w-full mb-8">
       <hr className="w-full border-1 border-secondaryGray mb-8" />
       <div className="w-full max-w-2xl pb-16">
         <div className="flex flex-col md:flex-row">
