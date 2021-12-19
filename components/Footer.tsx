@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
       <hr className="w-full border-1 border-gray-600 mb-8" />
-      <div className="w-full max-w-2xl pb-16">
+      <div className="w-full max-w-2xl">
         <div className="flex flex-col md:flex-row">
           <div className="mb-4 md:mb-0 mr-8">
             <p className="text-gray-600 hover:text-primaryRed transition">
