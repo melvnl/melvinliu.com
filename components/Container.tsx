@@ -59,9 +59,9 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
-        <div className=" font-bold">
+      <div className="flex flex-col justify-center px-2 md:px-8">
+        <nav className="flex items-center  justify-between w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
+        <div className=" font-bold ">
             Melvin Liu
           </div>
           <div className="ml-[-0.60rem]">
@@ -73,7 +73,7 @@ export default function Container(props) {
         </nav>
       </div>
       <main
-        className="flex flex-col justify-center px-8 bg-primaryWhite dark:bg-gray-900"
+        className="flex flex-col justify-center px-2 md:px-8 bg-primaryWhite dark:bg-gray-900"
       >
         {children}
         <Footer />
