@@ -17,7 +17,7 @@ function NavItem({ href, text }) {
           isActive
             ? 'font-semibold text-gray-800 '
             : 'font-normal text-gray-600',
-          'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all'
+          ' p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all'
         )}
       >
         <span className="capsize">{text}</span>
@@ -59,16 +59,17 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="flex flex-col justify-center px-2 md:px-8">
-        <nav className="flex items-center  justify-between w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
-        <div className=" font-bold ">
+      <div className=" border-b-2 border-gray-600 px-2 md:px-8 mb-4">
+        <nav className=" overflow-x-scroll flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
+        <div className=" font-bold block whitespace-nowrap">
             Melvin Liu
           </div>
-          <div className="ml-[-0.60rem]">
+          <div className=" ml-12 md:ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
             <NavItem href="/dashboard" text="Dashboard" />
             <NavItem href="/blog" text="Blog" />
             <NavItem href="/snippets" text="Snippets" />
+            <NavItem href="/mission" text="Mission" />
           </div>
         </nav>
       </div>
