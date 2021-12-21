@@ -59,7 +59,7 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className=" border-b-2 border-gray-600 px-2 md:px-8 mb-4">
+      <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
         <nav className=" overflow-x-scroll flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
         <div className=" font-bold block whitespace-nowrap">
             Melvin Liu
