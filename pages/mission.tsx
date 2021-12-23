@@ -28,9 +28,9 @@ const Mission: NextPage = () => {
           <p className=" text-sm md:text-xl mb-5">
             As for the future, I will invest my time learning{" "}
             <a
-              href=""
+              href="https://openai.com/"
               target="_blank"
-              className=" underline hover:text-primaryRed"
+              className=" underline hover:text-primaryRed" rel="noreferrer"
             >
               OpenAI
             </a>{" "}

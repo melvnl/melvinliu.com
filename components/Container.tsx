@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { Nav } from '../lib/types'
 import cn from 'classnames';
 import NextLink from 'next/link';
 
-import Footer from './Footer';
+import Footer from './Footer'; 
 
-function NavItem({ href, text }) {
+function NavItem({ href, text }: Nav  ) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -26,7 +27,7 @@ function NavItem({ href, text }) {
   );
 }
 
-export default function Container(props) {
+export default function Container(props : any) {
 
   const { children, ...customMeta } = props;
   const router = useRouter();
@@ -74,7 +75,7 @@ export default function Container(props) {
         </nav>
       </div>
       <main
-        className="flex flex-col justify-center px-2 md:px-8 bg-primaryWhite dark:bg-gray-900"
+        className="flex flex-col justify-center px-2 md:px-8"
       >
         {children}
         <Footer />
