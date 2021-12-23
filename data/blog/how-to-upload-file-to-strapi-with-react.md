@@ -1,6 +1,7 @@
 ---
 title: How to Upload a File (Image/Pdf/Zip/etc) to Strapi with React
 slug: how-to-upload-file-to-strapi-with-react
+cover: /images/blogs/
 id: 1
 description: How to Upload a File (Image/Pdf/Zip/etc) to Strapi with React
 date: Oct 13, 2021

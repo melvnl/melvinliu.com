@@ -6,7 +6,7 @@ description: Why Moving to Linux is My Best Decision in 2021
 date: Oct 13, 2021
 ---
 
-###Backstory
+### Backstory
 
 I was lucky enough to be accepted as an intern at the [first unicorn in my country that goes IPO](https://about.bukalapak.com/en/) for software engineer position, as a large tech e-commerce company that exist for 11 years the technology used behind must be quite mature, and more complex than usual (micro-frontend, micro-services, different virtual private network to access certain repository, private npm library, etc.).
 
