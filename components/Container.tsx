@@ -38,7 +38,7 @@ export default function Container(props) {
   };
 
   return (
-    <div className="bg-primaryWhite w-full max-w-[1260px] ">
+    <div className="w-full">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -60,7 +60,7 @@ export default function Container(props) {
         )}
       </Head>
       <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
-        <nav className=" overflow-x-scroll flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite bg-opacity-60 ">
+        <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite">
         <div className=" font-bold block whitespace-nowrap">
             Melvin Liu
           </div>
