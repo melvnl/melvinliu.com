@@ -67,9 +67,8 @@ export default function Container(props : any) {
           </div>
           <div className=" ml-12 md:ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
-            <NavItem href="/dashboard" text="Dashboard" />
-            <NavItem href="/blog" text="Blog" />
-            <NavItem href="/snippets" text="Snippets" />
+            <NavItem href="/blog" text="Blogs" />
+            <NavItem href="/projects" text="Projects" />
             <NavItem href="/mission" text="Mission" />
           </div>
         </nav>
