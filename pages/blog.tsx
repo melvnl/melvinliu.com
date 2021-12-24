@@ -15,14 +15,14 @@ export default function Blog({
       description="Thoughts on the software industry, programming, tech, videography, music, and my personal life."
     >
       <div className="flex flex-col items-start justify-center mb-16">
-        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl ">
           Blog
         </h1>
-        <p className="mb-4 text-gray-600 dark:text-gray-400">
+        <p className="mb-4 text-gray-600 ">
           {`I've started writing online since 2014, mostly about web development and tech careers.
             In total, I've written ${posts.length} articles on my blog.`}
         </p>
-        <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+        <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts
         </h3>
         <BlogContainer
