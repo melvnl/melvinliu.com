@@ -4,7 +4,6 @@ import fs from "fs";
 import path from "path";
 import Container from "../../components/Container";
 import ReactMarkdown from "react-markdown";
-import "../../styles/markdown.module.css";
 import matter from "gray-matter";
 
 export default function Post({ meta: { title, date }, content }: any) {

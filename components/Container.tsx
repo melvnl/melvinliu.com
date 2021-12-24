@@ -46,6 +46,7 @@ export default function Container(props : any) {
         <meta content={meta.description} name="description" />
         <meta property="og:url" content={`https://melvinliu.com${router.asPath}`} />
         <link rel="canonical" href={`https://melvinliu.com${router.asPath}`} />
+        <link rel="icon" href="/static/images/favicon.svg" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Melvin Liu" />
         <meta property="og:description" content={meta.description} />

@@ -1,8 +1,8 @@
 ---
 title: Why Moving to Linux is My Best Decision in 2021
 slug: moving-to-linux-is-my-best-decision-in-2021
-profile_img: "/static/images/blogs/1.png"  
-cover: "/static/images/blogs/1.png"
+profile_img: "/static/images/blogs/1.jpg"  
+cover: "/static/images/blogs/1.jpg"
 description: I've been using windows since my first day of college as a computer science student, and I should say that there is a few moment where I'm really stressed spending hours setting up the development environment (PATH, and mostly adjusting incompatible library). But I hit my breaking point a few weeks ago, due to incompatibility with my company codebase that is developed in UNIX operating system (like Mac or Linux)
 date: December 10, 2021
 read: 

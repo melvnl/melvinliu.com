@@ -4,7 +4,7 @@ import Container from "../components/Container";
 
 const Mission: NextPage = () => {
   return (
-    <Container>
+    <Container title="My Mission – Melvin Liu">
       <div className=" bg-primaryWhite">
         <div className=" text-primaryBlack max-w-[672px] mx-auto ">
           <h1 className=" font-medium text-2xl md:text-5xl mb-9">My mission</h1>
