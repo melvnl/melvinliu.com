@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className=" md:pt-[120px] lg:pt-[72px] max-w-xs">
+    <div className=" text-primaryGray md:pt-[120px] lg:pt-[72px] max-w-xs">
     <h1>Hourly rate starts from $30</h1>
     <div className="flex flex-col w-full ">  
       <div id="design" className=" my-5">
