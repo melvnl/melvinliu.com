@@ -39,7 +39,7 @@ export default function Container(props : any) {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full xl:px-16">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -75,7 +75,7 @@ export default function Container(props : any) {
         </nav>
       </div>
       <main
-        className="flex flex-col justify-center px-2 md:px-8"
+        className="flex flex-col justify-center px-2 md:px-8 "
       >
         {children}
         <Footer />

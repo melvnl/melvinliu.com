@@ -19,8 +19,15 @@ export default function Blog({
           Blog
         </h1>
         <p className="mb-4 text-gray-600 ">
-          {`I've started writing online since 2014, mostly about web development and tech careers.
-            In total, I've written ${posts.length} articles on my blog.`}
+          I've started writing online since 2020, mostly about software
+          engineering and tech careers (you can read them{" "}
+          <span className=" underline hover:text-primaryRed">
+            <a href="https://dev.to/melvnl" target="_blank" rel="noreferrer">
+              here
+            </a>
+          </span>{" "}
+          ). In this personal site, my writing is focused on things
+          that are not highly related to engineering, like about self development, and my thoughts, some may or may not related to engineering at all.
         </p>
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts

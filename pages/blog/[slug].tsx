@@ -30,7 +30,7 @@ export default function Post({ meta: { title, date }, content }: any) {
             </h1>
             <span>Published on {date}</span>
             <div className="prose">
-              <ReactMarkdown className=" markdown max-w-[550px]">
+              <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
               </ReactMarkdown>
             </div>
