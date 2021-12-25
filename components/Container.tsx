@@ -71,6 +71,7 @@ export default function Container(props : any) {
             <NavItem href="/blog" text="Blogs" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/mission" text="Mission" />
+            <NavItem href="/inquiry" text="Inquiry" />
           </div>
         </nav>
       </div>
