@@ -19,7 +19,7 @@ export default function Blog({
           Blog
         </h1>
         <p className="mb-4 text-gray-600 ">
-          I've started writing online since 2020, mostly about software
+          I&#39;ve started writing online since 2020, mostly about software
           engineering and tech careers (you can read them{" "}
           <span className=" underline hover:text-primaryRed">
             <a href="https://dev.to/melvnl" target="_blank" rel="noreferrer">
@@ -34,16 +34,19 @@ export default function Blog({
         </h3>
         <BlogContainer
           cover={posts[0].body.cover}
-          key={posts[0].body.title}
-          {...posts[0].body}
+          title={posts[0].body.title}
+          description={posts[0].body.description}
+          slug={posts[0].body.slug}
+
         />
         <div className="flex flex-wrap flex-col  md:flex-row">
           {posts.map((post, index) =>
             index > 0 ? (
               <BlogCard
-                cover={post.body.cover}
-                key={post.body.title}
-                {...post.body}
+              cover={post.body.cover}
+              title={post.body.title}
+              slug={post.body.slug}
+              description={post.body.description}
               />
             ) : null
           )}

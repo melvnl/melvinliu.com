@@ -11,7 +11,7 @@ const Mission: NextPage = () => {
 
           <p className=" text-sm md:text-xl mb-5">
             I always thought my dream was to be a military doctor or hotshot
-            lawyer like "Harvey Specter" from "Suits". But everything changed
+            lawyer like &quot;Harvey Specter&quot; from &quot;Suits&quot;. But everything changed
             since I enroll in Computer Science Major. It was a really great
             decision. Being a developer who can build something out of nothing
             is great fun, especially I can directly give worldwide impact, just
@@ -19,7 +19,7 @@ const Mission: NextPage = () => {
           </p>
 
           <p className=" text-sm md:text-xl mb-5">
-            My current focus as an engineer is now in Typescript and Go. I've
+            My current focus as an engineer is now in Typescript and Go. I&#39;ve
             tried several programming language before (C, C#, C++ , Python,
             Java, PHP, etc), But decided to go with Typescript, and Go as my
             current primary arsenal.
