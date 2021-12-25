@@ -13,16 +13,22 @@ function NavItem({ href, text }: Nav  ) {
 
   return (
     <NextLink href={href}>
-      <a
-        className={cn(
-          isActive
-            ? 'font-semibold text-gray-800 '
-            : 'font-normal text-gray-600',
-          ' p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all'
-        )}
-      >
-        <span className="capsize">{text}</span>
-      </a>
+      {
+        text !== "Inquiry"? (<a
+          className={cn(
+            isActive
+              ? 'font-semibold text-gray-800 '
+              : 'font-normal text-gray-600',
+            ' p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all'
+          )}
+        >
+          <span className="capsize">{text}</span>
+        </a>):(<a
+          className="p-1 ml-4 sm:px-3 sm:py-2 rounded-sm bg-primaryRed hover:bg-opacity-80 transition-all">
+          <span className="capsize">{text}</span>
+        </a>)
+      }
+      
     </NextLink>
   );
 }
@@ -71,6 +77,7 @@ export default function Container(props : any) {
             <NavItem href="/blog" text="Blogs" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/mission" text="Mission" />
+            <NavItem href="/inquiry" text="Inquiry" />
           </div>
         </nav>
       </div>
