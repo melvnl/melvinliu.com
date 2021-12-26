@@ -60,6 +60,7 @@ export default function Form() {
             name="name"
             value={data.name}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
@@ -77,6 +78,7 @@ export default function Form() {
             value={data.email}
             onChange={handleChange}
             placeholder="Email"
+            required
           />
         </div>
       </div>
@@ -96,6 +98,7 @@ export default function Form() {
             onChange={handleChange}
             value={data.entity}
             placeholder="Who you represent, a brand / company"
+            required
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
@@ -134,6 +137,7 @@ export default function Form() {
             name="brief"
             placeholder="Tell me about your project objective"
             value={data.brief}
+            required
             rows={12}
           />
         </div>
