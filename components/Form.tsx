@@ -3,6 +3,10 @@ import { send } from 'emailjs-com';
 
 export default function Form() {
 
+  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string
+  const USER_ID = process.env.NEXT_PUBLIC_USER_ID as string
+
   const [data, setData] = useState({
     name: '',
     email: '',
@@ -19,10 +23,10 @@ export default function Form() {
     e.preventDefault();
 
     send(
-      'service_al8ka5s',
-      'template_ia7ilds',
+      SERVICE_ID,
+      TEMPLATE_ID,
       data,
-      'user_0cgFEmhsf9Lrhx9lJjCNg'
+      USER_ID
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
