@@ -1,40 +1,43 @@
 import { useState } from "react";
-import { send } from 'emailjs-com';
+import { send } from "emailjs-com";
+import FormMessage from "./FormMessage";
 
 export default function Form() {
+  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+  const USER_ID = process.env.NEXT_PUBLIC_USER_ID as string;
 
-  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string
-  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string
-  const USER_ID = process.env.NEXT_PUBLIC_USER_ID as string
+  const [message, setMessage] = useState(false);
+  const [formStatus, setFormStatus] = useState(0);
 
   const [data, setData] = useState({
-    name: '',
-    email: '',
-    entity: '',
-    timeframe: '2-3 months',
-    brief: '',
+    name: "",
+    email: "",
+    entity: "",
+    timeframe: "2-3 months",
+    brief: "",
   });
 
   const handleChange = (e: any) => {
-    setData({...data, [e.target.name]: e.target.value});
-  }
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
 
   const sendForm = (e: any) => {
     e.preventDefault();
 
-    send(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      data,
-      USER_ID
-    )
+    send(SERVICE_ID, TEMPLATE_ID, data, USER_ID)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        setMessage(true);
+        setFormStatus(response.status);
+        setData({
+          name: "",
+          email: "",
+          entity: "",
+          timeframe: "2-3 months",
+          brief: "",
+        });
       })
-      .catch((err) => {
-        console.log('FAILED...', err);
-      });
-
+      .catch((err) => {});
   };
   return (
     <form className=" md:ml-20 w-full max-w-3xl" onSubmit={sendForm}>
@@ -135,6 +138,7 @@ export default function Form() {
           />
         </div>
       </div>
+      {message ? <FormMessage status={formStatus} /> : null}
       <button
         type="submit"
         className="bg-primaryGray hover:bg-primaryRed text-white font-semibold py-3 px-8 rounded-sm mb-8"

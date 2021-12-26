@@ -9,3 +9,7 @@ export type Blog = {
   description: string,
   cover: string,
   };
+
+export type message = {
+  status: number,
+  };
