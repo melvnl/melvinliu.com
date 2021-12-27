@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite">
         <div className=" text-primaryBlack ">
-          <h1 className="font-semibold text-2xl md:text-5xl mb-9">
+          <h1 className=" font-serif font-semibold text-2xl md:text-5xl mb-9">
             Melvin Liu, Software Engineer by Nature.
           </h1>
           <div className="max-w-[672px]">
@@ -47,24 +47,37 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className=" flex mt-12 overflow-x-scroll">
-          <div className=" flex-shrink-0 mr-5">
+          <div className=" flex-shrink-0">
             <Image
               src="/static/images/home/img-1.png"
               className=" flex-shrink-0"
               alt="Melvin Liu, Image 1"
               width={480}
               height={480}
+              quality={100}
             />
           </div>
-          <div className=" flex-shrink-0">
+          <div className=" flex-shrink-0 ml-5">
             <Image
               src="/static/images/home/img-2.png"
-              className=" flex-shrink-0"
+              className=" flex-shrink-0 ml-5"
               alt="Melvin Liu, Image 2"
               width={853}
               height={480}
+              quality={100}
             />
           </div>
+          <div className=" flex-shrink-0 ml-5">
+            <Image
+              src="/static/images/home/img-3.png"
+              className=" flex-shrink-0 ml-5"
+              alt="Melvin Liu, Image 3"
+              width={480}
+              height={480}
+              quality={100}
+            />
+          </div>
+          
         </div>
       </div>
     </Container>
