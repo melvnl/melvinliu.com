@@ -14,7 +14,8 @@ module.exports = {
         bgHovered: '#F7F6F4',
       },
       fontFamily: {
-        sans: ['Inter']
+        sans: ['Inter'],
+        serif: ['Georgia']
       },
     },
   },

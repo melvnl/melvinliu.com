@@ -25,7 +25,7 @@ export default function Post({ meta: { title, date }, content }: any) {
             </Link>
           </div>
           <div className="right">
-            <h1 className=" font-semibold text-2xl md:text-4xl max-w-[720px]">
+            <h1 className=" font-serif font-semibold text-2xl md:text-4xl max-w-[720px]">
               {title}
             </h1>
             <span>Published on {date}</span>

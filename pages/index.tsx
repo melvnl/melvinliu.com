@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite">
         <div className=" text-primaryBlack ">
-          <h1 className="font-semibold text-2xl md:text-5xl mb-9">
+          <h1 className=" font-serif font-semibold text-2xl md:text-5xl mb-9">
             Melvin Liu, Software Engineer by Nature.
           </h1>
           <div className="max-w-[672px]">
