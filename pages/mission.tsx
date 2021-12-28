@@ -7,40 +7,49 @@ const Mission: NextPage = () => {
     <Container title="My Mission – Melvin Liu">
       <div className=" bg-primaryWhite">
         <div className=" text-primaryBlack max-w-[672px] mx-auto ">
-          <h1 className=" font-serif font-medium text-2xl md:text-5xl mb-9">My mission</h1>
+          <h1 className=" font-serif font-medium text-2xl md:text-5xl mb-9">
+            My mission
+          </h1>
 
-          <p className=" text-sm md:text-xl mb-5">
-            I always thought my dream was to be a military doctor or hotshot
-            lawyer like &quot;Harvey Specter&quot; from &quot;Suits&quot;. But everything changed
-            since I enroll in Computer Science Major. It was a really great
-            decision. Being a developer who can build something out of nothing
-            is great fun, especially I can directly give worldwide impact, just
-            by sitting in front of my computer.
+          <p className=" text-xl mb-5">
+            When I was in High School, I thought my dream was to be a military
+            doctor or hotshot lawyer like &quot;Harvey Specter&quot; from
+            &quot;Suits&quot;. But everything changed when my asian mom kinda
+            suggesting me to pursue computer science.
           </p>
 
-          <p className=" text-sm md:text-xl mb-5">
-            My current focus as an engineer is now in Typescript and Go. I&#39;ve
-            tried several programming language before (C, C#, C++ , Python,
-            Java, PHP, etc), But decided to go with Typescript, and Go as my
-            current primary arsenal.
-          </p>
-
-          <p className=" text-sm md:text-xl mb-5">
-            As for the future, I will invest my time learning{" "}
+          <p className=" text-xl mb-5">
+            And after more than 2 years, I&#39;ve decided that becoming an
+            independent software developer slash tech entrepreneur who create
+            tools/products that could give value to lot of people, like Evan
+            You, the creator of{" "}
             <a
-              href="https://openai.com/"
+              className=" p-1 hover:bg-green-300"
+              href="https://vuejs.org/"
               target="_blank"
-              className=" underline hover:text-primaryRed" rel="noreferrer"
+              rel="noreferrer"
             >
-              OpenAI
+              Vue.js
             </a>{" "}
-            and Web3 Technology. I firmly believe that AI and decentralized
-            online ecosystem is the future{" "}
-            <span className=" text-primaryGray">
-              (also metaverse, but I think not in the near future 😥)
-            </span>
-            .
+            or Linux Trovalds who create Linux and Git, is my life calling.
           </p>
+
+          <div className="prose">
+            <blockquote>
+              <p>
+                One thing I learned is avoid trading time for money and invest
+                time in work that generates long term passive income. -{" "}
+                <a
+                  href="https://twitter.com/youyuxi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Evan You
+                </a>
+              </p>
+            </blockquote>
+          </div>
+
           <div className=" mt-10 md:mt-20">
             <Image
               src="/static/images/signature.png"
