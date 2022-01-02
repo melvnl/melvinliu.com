@@ -13,5 +13,3 @@ const Inquiry: NextPage = () => {
     </Container>
   );
 };
-
-export default Inquiry;
