@@ -1,47 +1,46 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { Nav } from '../lib/types'
-import cn from 'classnames';
-import NextLink from 'next/link';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { Nav } from "../lib/types";
+import cn from "classnames";
+import NextLink from "next/link";
 
-import Footer from './Footer'; 
+import Footer from "./Footer";
 
-function NavItem({ href, text }: Nav  ) {
+function NavItem({ href, text }: Nav) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
   return (
     <NextLink href={href}>
-      {
-        text !== "Inquiry"? (<a
+      {text !== "Inquiry" ? (
+        <a
           className={cn(
             isActive
-              ? 'font-semibold text-gray-800 '
-              : 'font-normal text-gray-600',
-            ' p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all'
+              ? "font-semibold text-gray-800 "
+              : "font-normal text-gray-600",
+            " p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all"
           )}
         >
           <span className="capsize">{text}</span>
-        </a>):(<a
-          className="p-1 ml-4 sm:px-3 sm:py-2 rounded-sm bg-primaryRed hover:bg-opacity-80 transition-all">
+        </a>
+      ) : (
+        <a className="p-1 ml-4 sm:px-3 sm:py-2 rounded-sm bg-primaryRed hover:bg-opacity-80 transition-all">
           <span className="capsize">{text}</span>
-        </a>)
-      }
-      
+        </a>
+      )}
     </NextLink>
   );
 }
 
-export default function Container(props : any) {
-
+export default function Container(props: any) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Melvin Liu – Engineer, writer, creator.',
+    title: "Melvin Liu – Engineer, writer, creator.",
     description: `Software Engineer, JavaScript enthusiast, and course creator.`,
-    type: 'website',
-    ...customMeta
+    type: "website",
+    ...customMeta,
   };
 
   return (
@@ -50,7 +49,10 @@ export default function Container(props : any) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://melvinliu.com${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`https://melvinliu.com${router.asPath}`}
+        />
         <link rel="canonical" href={`https://melvinliu.com${router.asPath}`} />
         <link rel="icon" href="/static/images/favicon.svg" />
         <meta property="og:type" content={meta.type} />
@@ -69,7 +71,7 @@ export default function Container(props : any) {
       </Head>
       <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
         <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite">
-        <div className=" font-bold block text-2xl whitespace-nowrap">
+          <div className=" font-bold block text-2xl whitespace-nowrap">
             Melvin Liu
           </div>
           <div className=" ml-12 md:ml-[-0.60rem]">
@@ -81,9 +83,7 @@ export default function Container(props : any) {
           </div>
         </nav>
       </div>
-      <main
-        className="flex flex-col justify-center px-2 md:px-8 "
-      >
+      <main className="flex flex-col justify-center px-2 md:px-8 ">
         {children}
         <Footer />
       </main>
