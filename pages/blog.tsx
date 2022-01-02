@@ -26,8 +26,9 @@ export default function Blog({
               here
             </a>
           </span>{" "}
-          ). In this personal site, my writing is focused on things
-          that are not highly related to engineering, like about self development, and my thoughts, some may or may not related to engineering at all.
+          ). In this personal site, my writing is focused on things that are not
+          highly related to engineering, like about self development, and my
+          thoughts, some may or may not related to engineering at all.
         </p>
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts
@@ -37,16 +38,15 @@ export default function Blog({
           title={posts[0].body.title}
           description={posts[0].body.description}
           slug={posts[0].body.slug}
-
         />
         <div className="flex flex-wrap flex-col  md:flex-row">
           {posts.map((post, index) =>
             index > 0 ? (
               <BlogCard
-              cover={post.body.cover}
-              title={post.body.title}
-              slug={post.body.slug}
-              description={post.body.description}
+                cover={post.body.cover}
+                title={post.body.title}
+                slug={post.body.slug}
+                description={post.body.description}
               />
             ) : null
           )}

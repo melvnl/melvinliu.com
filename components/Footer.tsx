@@ -31,9 +31,7 @@ export default function Footer() {
             </ExternalLink>
           </div>
           <div className="mb-4 md:mb-0 mr-8">
-            <ExternalLink href="https://github.com/melvnl">
-              Github
-            </ExternalLink>
+            <ExternalLink href="https://github.com/melvnl">Github</ExternalLink>
           </div>
         </div>
       </div>

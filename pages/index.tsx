@@ -77,7 +77,6 @@ const Home: NextPage = () => {
               quality={100}
             />
           </div>
-          
         </div>
       </div>
     </Container>
