@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import Form from "../components/Form";
 import Sidebar from "../components/Sidebar";
 
-const Home: NextPage = () => {
+const Inquiry: NextPage = () => {
   return (
     <Container title="Inquiry - Melvin Liu">
       <div className="flex flex-col-reverse md:flex-row">
@@ -14,4 +14,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Inquiry;
