@@ -70,7 +70,7 @@ export default function Container(props: any) {
         )}
       </Head>
       <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
-        <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-primaryWhite">
+        <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 ">
           <div className=" font-bold block text-2xl whitespace-nowrap">
             Melvin Liu
           </div>
