@@ -3,6 +3,13 @@
 
 echo '🏗️👷 Styling, testing and building your project before committing'
 
+# Format with Prettier before commiting
+yarn format ||
+(
+    echo 'Prettier format failied to run';
+    false;
+)
+
 # Check Prettier standards
 yarn check-format ||
 (
@@ -21,17 +28,6 @@ yarn check-lint ||
 yarn check-types ||
 (
     echo 'Failed Type check. Make the changes required above.'
-    false;
-)
-
-# If everything passes... Now we can commit
-echo 'The code looks good... Trying to build now. 🤔🤔🤔🤔'
-
-yarn build ||
-(
-    echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
-            Next build failed: View the errors above to see why. 
-    '
     false;
 )
 
