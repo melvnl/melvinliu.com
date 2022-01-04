@@ -10,8 +10,15 @@ import Footer from "./Footer";
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
   const isActive = router.asPath === href;
+  const isProjects = router.pathname === "/projects";
 
-  return (
+  return isProjects ? (
+    <NextLink href={href}>
+      <a className="font-normal text-white p-1 ml-4 sm:px-3 sm:py-2 rounded-sm hover:text-primaryRed transition-all">
+        <span className="capsize">{text}</span>
+      </a>
+    </NextLink>
+  ) : (
     <NextLink href={href}>
       {text !== "Inquiry" ? (
         <a
@@ -36,6 +43,7 @@ function NavItem({ href, text }: Nav) {
 export default function Container(props: any) {
   const { children, ...customMeta } = props;
   const router = useRouter();
+  const isProjects = router.pathname === "/projects";
   const meta = {
     title: "Melvin Liu – Engineer, writer, creator.",
     description: `Software Engineer, JavaScript enthusiast, and course creator.`,
@@ -71,7 +79,12 @@ export default function Container(props: any) {
       </Head>
       <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
         <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 ">
-          <div className=" font-bold block text-2xl whitespace-nowrap">
+          <div
+            className={cn(
+              isProjects ? "text-white" : "",
+              " font-bold block text-2xl whitespace-nowrap"
+            )}
+          >
             Melvin Liu
           </div>
           <div className=" ml-12 md:ml-[-0.60rem]">

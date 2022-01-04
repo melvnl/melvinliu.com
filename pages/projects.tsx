@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Container from "../components/Container";
+
 const Projects: NextPage = () => {
   return (
     <Container>
       <div className=" bg-black text-white">
         <div className=" mb-32  ">
-          <h1 className=" font-serif font-semibold text-2xl md:text-5xl max-w-5xl mb-9">
+          <h1 className=" font-serif font-normal text-2xl md:text-6xl max-w-5xl mb-10 md:mb-20">
             Melvin is a pragmatic <br /> software engineer. Currently creating
             fair economy for Indonesia.
           </h1>
@@ -67,6 +68,7 @@ const Projects: NextPage = () => {
           </div>
         </div>
 
+        <h1 className=" font-bold text-xl md:text-3xl mb-8">Projects</h1>
         <div className="flex flex-col md:flex-row gap-5">
           <div className="wrapper hover:cursor-pointer mb-5">
             <div className="img-wrapper mb-2 md:mb-8">
