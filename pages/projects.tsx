@@ -66,54 +66,43 @@ const Projects: NextPage = () => {
             />
           </div>
         </div>
-        <div id="boymaxwell" className="w-full">
-          <div className=" font-serif text-left mb-9 text-xl md:text-4xl">
-            <h4 className=" mb-2 font-bold text-white">Boymawell</h4>
-            <h4 className=" mb-2 font-bold text-secondaryGray">
-              UI/UX and Web Development
-            </h4>
-            <h4 className=" mb-2 font-bold text-secondaryGray">
-              2021 - Present
-            </h4>
-          </div>
-          <div className="flex flex-col md:flex-row gap-5">
-            <div className="wrapper">
-              <div className="img-wrapper mb-2 md:mb-8">
-                <Image
-                  quality={100}
-                  src="/static/images/projects/boymaxwell/1.png"
-                  width="608"
-                  height="300"
-                  alt="Hero 1"
-                />
-              </div>
-              <div className="description text-xl">
-                <h2 className=" font-bold mb-2">
-                  Boymaxwell branding and design
-                </h2>
-                <p className=" font-bold text-secondaryGray">
-                  How we want people perceive Indonesia’s natural resources
-                </p>
-              </div>
+
+        <div className="flex flex-col md:flex-row gap-5">
+          <div className="wrapper hover:cursor-pointer mb-5">
+            <div className="img-wrapper mb-2 md:mb-8">
+              <Image
+                quality={100}
+                src="/static/images/projects/boymaxwell/1.png"
+                width="608"
+                height="400"
+                alt="Hero 1"
+              />
             </div>
-            <div className="wrapper">
-              <div className="img-wrapper mb-2 md:mb-8">
-                <Image
-                  quality={100}
-                  src="/static/images/projects/boymaxwell/1.png"
-                  width="608"
-                  height="300"
-                  alt="Hero 1"
-                />
-              </div>
-              <div className="description text-xl">
-                <h2 className=" font-bold mb-2">
-                  Develop the website with performance in mind
-                </h2>
-                <p className=" font-bold text-secondaryGray">
-                  How I engineer Boymaxwell site
-                </p>
-              </div>
+            <div className="description text-base md:text-xl max-w-[577px]">
+              <h2 className=" font-bold mb-2">Bukalapak</h2>
+              <p className=" font-bold text-secondaryGray">
+                Bukalapak is Indonesia first unicorn company that goes initial
+                public offering in Aug 2021
+              </p>
+            </div>
+          </div>
+          <div className="wrapper hover:cursor-not-allowed mb-5">
+            <div className="img-wrapper mb-2 md:mb-8">
+              <Image
+                quality={100}
+                src="/static/images/projects/boymaxwell/2.png"
+                width="608"
+                height="400"
+                alt="Hero 1"
+              />
+            </div>
+            <div className="description text-base md:text-xl max-w-[577px]">
+              <h2 className=" font-bold mb-2">Boyxmaxwell</h2>
+              <p className=" font-bold text-secondaryGray">
+                Boyxmaxwell is an international trade company based in Aceh,
+                Indonesia. Exports various natural resources like coffee, palm
+                oil, coconut, cocoa, etc{" "}
+              </p>
             </div>
           </div>
         </div>
