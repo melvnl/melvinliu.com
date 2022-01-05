@@ -68,7 +68,7 @@ const Projects: NextPage = () => {
           </div>
         </div>
 
-        <h1 className=" font-bold text-xl md:text-3xl mb-8">Projects</h1>
+        <h1 className=" font-semibold text-xl md:text-3xl mb-8">Projects</h1>
         <div className="flex flex-col md:flex-row gap-5">
           <div className="wrapper hover:cursor-pointer mb-5">
             <div className="img-wrapper mb-2 md:mb-8">
