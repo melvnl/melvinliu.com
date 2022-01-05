@@ -10,7 +10,7 @@ module.exports = {
         primaryWhite: "#FFFEFC",
         primaryBlack: "#111111",
         primaryGray: "#666665",
-        secondaryGray: "#E5E4E2",
+        secondaryGray: "#A5A4A3",
         bgHovered: "#F7F6F4",
       },
       fontFamily: {
