@@ -47,6 +47,7 @@ export default function Container(props: any) {
   const meta = {
     title: "Melvin Liu – Engineer, writer, creator.",
     description: `Software Engineer, JavaScript enthusiast, and course creator.`,
+    image: "https://melvinliu.com/static/images/banner.png",
     type: "website",
     ...customMeta,
   };
