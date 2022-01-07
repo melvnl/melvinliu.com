@@ -6,6 +6,8 @@ export type Nav = {
 export type Blog = {
   title: string;
   slug: string;
+  date: string;
+  read: string;
   description: string;
   cover: string;
 };
