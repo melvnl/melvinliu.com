@@ -4,7 +4,10 @@ import Container from "../components/Container";
 
 const Projects: NextPage = () => {
   return (
-    <Container>
+    <Container
+      title="Projects – Melvin Liu"
+      description="Curated list of my engineering and product design project"
+    >
       <div className=" bg-black text-white">
         <div className=" mb-32  ">
           <h1 className=" font-serif font-normal text-2xl md:text-6xl max-w-5xl mb-10 md:mb-20">
