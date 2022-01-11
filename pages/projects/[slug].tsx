@@ -15,20 +15,20 @@ export default function Project({ meta: { title }, content }: any) {
             <Link href={`/projects`}>
               <a className="flex items-center border p-1 rounded md:border-0 ">
                 <Image
-                  src="/static/images/arrow.png"
+                  src="/static/images/arrow-white.svg"
                   width={20}
                   height={20}
                   alt="arrow"
                 />
-                <span className=" ml-1">All posts</span>
+                <span className=" text-white ml-1">All posts</span>
               </a>
             </Link>
           </div>
           <div className="right">
-            <h1 className=" font-semibold text-2xl md:text-4xl max-w-[720px]">
+            <h1 className=" text-white font-semibold text-2xl md:text-4xl max-w-[720px]">
               {title}
             </h1>
-            <div className=" prose">
+            <div className=" prose prose-lg prose-invert">
               <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
               </ReactMarkdown>

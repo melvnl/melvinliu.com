@@ -15,7 +15,7 @@ export default function Post({ meta: { title, date }, content }: any) {
             <Link href={`/blog`}>
               <a className="flex items-center border p-1 rounded md:border-0 ">
                 <Image
-                  src="/static/images/arrow.png"
+                  src="/static/images/arrow.svg"
                   width={20}
                   height={20}
                   alt="arrow"
