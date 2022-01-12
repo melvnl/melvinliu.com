@@ -10,7 +10,7 @@ export default function Project({ meta: { title }, content }: any) {
   return (
     <>
       <Container>
-        <div className=" text-primaryBlack flex flex-col md:flex-row ">
+        <div className=" min-h-screen text-primaryBlack flex flex-col md:flex-row ">
           <div className=" w-32 mb-2 ">
             <Link href={`/projects`}>
               <a className="flex items-center border p-1 rounded md:border-0 ">
