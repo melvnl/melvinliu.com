@@ -12,7 +12,7 @@ export default function Blog({
   return (
     <Container
       title="Blog – Melvin Liu"
-      description="Thoughts on the software industry, programming, tech, videography, music, and my personal life."
+      description="Thoughts on the software industry, programming, and career in tech"
     >
       <div className="flex flex-col items-start justify-center mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl ">

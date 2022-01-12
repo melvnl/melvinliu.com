@@ -16,8 +16,8 @@ export default function NotFound() {
           Whoa, you’re traveling too far!
         </h1>
         <p className="text-primaryGray mb-8">
-          That’s why you found this inaccessible page. Check the link again, or
-          you can go back to the homepage.
+          This means you type the wrong url. Check the link again, or you can go
+          back to the homepage.
         </p>
         <Link href="/">
           <a className="p-2 sm:p-4 w-64 font-bold mx-auto bg-gray-200 text-center rounded-md text-primaryBlack">

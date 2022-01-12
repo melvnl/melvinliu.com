@@ -147,7 +147,7 @@ export default function Form() {
         type="submit"
         className="bg-primaryGray hover:bg-primaryRed text-white font-semibold py-3 px-8 rounded-sm mb-8"
       >
-        Button
+        Submit
       </button>
     </form>
   );
