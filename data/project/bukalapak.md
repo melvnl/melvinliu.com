@@ -3,8 +3,8 @@ id: 1
 title: Bukalapak
 slug: bukalapak
 cover: "/static/images/projects/project/1.png"
-description: Bunch of technical reasons why Windows bad for software engineer.
+description: A leading tech company with a mission to bring a Fair Economy for All by creating a sustainable ecosystem in Indonesia.
 date: Dec 10, 2021
 ---
 
-### test bukalapak
+> ## Coming Soon

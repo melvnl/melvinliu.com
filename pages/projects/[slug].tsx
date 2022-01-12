@@ -20,7 +20,7 @@ export default function Project({ meta: { title }, content }: any) {
                   height={20}
                   alt="arrow"
                 />
-                <span className=" text-white ml-1">All posts</span>
+                <span className=" text-white ml-1">Back</span>
               </a>
             </Link>
           </div>
@@ -28,7 +28,7 @@ export default function Project({ meta: { title }, content }: any) {
             <h1 className=" text-white font-semibold text-2xl md:text-4xl max-w-[720px]">
               {title}
             </h1>
-            <div className=" prose prose-lg prose-invert">
+            <div className=" prose prose-lg prose-invert prose-a:text-primaryRed ">
               <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
               </ReactMarkdown>
