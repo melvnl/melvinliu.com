@@ -17,7 +17,7 @@ const ExternalLink = ({ href, children, isProjects }: any) => (
 
 export default function Footer() {
   const router = useRouter();
-  const isProjects = router.pathname === "/projects";
+  const isProjects = router.pathname.startsWith("/projects");
 
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">

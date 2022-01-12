@@ -6,30 +6,29 @@ import Container from "../../components/Container";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 
-export default function Post({ meta: { title, date }, content }: any) {
+export default function Project({ meta: { title }, content }: any) {
   return (
     <>
       <Container>
         <div className=" text-primaryBlack flex flex-col md:flex-row ">
-          <div className=" w-32 md:w-[270px] mb-2 ">
-            <Link href={`/blog`}>
+          <div className=" w-32 mb-2 ">
+            <Link href={`/projects`}>
               <a className="flex items-center border p-1 rounded md:border-0 ">
                 <Image
-                  src="/static/images/arrow.svg"
+                  src="/static/images/arrow-white.svg"
                   width={20}
                   height={20}
                   alt="arrow"
                 />
-                <span className=" ml-1">All posts</span>
+                <span className=" text-white ml-1">Back</span>
               </a>
             </Link>
           </div>
           <div className="right">
-            <h1 className=" font-semibold text-2xl md:text-4xl max-w-[720px]">
+            <h1 className=" text-white font-semibold text-2xl md:text-4xl max-w-[720px]">
               {title}
             </h1>
-            <span>Published on {date}</span>
-            <div className="prose">
+            <div className=" prose prose-lg prose-invert prose-a:text-primaryRed ">
               <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
               </ReactMarkdown>
@@ -42,7 +41,7 @@ export default function Post({ meta: { title, date }, content }: any) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("data/blog"));
+  const files = fs.readdirSync(path.join("data/project"));
 
   const paths = files.map((filename) => ({
     params: {
@@ -57,7 +56,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: any) {
-  const files = fs.readFileSync(path.join("data/blog", slug + ".md"), "utf-8");
+  const files = fs.readFileSync(
+    path.join("data/project", slug + ".md"),
+    "utf-8"
+  );
 
   const { data: meta, content } = matter(files);
 

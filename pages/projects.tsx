@@ -1,8 +1,15 @@
 import type { NextPage } from "next";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Image from "next/image";
+import { InferGetStaticPropsType } from "next";
 import Container from "../components/Container";
+import ProjectCard from "../components/ProjectCard";
 
-const Projects: NextPage = () => {
+export default function Projects({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container
       title="Projects – Melvin Liu"
@@ -72,48 +79,35 @@ const Projects: NextPage = () => {
         </div>
 
         <h1 className=" font-semibold text-xl md:text-3xl mb-8">Projects</h1>
-        <div className="flex flex-col md:flex-row gap-5">
-          <div className="wrapper hover:cursor-pointer mb-5">
-            <div className="img-wrapper mb-2 md:mb-8">
-              <Image
-                quality={100}
-                src="/static/images/projects/boymaxwell/1.png"
-                width="608"
-                height="400"
-                alt="Hero 1"
-              />
-            </div>
-            <div className="description text-base md:text-xl max-w-[577px]">
-              <h2 className=" font-bold mb-2">Bukalapak</h2>
-              <p className=" font-bold text-secondaryGray">
-                Bukalapak is Indonesia first unicorn company that goes initial
-                public offering in Aug 2021
-              </p>
-            </div>
-          </div>
-          <div className="wrapper hover:cursor-not-allowed mb-5">
-            <div className="img-wrapper mb-2 md:mb-8">
-              <Image
-                quality={100}
-                src="/static/images/projects/boymaxwell/2.png"
-                width="608"
-                height="400"
-                alt="Hero 1"
-              />
-            </div>
-            <div className="description text-base md:text-xl max-w-[577px]">
-              <h2 className=" font-bold mb-2">Boyxmaxwell</h2>
-              <p className=" font-bold text-secondaryGray">
-                Boyxmaxwell is an international trade company based in Aceh,
-                Indonesia. Exports various natural resources like coffee, palm
-                oil, coconut, cocoa, etc{" "}
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.body.title}
+              cover={project.body.cover}
+              title={project.body.title}
+              slug={project.body.slug}
+              date={project.body.date}
+              description={project.body.description}
+            />
+          ))}
         </div>
       </div>
     </Container>
   );
-};
+}
 
-export default Projects;
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("data/project"));
+
+  const projects = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+
+    const file = fs.readFileSync(path.join("data/project", filename), "utf-8");
+
+    const { data: body } = matter(file);
+
+    return { slug, body };
+  });
+
+  return { props: { projects: projects } };
+}

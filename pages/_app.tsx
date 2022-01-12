@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const isProjects = router.pathname === "/projects";
+  const isProjects = router.pathname.startsWith("/projects");
 
   return (
     <div className={isProjects ? " bg-black" : "bg-primaryWhite"}>

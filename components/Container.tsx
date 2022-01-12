@@ -10,7 +10,7 @@ import Footer from "./Footer";
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
   const isActive = router.asPath === href;
-  const isProjects = router.pathname === "/projects";
+  const isProjects = router.pathname.startsWith("/projects");
 
   return isProjects ? (
     <NextLink href={href}>
@@ -43,7 +43,7 @@ function NavItem({ href, text }: Nav) {
 export default function Container(props: any) {
   const { children, ...customMeta } = props;
   const router = useRouter();
-  const isProjects = router.pathname === "/projects";
+  const isProjects = router.pathname.startsWith("/projects");
   const meta = {
     title: "Melvin Liu – Engineer, writer, creator.",
     description: `Software Engineer, JavaScript enthusiast, and course creator.`,
