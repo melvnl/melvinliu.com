@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import cn from "classnames";
 
@@ -13,6 +14,14 @@ const ExternalLink = ({ prefix, href, children, isProjects }: any) => (
       href={href}
     >
       {children}
+      <div className=" inline ml-1">
+        <Image
+          src="/static/images/external-link.svg"
+          width="10"
+          height="10"
+          alt="External Link"
+        />
+      </div>
     </a>
   </>
 );
@@ -48,7 +57,7 @@ export default function Footer() {
               href="https://twitter.com/mlven23"
               isProjects={isProjects}
             >
-              mlven23
+              @mlven23
             </ExternalLink>
           </div>
           <div className="">
@@ -57,7 +66,7 @@ export default function Footer() {
               href="https://www.instagram.com/mlven23/"
               isProjects={isProjects}
             >
-              mlven23
+              @mlven23
             </ExternalLink>
           </div>
           <div className="">
