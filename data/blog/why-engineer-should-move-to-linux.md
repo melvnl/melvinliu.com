@@ -1,6 +1,6 @@
 ---
-title: Why you should move to LINUX
-slug: moving-to-linux-is-my-best-decision-in-2021
+title: Why engineer should move to Linux
+slug: why-engineer-should-move-to-linux
 cover: "/static/images/blogs/1.jpg"
 description: Bunch of technical reasons why Windows bad for software engineer.
 date: Dec 10, 2021
