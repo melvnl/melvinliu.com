@@ -45,8 +45,8 @@ export default function Container(props: any) {
   const router = useRouter();
   const isProjects = router.pathname.startsWith("/projects");
   const meta = {
-    title: "Melvin Liu – Engineer, writer, creator.",
-    description: `Software Engineer, JavaScript enthusiast, and course creator.`,
+    title: "Melvin Liu – Engineer, creator",
+    description: `Indonesia based software engineer, and product designer`,
     image: "https://melvinliu.com/static/images/banner.png",
     type: "website",
     ...customMeta,

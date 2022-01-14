@@ -86,6 +86,7 @@ export default function Projects({
               cover={project.body.cover}
               title={project.body.title}
               slug={project.body.slug}
+              type={project.body.type}
               date={project.body.date}
               description={project.body.description}
             />
