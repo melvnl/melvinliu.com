@@ -12,7 +12,7 @@ export default function BlogCard({
 }: Blog) {
   return (
     <Link href={`/blog/${slug}`}>
-      <a className=" transform transition duration-300 hover:scale-105 max-w-[350px] overflow-hidden border border-borderGray rounded-md">
+      <a className=" transform transition duration-300 hover:scale-105 hover:bg-hoverRed max-w-[350px] overflow-hidden border border-borderGray rounded-md">
         <div className="flex flex-col w-full">
           <Image src={cover} width={350} height={140} alt={title} />
           <div className=" border-t border-borderGray p-4">

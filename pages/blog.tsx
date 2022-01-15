@@ -31,7 +31,7 @@ export default function Blog({
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts
         </h3>
-        <div className="relative w-full mb-4">
+        <div className="relative w-full md:max-w-[1090px] mb-4">
           <input
             aria-label="Search articles"
             type="text"
@@ -54,7 +54,7 @@ export default function Blog({
             />
           </svg>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {!filteredBlogPosts.length && (
             <p className="mb-4 text-gray-600 dark:text-gray-400">
               No posts found.
@@ -87,7 +87,7 @@ export async function getStaticProps() {
 
     const { data: body } = matter(file);
 
-    console.log(title);
+    console.log(body);
 
     return { title, body };
   });
