@@ -3,7 +3,7 @@ title: Upload File to Strapi
 slug: upload-file-to-strapi
 cover: "/static/images/blogs/3.png"
 description: Explaining why you need NVM to change between node version without pain
-date: Oct 13, 2021
+date: "2021-10-13"
 read: 2 min
 ---
 

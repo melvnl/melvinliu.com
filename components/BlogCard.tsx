@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { parseISO, format } from "date-fns";
 import { Blog } from "../lib/types";
 
 export default function BlogCard({
@@ -19,12 +20,23 @@ export default function BlogCard({
             <h4 className="w-full mb-2 text-lg font-bold text-primaryBlack md:text-2xl ">
               {title}
             </h4>
-            <div className=" mt-4 mb-2">
-              <span>{date}</span>
-              <span>•</span>
-              <span className=" ml-1">{read} read</span>
+            <div className="mb-2">
+              <div className="flex">
+                <Image
+                  src="/static/images/clock.svg"
+                  width={17}
+                  height={17}
+                  alt="Clock Icon"
+                />
+                <span className="ml-1">{read} read</span>
+              </div>
             </div>
-            <p>{description}</p>
+            <div className=" mt-4 mb-2">
+              <span className=" font-semibold">
+                {format(parseISO(date), "MMMM dd, yyyy")}
+              </span>
+              <p>{description}</p>
+            </div>
           </div>
         </div>
       </a>

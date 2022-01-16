@@ -3,7 +3,7 @@ title: You need NVM! - Node Version Manager
 slug: you-need-nvm
 cover: "/static/images/blogs/2.png"
 description: Explaining why you need NVM to change between node version without pain
-date: Oct 23, 2021
+date: "2021-10-23"
 read: 2 min
 ---
 

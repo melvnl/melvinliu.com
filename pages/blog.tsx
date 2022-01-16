@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Container from "../components/Container";
-import BlogContainer from "../components/BlogContainer";
 import BlogCard from "../components/BlogCard";
 import { InferGetStaticPropsType } from "next";
 import { useState } from "react";
@@ -80,17 +79,19 @@ export default function Blog({
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join("data/blog"));
 
-  const posts = files.map((filename) => {
-    const title = filename.replace(".md", "").replace(/-/g, " ");
+  const posts = files
+    .map((filename) => {
+      const title = filename.replace(".md", "").replace(/-/g, " ");
 
-    const file = fs.readFileSync(path.join("data/blog", filename), "utf-8");
+      const file = fs.readFileSync(path.join("data/blog", filename), "utf-8");
 
-    const { data: body } = matter(file);
+      const { data: body } = matter(file);
 
-    console.log(body);
-
-    return { title, body };
-  });
+      return { title, body };
+    })
+    .sort(
+      (a, b) => Number(new Date(b.body.date)) - Number(new Date(a.body.date))
+    );
 
   return { props: { posts: posts } };
 }
