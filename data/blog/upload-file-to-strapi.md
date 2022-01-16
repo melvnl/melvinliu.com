@@ -2,7 +2,7 @@
 title: Upload File to Strapi
 slug: upload-file-to-strapi
 cover: "/static/images/blogs/3.png"
-description: Explaining why you need NVM to change between node version without pain
+description: Send form data to strapi backend is quite tricky, here is how!
 date: "2021-10-13"
 read: 2 min
 ---
