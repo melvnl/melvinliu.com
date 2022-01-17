@@ -18,6 +18,7 @@ export type Project = {
   date: string;
   type: string;
   description: string;
+  link: string;
   cover: string;
 };
 

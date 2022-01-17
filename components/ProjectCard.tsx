@@ -6,6 +6,7 @@ export default function ProjectCard({
   title,
   slug,
   type,
+  link,
   description,
   cover,
 }: Project) {

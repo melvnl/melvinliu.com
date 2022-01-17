@@ -5,6 +5,7 @@ slug: ternak-uang
 type: MOBILE DEV
 cover: "/static/images/projects/project/3.png"
 description: Ternak Uang is a digital platform to learn investment (from stocks, mutual funds, peer-to-peer, to cyptocurrency)
+link: "https://www.ternakuang.id/"
 date: Dec 10, 2021
 ---
 
