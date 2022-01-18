@@ -6,8 +6,10 @@ export default function ProjectCard({
   title,
   slug,
   type,
+  link,
   description,
   cover,
+  banner,
 }: Project) {
   return (
     <Link href={`/projects/${slug}`}>

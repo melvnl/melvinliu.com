@@ -3,12 +3,13 @@ id: 3
 title: Ternak Uang
 slug: ternak-uang
 type: MOBILE DEV
+heading: Apr 2021 | PT. Ternak Uang Nusantara
 cover: "/static/images/projects/project/3.png"
+banner: /static/images/projects/ternakuang/banner.png
 description: Ternak Uang is a digital platform to learn investment (from stocks, mutual funds, peer-to-peer, to cyptocurrency)
+link: "https://www.ternakuang.id/"
 date: Dec 10, 2021
 ---
-
-![Ternak Uang](/static/images/projects/project/3.png)
 
 > ## Short Explanation
 
