@@ -7,32 +7,30 @@ import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 
 export default function Project({
-  meta: { title, link, description, cover },
+  meta: { title, heading, link, description, banner },
   content,
 }: any) {
   return (
     <>
       <Container>
         <div className=" min-h-screen text-primaryBlack flex flex-col md:flex-row ">
-          <div className=" w-32 mb-2 ">
-            <Link href={`/projects`}>
-              <a className="flex items-center border p-1 rounded md:border-0 ">
-                <Image
-                  src="/static/images/arrow-white.svg"
-                  width={20}
-                  height={20}
-                  alt="arrow"
-                />
-                <span className=" text-white ml-1">Back</span>
-              </a>
-            </Link>
-          </div>
-          <div className="right">
-            <Image src={cover} width={608} height={400} alt={title} />
-            <h1 className=" text-white font-semibold text-2xl md:text-4xl max-w-[720px] mt-2">
+          <div className=" w-full">
+            <div className="heading mb-4">
+              <span className=" text-sm  md:text-lg text-zinc-200">
+                {heading}
+              </span>
+            </div>
+            <Image
+              src={banner}
+              width={1174}
+              height={600}
+              alt={title}
+              quality={100}
+            />
+            <h1 className=" text-white font-semibold text-2xl md:text-4xl mt-8">
               {title}
             </h1>
-            <div className=" my-2 text-lg">
+            <div className=" my-2 text-base md:text-lg">
               <p className="text-white mb-2">{description}</p>
               <a className=" flex items-center" href={link}>
                 <Image
@@ -47,10 +45,8 @@ export default function Project({
               </a>
             </div>
             <hr className="mt-4" />
-            <div className=" prose prose-lg prose-invert prose-a:text-primaryRed ">
-              <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
-                {content}
-              </ReactMarkdown>
+            <div className=" prose md:prose-lg prose-invert prose-a:text-primaryRed ">
+              <ReactMarkdown className=" w-full">{content}</ReactMarkdown>
             </div>
           </div>
         </div>

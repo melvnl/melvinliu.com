@@ -84,6 +84,7 @@ export default function Projects({
             <ProjectCard
               key={project.body.title}
               cover={project.body.cover}
+              banner={project.body.banner}
               title={project.body.title}
               link={project.body.title}
               slug={project.body.slug}

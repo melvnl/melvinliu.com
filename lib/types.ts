@@ -20,6 +20,7 @@ export type Project = {
   description: string;
   link: string;
   cover: string;
+  banner: string;
 };
 
 export type message = {
