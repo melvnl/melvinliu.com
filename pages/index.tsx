@@ -13,11 +13,13 @@ const Home: NextPage = () => {
           <div className=" text-primaryBlack font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className=" text-left">
               <p className=" mb-3">
-                Hi, I&#39;m Melvin Liu, a Software Engineer who currently reside
-                in Indonesia. I&#39;ve been designing and building web
-                application since 2019, it all started from a simple landing
-                page for a local raw food shipment company, to a large scale
-                e-commerce that serve million of users.
+                Hi, I&#39;m Melvin Liu, a Software Engineer who reside in
+                Indonesia.
+              </p>
+              <p className=" mb-3">
+                Currently run my own design and development studio, it all
+                started from a simple landing page for a local raw food shipment
+                company, to an international trading company.
               </p>
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
@@ -39,7 +41,7 @@ const Home: NextPage = () => {
 
               <p></p>
             </div>
-            <div className=" border-l-0 md:border-l pl-0 md:pl-4 border-gray-600 text-left">
+            <div className=" border-l-0 md:border-l pl-0 md:pl-4 border-gray-200 text-left">
               <p className=" mb-3">
                 My main expertise is web development, especially in front-end
                 engineering with Vue.js/ Nuxt.js, Vuex, Tailwind, SASS/SCSS. I
@@ -59,7 +61,7 @@ const Home: NextPage = () => {
                 </a>
               </p>
             </div>
-            <div className=" border-l-0 md:border-l pl-0 md:pl-4  border-gray-600 text-left">
+            <div className=" border-l-0 md:border-l pl-0 md:pl-4  border-gray-200 text-left">
               <p className=" mb-3">
                 If you have read this far, let&#39;s be friends! Connect with me
                 on{" "}
