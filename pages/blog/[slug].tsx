@@ -3,15 +3,20 @@ import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import Container from "../../components/Container";
+import SharePost from "../../components/SharePost";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
+import { parseISO, format } from "date-fns";
 
-export default function Post({ meta: { title, date }, content }: any) {
+export default function Post({
+  meta: { title, slug, read, date },
+  content,
+}: any) {
   return (
     <>
       <Container>
         <div className=" text-primaryBlack flex flex-col md:flex-row ">
-          <div className=" w-32 md:w-[270px] mb-2 ">
+          <div className="mb-8 w-32 md:w-[270px]">
             <Link href={`/blog`}>
               <a className="flex items-center border p-1 rounded md:border-0 ">
                 <Image
@@ -25,10 +30,17 @@ export default function Post({ meta: { title, date }, content }: any) {
             </Link>
           </div>
           <div className="right">
-            <h1 className=" font-semibold text-2xl md:text-4xl max-w-[720px]">
+            <span className=" text-base">
+              Published on {format(parseISO(date), "MMMM dd, yyyy")}
+            </span>
+            <h1 className=" mt-4 mb-4 font-semibold text-4xl md:text-5xl max-w-[840px]">
               {title}
             </h1>
-            <span>Published on {date}</span>
+            <SharePost
+              read={read}
+              title={title}
+              href={`https://melvinliu.com/blog/${slug}`}
+            />
             <div className="prose">
               <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
