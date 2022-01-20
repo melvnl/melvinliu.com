@@ -44,8 +44,8 @@ export default function Form() {
       <h1 className=" text-2xl md:text-5xl font-semibold text-primaryBlack mb-6">
         Available for freelance projects
       </h1>
-      <div className="flex flex-wrap -mx-3 mb-6">
-        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <div className="flex flex-wrap mb-6">
+        <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
           <label
             className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
             htmlFor="name"
@@ -63,7 +63,7 @@ export default function Form() {
             required
           />
         </div>
-        <div className="w-full md:w-1/2 px-3">
+        <div className="w-full md:w-1/2 md:px-3 md:pl-0">
           <label
             className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
             htmlFor="email"
@@ -82,8 +82,8 @@ export default function Form() {
           />
         </div>
       </div>
-      <div className="flex flex-wrap -mx-3 mb-6">
-        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <div className="flex flex-wrap  mb-6">
+        <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
           <label
             className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
             htmlFor="entity"
@@ -101,7 +101,7 @@ export default function Form() {
             required
           />
         </div>
-        <div className="w-full md:w-1/2 px-3">
+        <div className="w-full md:w-1/2 md:px-3 md:pl-0">
           <label
             className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
             htmlFor="timeframe"
@@ -122,8 +122,8 @@ export default function Form() {
           </select>
         </div>
       </div>
-      <div className="flex flex-wrap -mx-3 mb-6">
-        <div className="w-full px-3">
+      <div className="flex flex-wrap  mb-6">
+        <div className="w-full md:px-3 md:pl-0">
           <label
             className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
             htmlFor="brief"
