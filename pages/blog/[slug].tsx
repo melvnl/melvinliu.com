@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import Container from "../../components/Container";
 import SharePost from "../../components/SharePost";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 import { parseISO, format } from "date-fns";
 
 export default function Post({
@@ -18,13 +18,8 @@ export default function Post({
         <div className=" text-primaryBlack flex flex-col md:flex-row ">
           <div className="mb-8 w-32 md:w-[270px]">
             <Link href={`/blog`}>
-              <a className="flex items-center border p-1 rounded md:border-0 ">
-                <Image
-                  src="/static/images/arrow.svg"
-                  width={20}
-                  height={20}
-                  alt="arrow"
-                />
+              <a className=" hover:text-primaryRed flex items-center border p-1 rounded md:border-0 ">
+                <FaLongArrowAltLeft size={18} />
                 <span className=" ml-1">All posts</span>
               </a>
             </Link>
