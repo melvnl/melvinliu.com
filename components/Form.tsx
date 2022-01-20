@@ -40,7 +40,7 @@ export default function Form() {
       .catch((err) => {});
   };
   return (
-    <form className=" md:ml-20 max-w-3xl" onSubmit={sendForm}>
+    <form className=" md:ml-20 w-full max-w-3xl" onSubmit={sendForm}>
       <h1 className=" text-2xl md:text-5xl font-semibold text-primaryBlack mb-6">
         Available for freelance projects
       </h1>

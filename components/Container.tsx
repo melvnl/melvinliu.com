@@ -106,7 +106,7 @@ export default function Container(props: any) {
           </div>
         </nav>
       </div>
-      <main className="flex flex-col justify-center px-2 md:px-8 ">
+      <main className="flex flex-col justify-center px-2 md:px-8 mt-8 ">
         {children}
         <Footer />
       </main>
