@@ -18,8 +18,8 @@ export default function Projects({
       <div className=" bg-black text-white">
         <div className=" mb-32  ">
           <h1 className=" font-serif font-normal text-2xl md:text-6xl max-w-5xl mb-10 md:mb-20">
-            I solve incredibly challenging software and design problems for my
-            clients, here are just a few examples.
+            I solve incredibly challenging software and design problems, here
+            are just a few examples.
           </h1>
 
           <div className="flex mb-3 md:mb-5">

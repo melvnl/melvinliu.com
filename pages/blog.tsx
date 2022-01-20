@@ -27,6 +27,11 @@ export default function Blog({
           Thoughts, career hacks, software-engineering, and front-end
           development.
         </p>
+        <span className=" text-base text-primaryGray max-w-2xl">
+          {`I've been writing online since 2021, mostly about web development and
+          tech careers. In total, I've written ${posts.length}  articles on my blog. Use the
+          search below to filter by title`}
+        </span>
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts
         </h3>
