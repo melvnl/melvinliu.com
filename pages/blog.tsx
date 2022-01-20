@@ -35,7 +35,7 @@ export default function Blog({
         <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
           All Posts
         </h3>
-        <div className="relative w-full md:max-w-[1090px] mb-4">
+        <div className="relative w-full mb-4">
           <input
             aria-label="Search articles"
             type="text"
