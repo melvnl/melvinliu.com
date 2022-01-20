@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Nav } from "../lib/types";
 import cn from "classnames";
 import NextLink from "next/link";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 import Footer from "./Footer";
 
@@ -78,8 +79,8 @@ export default function Container(props: any) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className=" border-b-2 border-gray-600 md:border-0 px-2 md:px-8 mb-4">
-        <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 ">
+      <div className=" sticky top-0 z-50 border-b-2 bg-primaryWhite border-gray-600 md:border-0 px-2 md:px-8 mb-4">
+        <nav className=" overflow-x-scroll md:overflow-x-visible flex justify-between items-center w-full relative border-gray-200 mx-auto pt-4 pb-2 md:py-8 text-gray-900 ">
           <div
             className={cn(
               isProjects ? "text-white" : "",
