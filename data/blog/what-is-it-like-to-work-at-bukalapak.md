@@ -9,7 +9,7 @@ read: 5 min
 
 # Introduction
 
-I was accepted as Bukalapak Software Engineer (Frontend) Intern in August 2021, and I was lucky enough to join the Core Web Experience squad, where the engineers there are all Bukalapak first engineers who have been working
+I was accepted as Bukalapak Software Engineer (Frontend) Intern in October 2021, and I was lucky enough to join the Core Web Experience squad, where the engineers there are all Bukalapak first engineers who have been working
 
 ### How it starts
 
