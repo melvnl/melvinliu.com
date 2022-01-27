@@ -3,6 +3,10 @@ import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import { Blog } from "../lib/types";
 
+import { FiEye, FiClock } from "react-icons/fi";
+
+import ViewCounter from "./ViewCounter";
+
 export default function BlogCard({
   title,
   slug,
@@ -27,14 +31,11 @@ export default function BlogCard({
               {title}
             </h4>
             <div className="mb-2">
-              <div className="flex">
-                <Image
-                  src="/static/images/clock.svg"
-                  width={17}
-                  height={17}
-                  alt="Clock Icon"
-                />
-                <span className="ml-1">{read} read</span>
+              <div className="flex items-center">
+                <FiClock size={17} />
+                <span className="ml-1 mr-2">{read} read</span>
+                <FiEye size={17} />
+                <ViewCounter slug={slug} />
               </div>
             </div>
             <div className=" mt-4 mb-2">
