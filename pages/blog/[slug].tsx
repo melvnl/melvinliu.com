@@ -32,7 +32,6 @@ export default function Post({
             <h1 className=" mt-4 mb-4 font-semibold text-4xl md:text-5xl max-w-[840px]">
               {title}
             </h1>
-            <ViewCounter slug={slug} />
             <SharePost
               read={read}
               title={title}
