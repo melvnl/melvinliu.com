@@ -6,6 +6,8 @@ import Container from "../../components/Container";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 
+import { FaLink } from "react-icons/fa";
+
 export default function Project({
   meta: { title, heading, link, description, banner },
   content,
@@ -33,12 +35,7 @@ export default function Project({
             <div className=" my-2 text-base md:text-lg">
               <p className="text-white mb-2">{description}</p>
               <a className=" flex items-center" href={link}>
-                <Image
-                  src="/static/images/link.png"
-                  width={16}
-                  height={16}
-                  alt="External Link"
-                />
+                <FaLink size={16} className=" text-primaryRed" />
                 <span className=" text-primaryRed ml-2 hover:underline">
                   Open Live Site
                 </span>

@@ -2,26 +2,21 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import cn from "classnames";
 
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 const ExternalLink = ({ prefix, href, children, isProjects }: any) => (
   <>
     <span className={isProjects ? "text-white" : "text-primaryBlack"}>
       {prefix}
     </span>
     <a
-      className="text-primaryRed underline"
+      className="text-primaryRed "
       target="_blank"
       rel="noopener noreferrer"
       href={href}
     >
       {children}
-      <div className=" inline ml-1">
-        <Image
-          src="/static/images/external-link.svg"
-          width="10"
-          height="10"
-          alt="External Link"
-        />
-      </div>
+      <FaExternalLinkAlt className=" ml-1 inline " size={10} />
     </a>
   </>
 );
