@@ -7,12 +7,21 @@ import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { parseISO, format } from "date-fns";
-import ViewCounter from "../../components/ViewCounter";
+import { useEffect } from "react";
 
 export default function Post({
   meta: { title, slug, read, date },
   content,
 }: any) {
+  useEffect(() => {
+    const registerView = () =>
+      fetch(`/api/views/${slug}`, {
+        method: "POST",
+      });
+
+    registerView();
+  }, [slug]);
+
   return (
     <>
       <Container>
