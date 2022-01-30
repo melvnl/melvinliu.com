@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import cn from "classnames";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
-import useSWR from "swr";
 import Spotify from "./Spotify";
 
 const ExternalLink = ({ prefix, href, children, isProjects }: any) => (
@@ -32,7 +31,6 @@ async function fetcher(...args: any) {
 export default function Footer() {
   const router = useRouter();
   const isProjects = router.pathname.startsWith("/projects");
-  const { data } = useSWR(`/api/nowPlaying`, fetcher);
 
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
@@ -100,7 +98,12 @@ export default function Footer() {
             </ExternalLink>
           </div>
         </div>
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4">
+        <div
+          className={cn(
+            isProjects ? "text-white" : "text-primaryBlack",
+            "flex flex-col mb-4 md:mb-0 md:w-1/4"
+          )}
+        >
           <Spotify />
         </div>
       </div>
