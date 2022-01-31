@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import { Nav } from "../lib/types";
 import cn from "classnames";
 import NextLink from "next/link";
@@ -10,37 +9,19 @@ import Footer from "./Footer";
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
   const isActive = router.asPath === href;
-  const isProjects = router.pathname.startsWith("/projects");
 
-  return isProjects ? (
+  return (
     <NextLink href={href}>
       <a
         className={cn(
-          isActive ? " text-primaryRed " : " text-white",
-          " font-normal p-1 md:ml-4 sm:px-3 sm:py-2 "
+          isActive
+            ? "font-semibold text-gray-800 "
+            : "font-normal text-gray-600",
+          " p-1 md:ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all"
         )}
       >
         <span className="capsize">{text}</span>
       </a>
-    </NextLink>
-  ) : (
-    <NextLink href={href}>
-      {text !== "Inquiry" ? (
-        <a
-          className={cn(
-            isActive
-              ? "font-semibold text-gray-800 "
-              : "font-normal text-gray-600",
-            " p-1 md:ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all"
-          )}
-        >
-          <span className="capsize">{text}</span>
-        </a>
-      ) : (
-        <a className="p-1 md:ml-4 sm:px-3 sm:py-2 rounded-sm bg-primaryRed hover:bg-opacity-80 transition-all">
-          <span className="capsize">{text}</span>
-        </a>
-      )}
     </NextLink>
   );
 }
@@ -48,7 +29,6 @@ function NavItem({ href, text }: Nav) {
 export default function Container(props: any) {
   const { children, ...customMeta } = props;
   const router = useRouter();
-  const isProjects = router.pathname.startsWith("/projects");
   const meta = {
     title: "Melvin Liu – Software Engineer, Web",
     description: `Indonesia based software engineer, and product designer`,
@@ -83,25 +63,14 @@ export default function Container(props: any) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div
-        className={cn(
-          isProjects ? "bg-black" : "bg-primaryWhite",
-          " sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 md:px-8 mb-4"
-        )}
-      >
+      <div className="bg-primaryWhite sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 md:px-8 mb-4">
         <nav className=" flex justify-between items-center w-full relative border-gray-200 mx-auto py-4 md:py-8 text-gray-900 ">
-          <div
-            className={cn(
-              isProjects ? "text-white" : "",
-              " hidden font-bold md:block text-2xl whitespace-nowrap"
-            )}
-          >
+          <div className=" hidden font-bold md:block text-2xl whitespace-nowrap">
             melvinliu.com
           </div>
           <div className=" w-full flex justify-between md:w-auto">
             <NavItem href="/" text="Home" />
             <NavItem href="/blog" text="Blogs" />
-            <NavItem href="/projects" text="Projects" />
             <NavItem href="/inquiry" text="Inquiry" />
           </div>
         </nav>

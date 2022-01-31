@@ -1,15 +1,12 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import cn from "classnames";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Spotify from "./Spotify";
 
-const ExternalLink = ({ prefix, href, children, isProjects }: any) => (
+const ExternalLink = ({ prefix, href, children }: any) => (
   <>
-    <span className={isProjects ? "text-white" : "text-primaryBlack"}>
-      {prefix}
-    </span>
+    <span className="text-primaryBlack">{prefix}</span>
     <a
       className="text-primaryRed "
       target="_blank"
@@ -30,35 +27,20 @@ async function fetcher(...args: any) {
 
 export default function Footer() {
   const router = useRouter();
-  const isProjects = router.pathname.startsWith("/projects");
 
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
       <hr className="w-full border-1 border-gray-600 mb-8" />
       <div className="w-full flex flex-col md:flex-row ">
-        <div
-          className={cn(
-            isProjects ? "text-white" : "text-primaryBlack",
-            "flex flex-col mb-4 md:mb-0 md:w-1/2"
-          )}
-        >
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack">
           <h1 className=" mb-2 font-semibold">Contact</h1>
           <div className="">phone: +62-819-0881-6826</div>
           <div className="">email: melvinliu2000@gmail.com</div>
         </div>
-        <div
-          className={cn(
-            isProjects ? "text-white" : "text-primaryBlack",
-            "flex flex-col mb-4 md:mb-0 md:w-1/4"
-          )}
-        >
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
           <h1 className=" mb-2 font-semibold">Social</h1>
           <div className="">
-            <ExternalLink
-              prefix="Twitter: "
-              href="https://twitter.com/mlven23"
-              isProjects={isProjects}
-            >
+            <ExternalLink prefix="Twitter: " href="https://twitter.com/mlven23">
               @mlven23
             </ExternalLink>
           </div>
@@ -66,7 +48,6 @@ export default function Footer() {
             <ExternalLink
               prefix="Instagram: "
               href="https://www.instagram.com/mlven23/"
-              isProjects={isProjects}
             >
               @mlven23
             </ExternalLink>
@@ -75,35 +56,20 @@ export default function Footer() {
             <ExternalLink
               prefix="Linkedin: "
               href="https://www.linkedin.com/in/melvin-liu/"
-              isProjects={isProjects}
             >
               Melvin
             </ExternalLink>
           </div>
         </div>
-        <div
-          className={cn(
-            isProjects ? "text-white" : "text-primaryBlack",
-            "flex flex-col mb-4 md:mb-0 md:w-1/4"
-          )}
-        >
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
           <h1 className=" mb-2 font-semibold">Work</h1>
           <div className="mb-4 md:mb-0 ">
-            <ExternalLink
-              prefix="Github: "
-              href="https://github.com/melvnl"
-              isProjects={isProjects}
-            >
+            <ExternalLink prefix="Github: " href="https://github.com/melvnl">
               melvnl
             </ExternalLink>
           </div>
         </div>
-        <div
-          className={cn(
-            isProjects ? "text-white" : "text-primaryBlack",
-            "flex flex-col mb-4 md:mb-0 md:w-1/4"
-          )}
-        >
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
           <Spotify />
         </div>
       </div>
