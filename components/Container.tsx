@@ -50,7 +50,7 @@ export default function Container(props: any) {
   const router = useRouter();
   const isProjects = router.pathname.startsWith("/projects");
   const meta = {
-    title: "Melvin Liu – Engineer, creator",
+    title: "Melvin Liu – Software Engineer, Web",
     description: `Indonesia based software engineer, and product designer`,
     image: "https://melvinliu.com/static/images/banner.png",
     type: "website",
@@ -96,7 +96,7 @@ export default function Container(props: any) {
               " hidden font-bold md:block text-2xl whitespace-nowrap"
             )}
           >
-            Melvin Liu
+            melvinliu.com
           </div>
           <div className=" w-full flex justify-between md:w-auto">
             <NavItem href="/" text="Home" />
