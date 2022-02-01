@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
-import { Blog } from "../lib/types";
+import { Blog } from "@/lib/types";
 
 import { FiEye, FiClock } from "react-icons/fi";
 

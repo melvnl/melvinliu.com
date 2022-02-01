@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-import { getNowPlaying } from "../../lib/spotify";
+import { getNowPlaying } from "@/lib/spotify";
 
 export default async (_: any, res: any) => {
   const response = await getNowPlaying();

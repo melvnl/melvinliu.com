@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import Container from "../components/Container";
-import Form from "../components/Form";
-import Sidebar from "../components/Sidebar";
+import Container from "@/components/Container";
+import Form from "@/components/Form";
+import Sidebar from "@/components/Sidebar";
 
 const Inquiry: NextPage = () => {
   return (

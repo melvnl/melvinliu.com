@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
-import Container from "../../components/Container";
+import Container from "@/components/Container";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 

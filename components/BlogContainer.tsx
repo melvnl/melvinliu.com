@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Blog } from "../lib/types";
+import { Blog } from "@/lib/types";
 
 export default function BlogContainer({
   title,

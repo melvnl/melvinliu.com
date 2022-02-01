@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Nav } from "../lib/types";
+import { Nav } from "@/lib/types";
 import cn from "classnames";
 import NextLink from "next/link";
 

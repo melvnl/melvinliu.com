@@ -1,4 +1,4 @@
-import { message } from "../lib/types";
+import { message } from "@/lib/types";
 
 export default function FormMessage({ status }: message) {
   return status === 200 ? (

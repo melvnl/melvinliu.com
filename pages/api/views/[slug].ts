@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import db from "../../../lib/firebase";
+import db from "@/lib/firebase";
 
 export default async (req: any, res: any) => {
   if (req.method === "POST") {

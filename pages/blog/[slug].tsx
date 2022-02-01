@@ -1,8 +1,8 @@
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
-import Container from "../../components/Container";
-import SharePost from "../../components/SharePost";
+import Container from "@/components/Container";
+import SharePost from "@/components/SharePost";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import { FaLongArrowAltLeft } from "react-icons/fa";

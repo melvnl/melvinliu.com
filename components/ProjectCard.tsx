@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Project } from "../lib/types";
+import { Project } from "@/lib/types";
 
 export default function ProjectCard({
   title,

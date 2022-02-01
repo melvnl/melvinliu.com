@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Container from "../components/Container";
-import BlogCard from "../components/BlogCard";
+import Container from "@/components/Container";
+import BlogCard from "@/components/BlogCard";
 import { InferGetStaticPropsType } from "next";
 import { useState } from "react";
 
