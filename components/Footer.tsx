@@ -30,7 +30,7 @@ export default function Footer() {
 
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
-      <hr className="w-full border-1 border-gray-600 mb-8" />
+      <hr className="w-full border-1 border-gray-200 mb-8" />
       <div className="w-full flex flex-col md:flex-row ">
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack">
           <h1 className=" mb-2 font-semibold">Contact</h1>
