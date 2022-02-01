@@ -6,6 +6,12 @@ import NextLink from "next/link";
 
 import Footer from "./Footer";
 
+const links = [
+  { href: "/", text: "Home" },
+  { href: "/blog", text: "Blog" },
+  { href: "/inquiry", text: "Inquiry" },
+];
+
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
   const isActive = router.asPath === href;
@@ -69,9 +75,9 @@ export default function Container(props: any) {
             melvinliu.com
           </div>
           <div className=" w-full flex justify-between md:w-auto">
-            <NavItem href="/" text="Home" />
-            <NavItem href="/blog" text="Blogs" />
-            <NavItem href="/inquiry" text="Inquiry" />
+            {links.map(({ href, text }: Nav) => (
+              <NavItem key={text} href={href} text={text} />
+            ))}
           </div>
         </nav>
       </div>
