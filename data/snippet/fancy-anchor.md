@@ -1,7 +1,7 @@
 ---
 title: Fancy Anchor
 slug: fancy-anchor
-description: You probably need to refactor that deep nested conditional if-else statement.
+description: anchor/link hover animation with css
 ---
 
 # Fancy Anchor
