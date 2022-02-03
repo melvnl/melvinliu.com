@@ -26,8 +26,8 @@ const Home: NextPage = () => {
                 career in few notable company in Indonesia, the most notable one
                 is{" "}
                 <a
-                  className=" underline text-primaryRed"
-                  href="https://tanifund.com/"
+                  className=" underline fancy-anchor"
+                  href="https://about.bukalapak.com/"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
               <p className="mb-3">
                 Feel free to look at my side project that I make public on{" "}
                 <a
-                  className=" underline text-primaryRed"
+                  className=" underline fancy-anchor"
                   href="https://github.com/melvnl"
                   target="_blank"
                   rel="noreferrer noopener"
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
                 on{" "}
                 <span>
                   <a
-                    className=" underline text-primaryRed"
+                    className=" underline fancy-anchor"
                     href="https://github.com/melvnl"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
                   </a>
                   ,{" "}
                   <a
-                    className=" underline text-primaryRed"
+                    className=" underline fancy-anchor"
                     href="https://www.linkedin.com/in/melvin-liu/"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
                   </a>
                   , or{" "}
                   <a
-                    className=" underline text-primaryRed"
+                    className=" underline fancy-anchor"
                     href="https://twitter.com/mlven23"
                     target="_blank"
                     rel="noreferrer noopener"
