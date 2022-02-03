@@ -22,3 +22,10 @@ $ cd melvinliu.com
 $ yarn
 $ yarn dev
 ```
+
+## Credits
+
+I learn to build this site by analyzing other developer codebase, credit goes to  
+- [Leerob](https://leerob.io/)
+- [Theodorus Clarence](https://theodorusclarence.com/)
+- [Jackyef](https://jackyef.com/)
