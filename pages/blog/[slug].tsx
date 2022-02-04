@@ -8,6 +8,7 @@ import matter from "gray-matter";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { parseISO, format } from "date-fns";
 import { useEffect } from "react";
+import Comment from "@/components/Comment";
 
 export default function Post({
   meta: { title, slug, read, date },
@@ -51,6 +52,7 @@ export default function Post({
                 {content}
               </ReactMarkdown>
             </div>
+            <Comment />
           </div>
         </div>
       </Container>
