@@ -5,10 +5,12 @@ import cn from "classnames";
 import NextLink from "next/link";
 
 import Footer from "./Footer";
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", text: "Home" },
   { href: "/blog", text: "Blog" },
+  { href: "/snippet", text: "Snippet" },
   { href: "/inquiry", text: "Inquiry" },
 ];
 
@@ -43,8 +45,19 @@ export default function Container(props: any) {
     ...customMeta,
   };
 
+  const [onTop, setOnTop] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      setOnTop(window.pageYOffset === 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="w-full xl:px-16">
+    <div className="w-full">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -69,8 +82,13 @@ export default function Container(props: any) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="bg-primaryWhite sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 md:px-8 mb-4">
-        <nav className=" flex justify-between items-center w-full relative border-gray-200 mx-auto py-4 md:py-8 text-gray-900 ">
+      <div
+        className={cn(
+          onTop ? "" : "shadow-sm ",
+          "bg-primaryWhite sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 xl:px-24 mb-4"
+        )}
+      >
+        <nav className=" flex justify-between items-center w-full relative border-gray-200 mx-auto py-4  text-gray-900 ">
           <div className=" hidden font-bold md:block text-2xl whitespace-nowrap">
             melvinliu.com
           </div>
@@ -81,7 +99,7 @@ export default function Container(props: any) {
           </div>
         </nav>
       </div>
-      <main className="flex flex-col justify-center px-2 md:px-8 mt-8 ">
+      <main className=" flex flex-col justify-center px-2 xl:px-24 pt-4 mt-8 ">
         {children}
         <Footer />
       </main>
