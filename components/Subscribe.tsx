@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import SuccessMessage from "./SuccesMessage";
+import ErrorMessage from "./ErrorMessage";
 
 export default function Subscribe() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(false);
   const [email, setEmail] = useState("");
 
   const subscribe = async (e: any) => {
@@ -19,11 +21,18 @@ export default function Subscribe() {
 
     const { error } = await res.json();
     if (error) {
-      setMessage(`❌` + error);
+      // passing Component inside useState hook is an idiot
+      // setMessage(<ErrorMessage>{error}</ErrorMessage>);
       return;
     }
 
-    setMessage(`✔️ Hooray! You're now on the list.`);
+    // passing Component inside useState hook is an idiot
+
+    // setMessage(
+    //   <SuccessMessage>
+    //     {`Hooray! You're now on the list. (Kindly check your spam / all email tab for confirmation)`}
+    //   </SuccessMessage>
+    // );
   };
 
   return (
