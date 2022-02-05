@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import SuccessMessage from "./SuccesMessage";
 import ErrorMessage from "./ErrorMessage";
 
+import { Form, FormState } from "lib/types";
+import LoadingSpinner from "./LoadingSpinner";
+
 export default function Subscribe() {
-  const [message, setMessage] = useState(false);
+  const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const [email, setEmail] = useState("");
 
   const subscribe = async (e: any) => {
@@ -21,18 +24,17 @@ export default function Subscribe() {
 
     const { error } = await res.json();
     if (error) {
-      // passing Component inside useState hook is an idiot
-      // setMessage(<ErrorMessage>{error}</ErrorMessage>);
+      setForm({
+        state: Form.Error,
+        message: error,
+      });
       return;
     }
 
-    // passing Component inside useState hook is an idiot
-
-    // setMessage(
-    //   <SuccessMessage>
-    //     {`Hooray! You're now on the list. (Kindly check your spam / all email tab for confirmation)`}
-    //   </SuccessMessage>
-    // );
+    setForm({
+      state: Form.Success,
+      message: `Hooray! You're now on the list. (Kindly check your spam / all email tab for confirmation)`,
+    });
   };
 
   return (
@@ -62,15 +64,20 @@ export default function Subscribe() {
             className=" w-full p-2 my-2 md:w-1/6 md:ml-2 md:my-0 font-semibold text-white text-sm md:text-base bg-primaryRed rounded-md"
             type="submit"
           >
-            {"Subscribe 💌"}
+            {form.state === Form.Loading ? <LoadingSpinner /> : "Subscribe 💌"}
           </button>
         </div>
-        <div className=" text-sm md:text-base">
-          {message
-            ? message
-            : `I'll only send emails when new content is posted. No spam 😉`}
-        </div>
       </form>
+      {form.state === Form.Error ? (
+        <ErrorMessage>{form.message}</ErrorMessage>
+      ) : form.state === Form.Success ? (
+        <SuccessMessage>{form.message}</SuccessMessage>
+      ) : (
+        <p className="text-sm md:text-base">
+          {`I'll only send emails when new content is posted. No spam 😉`}
+        </p>
+      )}
+      {email}
     </div>
   );
 }
