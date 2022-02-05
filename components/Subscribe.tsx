@@ -77,7 +77,6 @@ export default function Subscribe() {
           {`I'll only send emails when new content is posted. No spam 😉`}
         </p>
       )}
-      {email}
     </div>
   );
 }
