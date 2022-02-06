@@ -13,18 +13,19 @@ const Home: NextPage = () => {
           <div className=" text-primaryBlack font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className=" text-left">
               <p className=" mb-3">
-                Hi, I&#39;m Melvin Liu, a Software Engineer who reside in
+                Hi, I&#39;m Melvin Liu, a Software Engineer who resides in
                 Indonesia.
               </p>
               <p className=" mb-3">
-                Currently run my own design and development studio, it all
-                started from a simple landing page for a local raw food shipment
-                company, to an international trading company.
+                I used to run my own design and development studio for a year
+                and a half, it all started from a simple landing page for a
+                local raw food shipment company, to an international trading
+                company.
               </p>
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
-                career in few notable company in Indonesia, the most notable one
-                is{" "}
+                career in a few notable companies in Indonesia, the most notable
+                one is{" "}
                 <a
                   className=" underline fancy-anchor"
                   href="https://about.bukalapak.com/"
@@ -34,9 +35,9 @@ const Home: NextPage = () => {
                   Bukalapak
                 </a>{" "}
                 - Indonesia first unicorn startup goes IPO (Initial Public
-                Offering), once started out as marketplace platform and grew
-                into an All-Commerce platform, empowering both users and
-                communities as one company: Buka.
+                Offering), once started as a marketplace platform and grew into
+                an All-Commerce platform, empowering both users and communities
+                as one company: Buka.
               </p>
 
               <p></p>
@@ -44,10 +45,9 @@ const Home: NextPage = () => {
             <div className=" border-l-0 md:border-l pl-0 md:pl-4 border-gray-200 text-left">
               <p className=" mb-3">
                 My main expertise is web development, especially in front-end
-                engineering with Vue.js/ Nuxt.js, Vuex, Tailwind, SASS/SCSS. I
-                don&#39;t limit myself to certain technology, hence I can do
-                React.js/Next.js and backend engineering as well either Node.js
-                or Go
+                engineering with either Vue.js/ React.js, but currently, I
+                started to learn database (PostgreSQL). and a backend language
+                as well (Golang)
               </p>
               <p className="mb-3">
                 Feel free to look at my side project that I make public on{" "}
