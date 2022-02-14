@@ -94,7 +94,7 @@ The work-life balance might be different for each squad (if you are unlucky enou
 
 # Compensation
 
-I work there from Oct 2021 - Jan 2022 as an engineer intern, the compensation is quite "normal", I know a lot of places that pay double/triple my salary even though they are smaller or less popular compared to Bukalapak. There don't let you use company devices (work laptop) for intern (at least that was my case, and also I don't request it since no one bring that issue up), hence I have to install Linux in my daily driver in order to start working on my task (I used Windows, and Unix based operating system is actually compulsory in order to run Bukalapak codebase).
+I work there from Oct 2021 - Jan 2022 as an engineer intern, the compensation is quite competitive compared to the workload.
 
 # Conclusion
 
