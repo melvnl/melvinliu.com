@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
-
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { SpotifyFlag } from "@/constants/env";
 import Spotify from "./Spotify";
 
 const ExternalLink = ({ prefix, href, children }: any) => (
@@ -70,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
-          <Spotify />
+          {SpotifyFlag && <Spotify />}
         </div>
       </div>
     </footer>
