@@ -1,6 +1,7 @@
+import { withSentry } from "@sentry/nextjs";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(
+export default withSentry(async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
@@ -34,4 +35,4 @@ export default async function handler(
   } catch (error: any) {
     return res.status(500).json({ error: error.message || error.toString() });
   }
-}
+});
