@@ -7,6 +7,8 @@ import { InferGetStaticPropsType } from "next";
 import Container from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 
+import { FaArrowDown } from "react-icons/fa";
+
 export default function Projects({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -21,12 +23,18 @@ export default function Projects({
             I solve incredibly challenging software and design problems, here
             are just a few examples.
           </h1>
+          <a href="#project" className="">
+            <FaArrowDown
+              className="animate-bounce mx-auto hover:text-primaryRed cursor-pointer"
+              size={32}
+            />
+          </a>
         </div>
 
         <h1 className=" font-semibold text-primaryBlack text-xl md:text-3xl mb-8">
           Projects
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div id="project" className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {projects.map((project) => (
             <ProjectCard
               key={project.body.title}
