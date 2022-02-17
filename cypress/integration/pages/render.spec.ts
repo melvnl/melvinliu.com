@@ -16,9 +16,9 @@ describe("Check all page snapshot", () => {
   });
 
   it("Snippet", () => {
-    cy.visit("/");
+    cy.visit("/snippet");
     cy.get("h1").should("contain", "Code Snippets");
-    cy.get("p").should(
+    cy.get("span").should(
       "contain",
       "This is my own personal code library, where I store code snippet regarding various tech stack and tools, e.g: React, Next, Strapi, API , etc. You can use it freely!"
     );
@@ -26,7 +26,7 @@ describe("Check all page snapshot", () => {
 
   it("Inquiry", () => {
     cy.visit("/inquiry");
-    cy.get("h1").should("contain", " Available for freelance projects");
+    cy.get("h1").should("contain", "Available for freelance projects");
   });
 
   it("Freelance", () => {
