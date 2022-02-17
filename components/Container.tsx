@@ -4,6 +4,9 @@ import { Nav } from "@/lib/types";
 import cn from "classnames";
 import NextLink from "next/link";
 
+import Hello from "@/lib/hello";
+import { HelloFlag } from "@/constants/env";
+
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
 
@@ -13,6 +16,8 @@ const links = [
   { href: "/snippet", text: "Snippet" },
   { href: "/inquiry", text: "Inquiry" },
 ];
+
+let saidHello = !HelloFlag;
 
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
@@ -55,6 +60,11 @@ export default function Container(props: any) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (!saidHello) {
+    Hello();
+    saidHello = true;
+  }
 
   return (
     <div className="w-full">

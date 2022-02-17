@@ -17,10 +17,15 @@ const Home: NextPage = () => {
                 Indonesia.
               </p>
               <p className=" mb-3">
-                I used to run my own design and development studio for a year
-                and a half, it all started from a simple landing page for a
-                local raw food shipment company, to an international trading
-                company.
+                I currently run my own design and development studio and have
+                worked with diverse projects, you can check my work{" "}
+                <a
+                  className=" underline fancy-anchor"
+                  href="https://melvinliu.com/freelance"
+                >
+                  here
+                </a>
+                .
               </p>
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
