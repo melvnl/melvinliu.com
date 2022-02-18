@@ -19,7 +19,7 @@ export default function Spotify() {
       <div className="flex border p-3 rounded-sm shadow-sm">
         {data?.isPlaying ? (
           <>
-            <div className="relative w-full">
+            <div data-cy="spotify" className="relative w-full">
               <div className="flex">
                 <Image
                   src={data?.albumImageUrl}
