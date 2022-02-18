@@ -11,3 +11,9 @@ export const HelloFlag = isProd;
  * @see Footer.tsx
  */
 export const SpotifyFlag = isProd;
+
+/**
+ * Show Giscus Component
+ * @see Comment.tsx
+ */
+export const CommentFlag = isProd;
