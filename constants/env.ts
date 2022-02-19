@@ -13,6 +13,12 @@ export const HelloFlag = isProd;
 export const SpotifyFlag = isProd;
 
 /**
+ * Count Blog View to Firebase only in Production
+ * @see /blog/[slug].tsx
+ */
+export const CountViewFlag = isProd;
+
+/**
  * Show Giscus Component
  * @see Comment.tsx
  */
