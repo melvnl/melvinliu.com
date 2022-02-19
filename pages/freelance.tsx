@@ -6,7 +6,7 @@ import Image from "next/image";
 import { InferGetStaticPropsType } from "next";
 import Container from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-
+import ScrollToButton from "@/components/ScrollToButton";
 import { FaArrowDown } from "react-icons/fa";
 
 export default function Projects({
@@ -23,12 +23,12 @@ export default function Projects({
             I solve incredibly challenging software and design problems, here
             are just a few examples.
           </h1>
-          <a href="#project" className="">
+          <ScrollToButton toId="project" duration={500} className=" bg-black">
             <FaArrowDown
-              className="animate-bounce mx-auto hover:text-primaryRed cursor-pointer"
+              className="animate-bounce  hover:text-primaryRed cursor-pointer"
               size={32}
             />
-          </a>
+          </ScrollToButton>
         </div>
 
         <h1 className=" font-semibold text-primaryBlack text-xl md:text-3xl mb-8">
