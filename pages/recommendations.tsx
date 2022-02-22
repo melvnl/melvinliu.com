@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Container from "@/components/Container";
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
@@ -24,6 +24,22 @@ const Home: NextPage = () => {
           >
             Login
           </button>
+        )}
+        {session?.user && (
+          <div className="">
+            <p className="my-1 text-primaryBlack">
+              Sign In as {session?.user.email}
+            </p>
+            <button
+              className="flex items-center justify-center my-4 font-bold h-8 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
+              Sign Out
+            </button>
+          </div>
         )}
       </div>
     </Container>

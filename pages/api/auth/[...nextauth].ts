@@ -8,4 +8,5 @@ export default NextAuth({
       clientSecret: process.env.OAUTH_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.OAUTH_SECRET,
 });
