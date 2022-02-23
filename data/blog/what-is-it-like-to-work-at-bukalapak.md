@@ -104,4 +104,4 @@ As for the compensation, I heard from the current permanent employee, Bukalapak 
 
 ### Note
 
-This blog is purely my personal opinion combined with tip-off from anonymous resource in [FOMO app](https://fomo.id/), I highly recommend you to do your own research.
+This blog is purely my personal opinion combined with tip-off from anonymous resource in [FOMO app](https://fomo.id/), I highly recommend you to do your own research. If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

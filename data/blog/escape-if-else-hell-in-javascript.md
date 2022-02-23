@@ -59,3 +59,5 @@ This can be also applied in algorithm leetcode-type-of-question to save you up s
 
 Thanks for reading!!!
 Have a good day, and remember that project you always think about won't code itself 🤪.
+
+**Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

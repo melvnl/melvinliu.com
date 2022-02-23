@@ -40,3 +40,5 @@ Here is few things that I noticed:
 
 As an engineer, I highly suggest you to move from windows to UNIX based like Linux or Mac as soon as you can. Here ! Have some Linus Trovalds Meme!.
 ![Linux Trovalds mad at Nvidia](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/usyzcxrtl18yu7497luw.png)
+
+**Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

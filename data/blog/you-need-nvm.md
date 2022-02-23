@@ -59,3 +59,5 @@ To use the installed Node.js version you can simply type **nvm use 8.0.0**
 If you see an error message _exit status 5: Access is denied._, It is due to admin privilege issue. To solve it you can simply run your command prompt as administrator.
 
 Thank you for your time reading this short article / tutorial about Node Version Manager, hope it helps! and Have a great day.
+
+**Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

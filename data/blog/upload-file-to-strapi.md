@@ -87,6 +87,6 @@ axios
 
 Since we have uploaded the file before the whole data, hence on the second request we only need to send the Strapi fileId that is attached with the file that we have uploaded previously.
 
-**Note: the endpoint "contact-submissions" is my own custom endpoint, where my client can see the data that their costumer has sent through the contact form.**
-
 I hope this short tutorial / article is helpful. Have a good day!
+
+**Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

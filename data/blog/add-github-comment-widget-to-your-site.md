@@ -149,3 +149,5 @@ https://www.freecodecamp.org/news/graphql-vs-rest-api/
 Twitter: https://twitter.com/mlven23  
 GitHub: https://github.com/melvnl  
 LinkedIn: https://www.linkedin.com/in/melvin-liu/
+
+**Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉
