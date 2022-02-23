@@ -35,19 +35,21 @@ export default function Projects({
           Projects
         </h1>
         <div id="project" className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.body.title}
-              cover={project.body.cover}
-              banner={project.body.banner}
-              title={project.body.title}
-              link={project.body.title}
-              slug={project.body.slug}
-              type={project.body.type}
-              date={project.body.date}
-              description={project.body.description}
-            />
-          ))}
+          {projects
+            .sort((a, b) => a.body.id - b.body.id)
+            .map((project) => (
+              <ProjectCard
+                key={project.body.title}
+                cover={project.body.cover}
+                banner={project.body.banner}
+                title={project.body.title}
+                link={project.body.title}
+                slug={project.body.slug}
+                type={project.body.type}
+                date={project.body.date}
+                description={project.body.description}
+              />
+            ))}
         </div>
       </div>
     </Container>
