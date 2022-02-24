@@ -5,7 +5,7 @@ import Spotify from "./Spotify";
 
 const ExternalLink = ({ prefix, href, children }: any) => (
   <>
-    <span className="text-primaryBlack">{prefix}</span>
+    <span className="text-primaryBlack dark:text-white">{prefix}</span>
     <a
       className="text-primaryRed "
       target="_blank"
@@ -31,12 +31,12 @@ export default function Footer() {
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
       <hr className="w-full border-1 border-gray-200 mb-8" />
       <div className="w-full flex flex-col md:flex-row ">
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack">
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Contact</h1>
           <div className="">phone: +62-819-0881-6826</div>
           <div className="">email: melvinliu2000@gmail.com</div>
         </div>
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Social</h1>
           <div className="">
             <ExternalLink prefix="Twitter: " href="https://twitter.com/mlven23">
@@ -60,7 +60,7 @@ export default function Footer() {
             </ExternalLink>
           </div>
         </div>
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Work</h1>
           <div className="mb-4 md:mb-0 ">
             <ExternalLink prefix="Github: " href="https://github.com/melvnl">
@@ -68,7 +68,7 @@ export default function Footer() {
             </ExternalLink>
           </div>
         </div>
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack">
+        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           {SpotifyFlag && <Spotify />}
         </div>
       </div>
