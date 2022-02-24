@@ -26,12 +26,21 @@ const Home: NextPage = () => {
           </button>
         )}
         {session?.user && (
-          <div className="">
-            <p className="my-1 text-primaryBlack">
-              Sign In as {session?.user.email}
-            </p>
+          <>
+            <div className=" mt-10 flex items-center">
+              <span
+                style={{ backgroundImage: `url('${session?.user.image}')` }}
+                className=" rounded-full h-12 w-12 bg-cover bg-white bg-no-repeat mr-3"
+              />
+              <div className="flex flex-col">
+                <p className="text-primaryBlack">Sign In as</p>
+                <p className="font-bold text-primaryBlack">
+                  {session?.user.email}
+                </p>
+              </div>
+            </div>
             <button
-              className="flex items-center justify-center my-4 font-bold h-8 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
+              className="flex items-center justify-center mb-4 mt-10  font-bold h-8 bg-gray-200 text-gray-900 rounded w-28"
               onClick={(e) => {
                 e.preventDefault();
                 signOut();
@@ -39,7 +48,7 @@ const Home: NextPage = () => {
             >
               Sign Out
             </button>
-          </div>
+          </>
         )}
       </div>
     </Container>
