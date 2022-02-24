@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/", text: "Home" },
   { href: "/blog", text: "Blog" },
-  { href: "/snippet", text: "Snippet" },
+  { href: "/project", text: "Project" },
   { href: "/inquiry", text: "Inquiry" },
 ];
 
