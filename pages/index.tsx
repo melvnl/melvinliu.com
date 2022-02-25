@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                 I currently run my own design and development studio and have
                 worked with diverse projects, you can check my work{" "}
                 <a
-                  className=" underline fancy-anchor"
+                  className=" fancy-anchor dark:text-gray-300 dark:underline"
                   href="https://melvinliu.com/freelance"
                 >
                   here
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
                 career in a few notable companies in Indonesia, the most notable
                 one is{" "}
                 <a
-                  className=" underline fancy-anchor"
+                  className=" fancy-anchor dark:text-gray-300 dark:underline"
                   href="https://about.bukalapak.com/"
                   target="_blank"
                   rel="noreferrer noopener"
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
               <p className="mb-3">
                 Feel free to look at my side project that I make public on{" "}
                 <a
-                  className=" underline fancy-anchor"
+                  className=" fancy-anchor dark:text-gray-300 dark:underline"
                   href="https://github.com/melvnl"
                   target="_blank"
                   rel="noreferrer noopener"
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                 on{" "}
                 <span>
                   <a
-                    className=" underline fancy-anchor"
+                    className=" fancy-anchor dark:text-gray-300 dark:underline"
                     href="https://github.com/melvnl"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
                   </a>
                   ,{" "}
                   <a
-                    className=" underline fancy-anchor"
+                    className=" fancy-anchor dark:text-gray-300 dark:underline"
                     href="https://www.linkedin.com/in/melvin-liu/"
                     target="_blank"
                     rel="noreferrer noopener"
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
                   </a>
                   , or{" "}
                   <a
-                    className=" underline fancy-anchor"
+                    className=" fancy-anchor dark:text-gray-300 dark:underline"
                     href="https://twitter.com/mlven23"
                     target="_blank"
                     rel="noreferrer noopener"
