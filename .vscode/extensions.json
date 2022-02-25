@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "coenraads.bracket-pair-colorizer",
+    "dbaeumer.vscode-eslint",
+    "dracula-theme.theme-dracula",
+    "monokai.theme-monokai-pro-vscode",
+    "ecmel.vscode-html-css",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-azuretools.vscode-docker",
+    "shyykoserhiy.vscode-spotify",
+    "wix.vscode-import-cost",
+    "zignd.html-css-class-completion",
+    //for react developer
+    "dsznajder.es7-react-js-snippets",
+    //for vue developer
+    "jcbuisson.vue",
+    "octref.vetur",
+    "sdras.vue-vscode-snippets"
+  ]
+}
