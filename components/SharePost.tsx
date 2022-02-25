@@ -6,7 +6,7 @@ function ShareLink({ href, children }: any) {
     <a
       href={href}
       target="_blank"
-      className=" p-2 text-primaryGray rounded-sm hover:bg-gray-200"
+      className=" p-2 text-primaryGray dark:text-white rounded-sm hover:bg-gray-200"
       rel="noreferrer"
     >
       {children}
@@ -32,14 +32,14 @@ export default function SharePost({ title, read, href }: any) {
         </div>
         <div className="text-sm description">
           <p>By Melvin Liu</p>
-          <span className=" text-primaryGray">
+          <span className=" text-primaryGray dark:text-white">
             Engineering, Design, Entrepreneurship
           </span>
         </div>
       </div>
       <div className=" ">
         <p className=" mt-10 mb-5 text-base">{read} read</p>
-        <h1 className="uppercase text-sm text-primaryGray mb-2">
+        <h1 className="uppercase text-sm text-primaryGray dark:text-white mb-2">
           share this post
         </h1>
         <div className=" flex items-center">

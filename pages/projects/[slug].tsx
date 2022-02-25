@@ -15,10 +15,10 @@ export default function Project({
   return (
     <>
       <Container>
-        <div className=" min-h-screen text-primaryBlack flex flex-col md:flex-row ">
+        <div className=" min-h-screen text-primaryBlack dark:text-white flex flex-col md:flex-row ">
           <div className=" w-full">
             <div className="heading mb-4">
-              <span className=" text-sm  md:text-lg text-primaryGray">
+              <span className=" text-sm  md:text-lg text-primaryGray dark:text-gray-300">
                 {heading}
               </span>
             </div>
@@ -29,11 +29,11 @@ export default function Project({
               alt={title}
               quality={100}
             />
-            <h1 className=" text-primaryBlack font-semibold text-2xl md:text-4xl mt-8">
+            <h1 className=" font-semibold text-2xl md:text-4xl mt-8">
               {title}
             </h1>
             <div className=" my-2 text-base md:text-lg">
-              <p className="text-primaryBlack mb-2">{description}</p>
+              <p className="mb-2">{description}</p>
               <a className=" flex items-center" href={link}>
                 <FaLink size={16} className=" text-primaryRed" />
                 <span className=" text-primaryRed ml-2 hover:underline">
@@ -42,7 +42,7 @@ export default function Project({
               </a>
             </div>
             <hr className="mt-4" />
-            <div className=" prose md:prose-lg prose-a:text-primaryRed ">
+            <div className=" prose md:prose-lg prose-a:text-primaryRed dark:prose-invert ">
               <ReactMarkdown className=" w-full">{content}</ReactMarkdown>
             </div>
           </div>

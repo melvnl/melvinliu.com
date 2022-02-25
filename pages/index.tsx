@@ -5,12 +5,12 @@ import Container from "@/components/Container";
 const Home: NextPage = () => {
   return (
     <Container>
-      <div className=" bg-primaryWhite">
-        <div className=" text-primaryBlack ">
+      <div className=" bg-primaryWhite dark:bg-darkBlack">
+        <div className=" text-primaryBlack dark:text-white ">
           <h1 className=" font-sans font-bold text-3xl md:text-5xl mb-10 md:mb-20">
             Move Fast, Break Things
           </h1>
-          <div className=" text-primaryBlack font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className=" font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className=" text-left">
               <p className=" mb-3">
                 Hi, I&#39;m Melvin Liu, a Software Engineer who resides in

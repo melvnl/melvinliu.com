@@ -23,9 +23,11 @@ export default function ProjectCard({
               height="400"
               alt="Hero 1"
             />
-            <h1 className="text-base font-medium text-primaryGray">{type}</h1>
+            <h1 className="text-base font-medium text-primaryGray dark:text-gray-300">
+              {type}
+            </h1>
           </div>
-          <div className="description text-primaryBlack text-base md:text-xl max-w-[577px]">
+          <div className="description text-primaryBlack dark:text-white text-base md:text-xl max-w-[577px]">
             <h2 className=" font-bold mb-2">{title}</h2>
             <p className=" font-medium">{description}</p>
           </div>

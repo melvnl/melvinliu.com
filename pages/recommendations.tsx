@@ -7,11 +7,11 @@ const Home: NextPage = () => {
 
   return (
     <Container>
-      <div className=" bg-primaryWhite">
-        <h5 className="text-lg md:text-xl font-bold text-primaryBlack">
+      <div className=" bg-primaryWhite dark:bg-darkBlack">
+        <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
           Give Me Your Recommendation!
         </h5>
-        <p className="my-1 text-primaryBlack">
+        <p className="my-1 text-primaryBlack dark:text-white">
           Share a message for my future client.
         </p>
         {!session && (
@@ -33,8 +33,8 @@ const Home: NextPage = () => {
                 className=" rounded-full h-12 w-12 bg-cover bg-white bg-no-repeat mr-3"
               />
               <div className="flex flex-col">
-                <p className="text-primaryBlack">Sign In as</p>
-                <p className="font-bold text-primaryBlack">
+                <p className="text-primaryBlack dark:text-white">Sign In as</p>
+                <p className="font-bold text-primaryBlack dark:text-white">
                   {session?.user.email}
                 </p>
               </div>

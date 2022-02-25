@@ -41,19 +41,19 @@ export default function Form() {
   };
   return (
     <form className=" md:ml-20 w-full max-w-3xl" onSubmit={sendForm}>
-      <h1 className=" text-2xl md:text-5xl font-semibold text-primaryBlack mb-6">
+      <h1 className=" text-2xl md:text-5xl font-semibold text-primaryBlack dark:text-white mb-6">
         Available for freelance projects
       </h1>
       <div className="flex flex-wrap mb-6">
         <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
           <label
-            className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
+            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="name"
           >
             Your Name
           </label>
           <input
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="name"
             type="text"
             placeholder="Name"
@@ -65,13 +65,13 @@ export default function Form() {
         </div>
         <div className="w-full md:w-1/2 md:px-3 md:pl-0">
           <label
-            className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
+            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="email"
           >
             Email
           </label>
           <input
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="email"
             type="email"
             name="email"
@@ -85,13 +85,13 @@ export default function Form() {
       <div className="flex flex-wrap  mb-6">
         <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
           <label
-            className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
+            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="entity"
           >
             Company/Brand
           </label>
           <input
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="entity"
             type="text"
             name="entity"
@@ -103,7 +103,7 @@ export default function Form() {
         </div>
         <div className="w-full md:w-1/2 md:px-3 md:pl-0">
           <label
-            className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
+            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="timeframe"
           >
             Time Frame
@@ -125,7 +125,7 @@ export default function Form() {
       <div className="flex flex-wrap  mb-6">
         <div className="w-full md:px-3 md:pl-0">
           <label
-            className="block capitalize tracking-wide text-gray-700 text-base font-normal mb-2"
+            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="brief"
           >
             Project Brief
@@ -145,7 +145,7 @@ export default function Form() {
       {message ? <FormMessage status={formStatus} /> : null}
       <button
         type="submit"
-        className="bg-primaryGray hover:bg-primaryRed text-white font-semibold py-3 px-8 rounded-sm mb-8"
+        className="bg-primaryGray dark:bg-gray-700 hover:bg-primaryRed dark:hover:bg-primaryRed text-white font-semibold py-3 px-8 rounded-sm mb-8"
       >
         Submit
       </button>

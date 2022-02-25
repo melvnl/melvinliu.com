@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -15,6 +16,7 @@ module.exports = {
         borderGray: "#4C4C4C",
         secondaryGray: "#A5A4A3",
         bgHovered: "#F7F6F4",
+        darkBlack: "#1F2028"
       },
       fontFamily: {
         sans: ["Inter"],
