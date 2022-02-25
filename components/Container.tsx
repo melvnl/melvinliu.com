@@ -29,9 +29,9 @@ function NavItem({ href, text }: Nav) {
       <a
         className={cn(
           isActive
-            ? "font-semibold text-gray-800 "
-            : "font-normal text-gray-600",
-          " p-1 md:ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered transition-all"
+            ? "font-semibold text-gray-800 dark:text-white "
+            : "font-normal text-gray-600 dark:text-gray-300",
+          " p-1 md:ml-4 sm:px-3 sm:py-2 rounded-sm hover:bg-bgHovered dark:hover:bg-gray-700 transition-all"
         )}
       >
         <span className="capsize">{text}</span>
@@ -99,12 +99,12 @@ export default function Container(props: any) {
       </Head>
       <div
         className={cn(
-          onTop ? "" : "shadow-sm ",
-          "bg-primaryWhite sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 xl:px-24 mb-4"
+          onTop ? "" : "shadow-sm dark:shadow-gray-300 ",
+          "bg-primaryWhite dark:bg-darkBlack sticky top-0 z-50 border-b  border-primaryRed md:border-0 px-2 xl:px-24 mb-4"
         )}
       >
         <nav className=" flex justify-between items-center w-full relative mx-auto py-4 ">
-          <div className=" hidden font-bold md:block text-2xl whitespace-nowrap text-primaryBlack">
+          <div className=" hidden font-bold md:block text-2xl whitespace-nowrap text-primaryBlack dark:text-white">
             melvinliu.com
           </div>
           <div className=" w-full flex justify-between items-center md:w-auto ">
@@ -114,7 +114,7 @@ export default function Container(props: any) {
             <button
               aria-label="Toggle Dark Mode"
               type="button"
-              className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+              className="w-9 h-9 md:ml-4 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
               onClick={() =>
                 setTheme(resolvedTheme === "light" ? "dark" : "light")
               }

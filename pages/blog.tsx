@@ -21,19 +21,19 @@ export default function Blog({
       description="Thoughts on the software industry, programming, and career in tech"
     >
       <div className="flex flex-col items-start justify-center mb-16">
-        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl ">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-primaryBlack dark:text-white md:text-5xl ">
           Blog
         </h1>
-        <p className="mb-4 text-gray-600 text-lg font-semibold ">
+        <p className="mb-4 text-gray-600 text-lg font-semibold dark:text-white ">
           Thoughts, career hacks, software-engineering, and front-end
           development.
         </p>
-        <span className=" text-base text-primaryGray max-w-2xl">
+        <span className=" text-base text-primaryGray dark:text-white max-w-2xl">
           {`I've been writing online since 2021, mostly about web development and
           tech careers. In total, I've written ${posts.length}  articles on my blog. Use the
           search below to filter by title`}
         </span>
-        <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl ">
+        <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-primaryBlack dark:text-white md:text-4xl ">
           All Posts
         </h3>
         <div className="relative w-full mb-4">
