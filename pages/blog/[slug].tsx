@@ -30,7 +30,7 @@ export default function Post({
   return (
     <>
       <Container>
-        <div className=" text-primaryBlack flex flex-col md:flex-row ">
+        <div className=" text-primaryBlack dark:text-white flex flex-col md:flex-row ">
           <div className="mb-8 w-32 md:w-[270px]">
             <Link href={`/blog`}>
               <a className=" hover:text-primaryRed flex items-center border p-1 rounded md:border-0 ">
@@ -51,7 +51,7 @@ export default function Post({
               title={title}
               href={`https://melvinliu.com/blog/${slug}`}
             />
-            <div className="prose">
+            <div className="prose dark:prose-invert">
               <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
                 {content}
               </ReactMarkdown>

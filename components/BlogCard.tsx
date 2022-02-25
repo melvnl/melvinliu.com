@@ -29,7 +29,7 @@ export default function BlogCard({
             />
           </div>
           <div className=" py-4">
-            <h4 className="w-full mb-2 text-lg font-bold text-primaryBlack md:text-2xl group-hover:text-primaryRed ">
+            <h4 className="w-full mb-2 text-lg font-bold text-primaryBlack dark:text-white md:text-2xl group-hover:text-primaryRed ">
               {title}
             </h4>
             <div className="mb-2">

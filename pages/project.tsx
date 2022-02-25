@@ -17,7 +17,7 @@ export default function Projects({
       title="Projects – Melvin Liu"
       description="Curated list of my engineering and product design project"
     >
-      <div className=" text-primaryBlack">
+      <div className=" text-primaryBlack dark:text-white">
         <div className=" mb-16 md:mb-32 ">
           <h1 className=" font-semibold text-2xl md:text-6xl max-w-5xl mb-10 md:mb-20">
             I solve incredibly challenging software and design problems, here
@@ -31,9 +31,7 @@ export default function Projects({
           </ScrollToButton>
         </div>
 
-        <h1 className=" font-semibold text-primaryBlack text-xl md:text-3xl mb-8">
-          Projects
-        </h1>
+        <h1 className=" font-semibold text-xl md:text-3xl mb-8">Projects</h1>
         <div id="project" className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {projects
             .sort((a, b) => a.body.id - b.body.id)

@@ -43,11 +43,14 @@ export default function Subscribe() {
         Subscribe to the newsletter
       </h1>
 
-      <p className=" text-primaryBlack text-sm md:text-base">
+      <p className=" text-primaryBlack dark:text-white text-sm md:text-base">
         Level up your knowledge about web development, tech, and hot topics in
         startup business environtment by joining my newsletter 🚀
       </p>
-      <form className=" my-2 text-primaryBlack" onSubmit={subscribe}>
+      <form
+        className=" my-2 text-primaryBlack dark:text-white"
+        onSubmit={subscribe}
+      >
         <div className="flex flex-col md:flex-row mb-2">
           <input
             id="email-input"
