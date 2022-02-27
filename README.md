@@ -14,6 +14,7 @@
 - `lib/*` - Short for "library", a collection of helpful utilities
 - `pages/blog/*` - Static pre-rendered blog pages using markdown.
 - `pages/*` - All other static pages.
+- `prisma/*` - My Prisma schema, which uses a PlanetScale MySQL database.
 - `public/*` - Static assets including fonts, images,etc.
 - `styles/*` - A small amount of global styles. Currently using Tailwind CSS.
 
