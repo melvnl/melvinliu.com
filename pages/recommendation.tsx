@@ -169,6 +169,7 @@ const Recommendations: NextPage = () => {
                   required
                   className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
+                  value={data.company}
                 />
               </div>
               <div className=" w-full md:w-1/2">
@@ -187,6 +188,7 @@ const Recommendations: NextPage = () => {
                   rows={8}
                   className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
+                  value={data.message}
                 />
               </div>
 
