@@ -1,8 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import db from "@/lib/firebase";
-import { withSentry } from "@sentry/nextjs";
 
-export default withSentry(async (req: any, res: any) => {
+export default async (req: any, res: any) => {
   if (req.method === "POST") {
     const ref = db.ref("views").child(req.query.slug);
     const { snapshot } = await ref.transaction((currentViews) => {
@@ -24,4 +23,4 @@ export default withSentry(async (req: any, res: any) => {
 
     return res.status(200).json({ total: views });
   }
-});
+};
