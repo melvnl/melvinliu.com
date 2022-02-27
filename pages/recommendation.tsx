@@ -109,7 +109,7 @@ const Recommendations: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
-          Give Me Your Recommendation!
+          Give Me Your Recommendation
         </h5>
         <p className="my-1 text-primaryBlack dark:text-white">
           Share a message for my future client & colleague.
