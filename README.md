@@ -2,6 +2,9 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Vercel](https://vercel.com)
+- **Database**: [Planetscale](https://planetscale.com/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Authentication**: [NextAuth.js](https://next-auth.js.org/)
 - **Content**: [Markdown](https://github.com/remarkjs/react-markdown)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
