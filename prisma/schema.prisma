@@ -13,8 +13,7 @@ model Users {
 id      Int   @default(autoincrement()) @id
 name    String @db.VarChar(50)
 email   String @db.VarChar(50)
-date    DateTime @default(now())
+date    DateTime @default(now()) @db.DateTime(6)
 company String @db.VarChar(50)
-relation String @db.VarChar(100)
 message String @db.VarChar(255)
 }
