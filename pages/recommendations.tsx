@@ -144,7 +144,7 @@ const Recommendations: NextPage = () => {
                 </div>
               </div>
               <button
-                className="font-bold h-8 mt-4 lg:mt-0 bg-gray-200 text-gray-900 rounded w-28"
+                className="font-bold h-8 mt-4 lg:mt-0 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
                 onClick={(e) => {
                   e.preventDefault();
                   signOut();

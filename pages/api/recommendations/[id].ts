@@ -43,21 +43,20 @@ export default async function handler(
   }
 
   if (req.method === "PUT") {
-    const body = (req.body.message || "").slice(0, 500);
+    const message = (req.body.message || "").slice(0, 500);
 
     await prisma.users.update({
       where: {
         id: Number(id),
       },
       data: {
-        body,
-        updated_at: new Date().toISOString(),
+        message,
       },
     });
 
     return res.status(201).json({
       ...entry,
-      body,
+      message,
     });
   }
 
