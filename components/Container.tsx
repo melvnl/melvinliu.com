@@ -15,7 +15,7 @@ const links = [
   { href: "/", text: "Home" },
   { href: "/blog", text: "Blog" },
   { href: "/project", text: "Project" },
-  { href: "/inquiry", text: "Inquiry" },
+  { href: "/support", text: "Support" },
 ];
 
 let saidHello = !HelloFlag;

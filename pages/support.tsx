@@ -21,11 +21,11 @@ function RecommendationEntry({ entry, user }: any) {
   const deleteEntry = async (e: any) => {
     e.preventDefault();
 
-    await fetch(`/api/recommendations/${entry.id}`, {
+    await fetch(`/api/support/${entry.id}`, {
       method: "DELETE",
     });
 
-    mutate("/api/recommendations");
+    mutate("/api/support");
   };
 
   return (
@@ -56,9 +56,9 @@ function RecommendationEntry({ entry, user }: any) {
   );
 }
 
-const Recommendations: NextPage = () => {
+const Support: NextPage = () => {
   const { data: session } = useSession();
-  const { data: entries } = useSWR("/api/recommendations", fetcher);
+  const { data: entries } = useSWR("/api/support", fetcher);
 
   const { mutate } = useSWRConfig();
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -77,7 +77,7 @@ const Recommendations: NextPage = () => {
 
     console.log({ data });
 
-    const res = await fetch("/api/recommendations", {
+    const res = await fetch("/api/support", {
       body: JSON.stringify({
         company: data.company,
         message: data.message,
@@ -96,10 +96,10 @@ const Recommendations: NextPage = () => {
       });
       return;
     }
-    mutate("/api/recommendations");
+    mutate("/api/support");
     setForm({
       state: Form.Success,
-      message: `Hooray! Thanks for giving me your recommendation.`,
+      message: `Hooray! Thanks for giving me your support.`,
     });
     setData({
       company: "",
@@ -111,7 +111,7 @@ const Recommendations: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
-          Give Me Your Recommendation
+          Give Me Your Support
         </h5>
         <p className="my-1 text-primaryBlack dark:text-white">
           Share a message for my future client & colleague.
@@ -223,4 +223,4 @@ const Recommendations: NextPage = () => {
   );
 };
 
-export default Recommendations;
+export default Support;
