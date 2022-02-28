@@ -8,6 +8,8 @@ import { useState } from "react";
 import { Form, FormState } from "@/lib/types";
 import LoadingSpinner from "@/components/LoadingSpinner";
 
+import { FiGithub } from "react-icons/fi";
+
 async function fetcher(...args: any) {
   const res = await fetch(args);
 
@@ -116,13 +118,13 @@ const Recommendations: NextPage = () => {
         </p>
         {!session && (
           <button
-            className="flex items-center justify-center my-4 font-bold h-8 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
+            className=" flex items-center my-4 font-semibold px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white dark:text-white rounded "
             onClick={(e) => {
               e.preventDefault();
               signIn("github");
             }}
           >
-            Login
+            <FiGithub size={16} className=" mr-2" /> Login with Github
           </button>
         )}
         {session?.user && (
