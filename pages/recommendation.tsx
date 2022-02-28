@@ -169,6 +169,7 @@ const Recommendations: NextPage = () => {
                   aria-label="Type Your company..."
                   placeholder="Type Your company..."
                   required
+                  maxLength={50}
                   className="appearance-none block w-full bg-gray-200 text-gray-700  border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
                   value={data.company}
@@ -185,9 +186,10 @@ const Recommendations: NextPage = () => {
                   id="message"
                   name="message"
                   aria-label="Type Your Message..."
-                  placeholder="Type Your Message..."
+                  placeholder="Type Your Message (500 max characters)..."
                   required
                   rows={8}
+                  maxLength={500}
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
                   value={data.message}
