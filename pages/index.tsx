@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                 <span>
                   <a
                     className=" fancy-anchor dark:text-gray-300 dark:underline"
-                    href="https://github.com/melvnl"
+                    href="https://www.instagram.com/mlven23/"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
