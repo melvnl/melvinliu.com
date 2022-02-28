@@ -15,5 +15,5 @@ name    String @db.VarChar(50)
 email   String @db.VarChar(50)
 date    DateTime @default(now()) @db.DateTime(6)
 company String @db.VarChar(50)
-message String @db.VarChar(255)
+message String @db.VarChar(500)
 }
