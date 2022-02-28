@@ -169,7 +169,7 @@ const Recommendations: NextPage = () => {
                   aria-label="Type Your company..."
                   placeholder="Type Your company..."
                   required
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700  border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
                   value={data.company}
                 />
@@ -188,7 +188,7 @@ const Recommendations: NextPage = () => {
                   placeholder="Type Your Message..."
                   required
                   rows={8}
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   onChange={handleChange}
                   value={data.message}
                 />
