@@ -71,11 +71,21 @@ const Support: NextPage = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
+  const notification = async () => {
+    await fetch("/api/discord", {
+      body: JSON.stringify({
+        content: `someone give you a recommendations! Check it out melv: https://melvinliu.com/support`,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+  };
+
   const leaveEntry = async (e: any) => {
     e.preventDefault();
     setForm({ state: Form.Loading });
-
-    console.log({ data });
 
     const res = await fetch("/api/support", {
       body: JSON.stringify({
@@ -101,6 +111,7 @@ const Support: NextPage = () => {
       state: Form.Success,
       message: `Hooray! Thanks for giving me your support.`,
     });
+    notification();
     setData({
       company: "",
       message: "",
