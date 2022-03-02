@@ -12,7 +12,7 @@
 
 - `data/*` - markdown file data that is used for blogs
 - `lib/*` - Short for "library", a collection of helpful utilities
-- `pages/api/*` - API routes powering newsletter subscription, recommendation, discord webhook, spotify and post views.
+- `pages/api/*` - API routes powering newsletter subscription, authentication,  discord webhook, spotify and post views.
 - `pages/blog/*` - Static pre-rendered blog pages using markdown.
 - `pages/*` - All other static pages.
 - `prisma/*` - My Prisma schema, which uses a PlanetScale MySQL database.
