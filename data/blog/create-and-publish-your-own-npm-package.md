@@ -80,3 +80,15 @@ npm link your-package-name
 ```
 
 This command will link your current app/project with the package that you have locally (let's say you have a project written in react, let's call it book-app-store, to test the discord-alert package, you can type **npm link discord-alert**, and use it locally to make sure whether it's work)
+
+### Step 5: Publish
+
+Run
+
+```bash
+npm publish
+```
+
+and you will receive an email notification from npmjs that your package is already shipped 🥳
+
+**_Note:_** npmjs and yarnpkg are somehow connected hence if you publish it to npm , it also shipped to yarn , read [this](https://stackoverflow.com/questions/58071109/difference-between-yarn-registry-and-npm-registry) for further information.
