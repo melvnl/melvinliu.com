@@ -21,7 +21,7 @@ const Home: NextPage = () => {
                 worked with diverse projects, you can check my work{" "}
                 <a
                   className=" fancy-anchor dark:text-gray-300 dark:underline"
-                  href="https://melvinliu.com/freelance"
+                  href="https://melvinliu.com/project"
                 >
                   here
                 </a>
