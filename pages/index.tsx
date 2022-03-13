@@ -13,12 +13,11 @@ const Home: NextPage = () => {
           <div className=" font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className=" text-left">
               <p className=" mb-3">
-                Hi, I&#39;m Melvin Liu, a Software Engineer who resides in
+                Hi, I&#39;m Melvin Liu, a Software Engineer from Jakarta,
                 Indonesia.
               </p>
-              <p className=" mb-3">
-                I currently run my own design and development studio and have
-                worked with diverse projects, you can check my work{" "}
+              {/* <p className=" mb-3">
+                Currently{" "}
                 <a
                   className=" fancy-anchor dark:text-gray-300 dark:underline"
                   href="https://melvinliu.com/project"
@@ -26,7 +25,7 @@ const Home: NextPage = () => {
                   here
                 </a>
                 .
-              </p>
+              </p> */}
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
                 career in a few notable companies in Indonesia, the most notable
