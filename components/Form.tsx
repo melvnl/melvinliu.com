@@ -1,12 +1,7 @@
 import { useState } from "react";
-import { send } from "emailjs-com";
 import FormMessage from "./FormMessage";
 
 export default function Form() {
-  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
-  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
-  const USER_ID = process.env.NEXT_PUBLIC_USER_ID as string;
-
   const [message, setMessage] = useState(false);
   const [formStatus, setFormStatus] = useState(0);
 
@@ -22,13 +17,21 @@ export default function Form() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const sendForm = (e: any) => {
+  const sendForm = async (e: any) => {
     e.preventDefault();
 
-    send(SERVICE_ID, TEMPLATE_ID, data, USER_ID)
-      .then((response) => {
+    await fetch("/api/discord", {
+      body: JSON.stringify({
+        content: `someone send you an Inquiry! \n\nName: ${data.name}\nEmail: ${data.email}\nEntity: ${data.entity}\nTimeframe: ${data.timeframe}\nBrief: ${data.brief}`,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then(function (res) {
         setMessage(true);
-        setFormStatus(response.status);
+        setFormStatus(res.status);
         setData({
           name: "",
           email: "",
@@ -37,7 +40,9 @@ export default function Form() {
           brief: "",
         });
       })
-      .catch((err) => {});
+      .catch(function (res) {
+        setFormStatus(res.status);
+      });
   };
   return (
     <form className=" md:ml-20 w-full max-w-3xl" onSubmit={sendForm}>
