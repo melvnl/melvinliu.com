@@ -16,16 +16,16 @@ const Home: NextPage = () => {
                 Hi, I&#39;m Melvin Liu, a Software Engineer from Jakarta,
                 Indonesia.
               </p>
-              {/* <p className=" mb-3">
-                Currently{" "}
+              <p className=" mb-3">
+                Currently working as Software Engineer at{" "}
                 <a
                   className=" fancy-anchor dark:text-gray-300 dark:underline"
-                  href="https://melvinliu.com/project"
+                  href="https://makmur.id/"
                 >
-                  here
+                  Makmur
                 </a>
-                .
-              </p> */}
+                , a technology-based investment application for Indonesians.
+              </p>
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
                 career in a few notable companies in Indonesia, the most notable
