@@ -22,6 +22,7 @@ export default function Form() {
 
     await fetch("/api/discord", {
       body: JSON.stringify({
+        type: "inquiry",
         content: `someone send you an Inquiry! \n\nName: ${data.name}\nEmail: ${data.email}\nEntity: ${data.entity}\nTimeframe: ${data.timeframe}\nBrief: ${data.brief}`,
       }),
       headers: {

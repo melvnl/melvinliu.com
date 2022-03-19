@@ -4,14 +4,19 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { content } = req.body;
+  const { content, type } = req.body;
+
+  const typeObj = {
+    support: process.env.DC_SUPPORT,
+    inquiry: process.env.DC_INQUIRY,
+  };
 
   if (!content) {
     return res.status(400).json({ error: "There is no content" });
   }
 
   try {
-    const webhook = process.env.DISCORD_API;
+    const webhook = typeObj[type as keyof typeof typeObj];
     const response = await fetch(`${webhook}`, {
       body: JSON.stringify({ content }),
       headers: {

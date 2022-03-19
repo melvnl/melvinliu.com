@@ -74,6 +74,7 @@ const Support: NextPage = () => {
   const notification = async () => {
     await fetch("/api/discord", {
       body: JSON.stringify({
+        type: "support",
         content: `someone give you a recommendation! Check it out melv: https://melvinliu.com/support \n\nCompany: ${data.company}\nMessage: ${data.message}`,
       }),
       headers: {
