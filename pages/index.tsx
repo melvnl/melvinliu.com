@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                 >
                   Makmur
                 </a>
-                , a technology-based investment application for Indonesians.
+                , a technology-based investment application for Indonesian.
               </p>
               <p className=" mb-3">
                 In the past, I was lucky enough to start my software engineering
