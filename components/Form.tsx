@@ -115,7 +115,7 @@ export default function Form() {
             Time Frame
           </label>
           <select
-            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-sm leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-sm leading-tight focus:outline-none focus:bg-white focus:border-gray-500 appearance-none"
             id="timeframe"
             onChange={handleChange}
             name="timeframe"
