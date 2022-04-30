@@ -9,13 +9,13 @@ import ProjectCard from "../components/ProjectCard";
 import ScrollToButton from "@/components/ScrollToButton";
 import { FaArrowDown } from "react-icons/fa";
 
-export default function Projects({
-  projects,
+export default function Works({
+  works,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container
-      title="Projects – Melvin Liu"
-      description="Curated list of my engineering and product design project"
+      title="Work – Melvin Liu"
+      description="Curated list of my engineering and product design work"
     >
       <div className=" text-primaryBlack dark:text-white">
         <div className=" mb-16 md:mb-32 ">
@@ -23,7 +23,7 @@ export default function Projects({
             I solve incredibly challenging software and design problems, here
             are just a few examples.
           </h1>
-          <ScrollToButton toId="project" duration={500} className=" bg-black">
+          <ScrollToButton toId="work" duration={500} className=" bg-black">
             <FaArrowDown
               className="animate-bounce  hover:text-primaryRed cursor-pointer"
               size={32}
@@ -31,21 +31,21 @@ export default function Projects({
           </ScrollToButton>
         </div>
 
-        <h1 className=" font-semibold text-xl md:text-3xl mb-8">Projects</h1>
-        <div id="project" className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects
+        <h1 className=" font-semibold text-xl md:text-3xl mb-8">Works</h1>
+        <div id="work" className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {works
             .sort((a, b) => a.body.id - b.body.id)
-            .map((project) => (
+            .map((work) => (
               <ProjectCard
-                key={project.body.title}
-                cover={project.body.cover}
-                banner={project.body.banner}
-                title={project.body.title}
-                link={project.body.title}
-                slug={project.body.slug}
-                type={project.body.type}
-                date={project.body.date}
-                description={project.body.description}
+                key={work.body.title}
+                cover={work.body.cover}
+                banner={work.body.banner}
+                title={work.body.title}
+                link={work.body.title}
+                slug={work.body.slug}
+                type={work.body.type}
+                date={work.body.date}
+                description={work.body.description}
               />
             ))}
         </div>
@@ -55,17 +55,17 @@ export default function Projects({
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("data/project"));
+  const files = fs.readdirSync(path.join("data/work"));
 
-  const projects = files.map((filename) => {
+  const works = files.map((filename) => {
     const slug = filename.replace(".md", "");
 
-    const file = fs.readFileSync(path.join("data/project", filename), "utf-8");
+    const file = fs.readFileSync(path.join("data/work", filename), "utf-8");
 
     const { data: body } = matter(file);
 
     return { slug, body };
   });
 
-  return { props: { projects: projects } };
+  return { props: { works: works } };
 }
