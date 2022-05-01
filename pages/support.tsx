@@ -123,7 +123,7 @@ const Support: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
-          Give Me Your Support
+          Give Me Your Recommendation
         </h5>
         <p className="my-1 text-primaryBlack dark:text-white">
           Share a message for my future client & colleague.
@@ -258,7 +258,7 @@ const Support: NextPage = () => {
         )}
 
         <h6 className=" mt-10 mb-8 text-md md:text-lg font-bold text-primaryBlack dark:text-white">
-          What People Say about me!
+          What People Say about me 👇
         </h6>
         <div className=" w-full md:w-1/2">
           {entries?.map((entry: any) => (
