@@ -12,7 +12,7 @@ export default function ProjectCard({
   banner,
 }: Project) {
   return (
-    <Link href={`/projects/${slug}`}>
+    <Link href={`/work/${slug}`}>
       <a className="">
         <div className="wrapper hover:cursor-pointer mb-5 ">
           <div className="img-wrapper mb-2 md:mb-8">

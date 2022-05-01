@@ -17,6 +17,4 @@ Bukalapak is an Indonesian-based technology born in 2010, with a focus on helpin
 
 Some of the other achievements including Satyalancana Wira Karya Medal of Honors for our Founders, Achmad Zaky in 2016 and Fajrin in 2019, ranking 14th in Financial Times’ list of High Growth Companies in the Asia Pacific, HR Asia’s Best Companies To Work For in 2019 - 2020, and The Best Contact Center Indonesia 2018 and 2019 by the Indonesia Contact Center Association (ICCA)
 
-![Bukalapak](https://media-exp1.licdn.com/dms/image/C561BAQEPej_J56epSQ/company-background_10000/0/1609234834974?e=1642950000&v=beta&t=zVVRbUOjrYBlBjehjuNWnIrjmmkurJzYnEVShqRB2Yw)
-
 ## Description coming soon...

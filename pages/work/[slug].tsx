@@ -53,7 +53,7 @@ export default function Project({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("data/project"));
+  const files = fs.readdirSync(path.join("data/work"));
 
   const paths = files.map((filename) => ({
     params: {
@@ -68,10 +68,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: any) {
-  const files = fs.readFileSync(
-    path.join("data/project", slug + ".md"),
-    "utf-8"
-  );
+  const files = fs.readFileSync(path.join("data/work", slug + ".md"), "utf-8");
 
   const { data: meta, content } = matter(files);
 
