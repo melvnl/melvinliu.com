@@ -33,7 +33,6 @@ export default function Footer() {
       <div className="w-full flex flex-col md:flex-row ">
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Contact</h1>
-          <div className="">phone: +62-819-0881-6826</div>
           <div className="">email: melvinliu2000@gmail.com</div>
         </div>
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
