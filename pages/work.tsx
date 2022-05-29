@@ -32,7 +32,7 @@ export default function Works({
         </div>
 
         <h1 className=" font-semibold text-xl md:text-3xl mb-8">Works</h1>
-        <div id="work" className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div id="work" className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {works
             .sort((a, b) => a.body.id - b.body.id)
             .map((work) => (
