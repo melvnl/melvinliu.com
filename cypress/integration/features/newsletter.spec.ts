@@ -1,4 +1,4 @@
-import { describe, it, cy } from "local-cypress";
+import { describe, it, cy, beforeEach } from "local-cypress";
 
 describe("Newsletter works as expected", () => {
   beforeEach(() => {

@@ -1,103 +1,62 @@
 import type { NextPage } from "next";
-// import Image from "next/image";
+import Image from "next/image";
 import Container from "@/components/Container";
 
 const Home: NextPage = () => {
   return (
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
-        <div className=" text-primaryBlack dark:text-white ">
-          <h1 className=" font-sans font-bold text-3xl md:text-5xl mb-10 md:mb-20">
-            Move Fast, Break Things
+        <div className=" text-primaryBlack dark:text-white mb-10 md:mb-20 ">
+          <h1 className=" font-sans font-bold text-3xl md:text-6xl mb-5 md: mb-10">
+            Hi, <br />
+            I&#39;m Melvin.
+            <br />
+            Software Engineer <br />
+            based in <span className=" text-primaryRed">Indonesia.</span>
           </h1>
-          <div className=" font-normal grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className=" text-left">
-              <p className=" mb-3">
-                Hi, I&#39;m Melvin Liu, a Software Engineer from Jakarta,
-                Indonesia.
-              </p>
-              <p className=" mb-3">
-                Currently working as Software Engineer at{" "}
-                <a
-                  className=" fancy-anchor dark:text-gray-300 dark:underline"
-                  href="https://makmur.id/"
-                >
-                  Makmur
-                </a>
-                , a technology-based investment application for Indonesian.
-              </p>
-              <p className=" mb-3">
-                In the past, I was lucky enough to start my software engineering
-                career in a few notable companies in Indonesia, the most notable
-                one is{" "}
-                <a
-                  className=" fancy-anchor dark:text-gray-300 dark:underline"
-                  href="https://about.bukalapak.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Bukalapak
-                </a>{" "}
-                - Indonesia first unicorn startup goes IPO (Initial Public
-                Offering), once started as a marketplace platform and grew into
-                an All-Commerce platform, empowering both users and communities
-                as one company: Buka.
-              </p>
-
-              <p></p>
+          <p className=" font-sans text-base md:text-xl max-w-[750px] text-primaryGray dark:text-white">
+            with 2 years of solid experience in web things. Currently, I&#39;m
+            focused on building accessible financial planning and long-term
+            investment platform at{" "}
+            <a
+              className=" text-primaryRed hover:cursor-pointer hover:underline"
+              href="https://www.makmur.id"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Makmur.
+            </a>
+          </p>
+        </div>
+        <div className=" text-primaryBlack dark:text-white flex flex-col md:flex-row my-8">
+          <p className=" font-bold text-xl md:text-3xl mr-12">
+            Trusted by Indonesia&#39;s <br />
+            leading companies
+          </p>
+          <div className="flex flex-col md:flex-row">
+            <div className=" max-w-[100px] md:max-w-full md:mx-4 my-2 md:my-auto">
+              <Image
+                src="/static/images/tanihub-1.svg"
+                width={173}
+                height={29}
+                alt="TaniHub group"
+              />
             </div>
-            <div className=" border-l-0 md:border-l pl-0 md:pl-4 border-gray-200 text-left">
-              <p className=" mb-3">
-                My main expertise is web development, especially in front-end
-                engineering with either Vue.js/ React.js, but currently, I
-                started to learn database (PostgreSQL). and a backend language
-                as well (Golang)
-              </p>
-              <p className="mb-3">
-                Feel free to look at my side project that I make public on{" "}
-                <a
-                  className=" fancy-anchor dark:text-gray-300 dark:underline"
-                  href="https://github.com/melvnl"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Github
-                </a>
-              </p>
+            <div className=" max-w-[100px] md:max-w-full md:mx-4 my-2 md:my-auto">
+              <Image
+                src="/static/images/bukalapak-1.svg"
+                width={148}
+                height={29}
+                alt="Bukalapak"
+              />
             </div>
-            <div className=" border-l-0 md:border-l pl-0 md:pl-4  border-gray-200 text-left">
-              <p className=" mb-3">
-                If you have read this far, let&#39;s be friends! Connect with me
-                on{" "}
-                <span>
-                  <a
-                    className=" fancy-anchor dark:text-gray-300 dark:underline"
-                    href="https://www.instagram.com/mlven23/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Instagram
-                  </a>
-                  ,{" "}
-                  <a
-                    className=" fancy-anchor dark:text-gray-300 dark:underline"
-                    href="https://www.linkedin.com/in/melvin-liu/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Linkedin
-                  </a>
-                  , or{" "}
-                  <a
-                    className=" fancy-anchor dark:text-gray-300 dark:underline"
-                    href="https://twitter.com/mlven23"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Twitter
-                  </a>
-                </span>
-              </p>
+            <div className=" max-w-[100px] md:max-w-full md:mx-4 my-2 md:my-auto">
+              <Image
+                src="/static/images/ternak-uang.svg"
+                width={148}
+                height={29}
+                alt="Ternak Uang"
+              />
             </div>
           </div>
         </div>
