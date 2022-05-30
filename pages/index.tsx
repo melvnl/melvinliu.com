@@ -58,6 +58,14 @@ const Home: NextPage = () => {
                 alt="Ternak Uang"
               />
             </div>
+            <div className=" max-w-[100px] md:max-w-full md:mx-4 my-2 md:my-auto">
+              <Image
+                src="/static/images/makmur.svg"
+                width={137}
+                height={24}
+                alt="Makmur"
+              />
+            </div>
           </div>
         </div>
       </div>
