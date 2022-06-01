@@ -14,6 +14,13 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="preload"
+          href="/fonts/Menlo.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
         <link href="/static/images/favicon.svg" rel="shortcut icon" />
         <link rel="apple-touch-icon" href="/static/images/favicon.svg" />
         <link
@@ -34,7 +41,7 @@ export default function Document() {
           rel="mask-icon"
         />
       </Head>
-      <body className="bg-primaryWhite dark:bg-darkBlack">
+      <body className="font-sans bg-primaryWhite dark:bg-darkBlack">
         <Main />
         <NextScript />
       </body>

@@ -7,14 +7,14 @@ const Home: NextPage = () => {
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <div className=" text-primaryBlack dark:text-white mb-10 md:mb-20 ">
-          <h1 className=" font-sans font-bold text-3xl md:text-6xl mb-5 md: mb-10">
+          <h1 className=" font-mono font-bold text-3xl md:text-6xl mb-5 md:mb-10">
             Hi, <br />
             I&#39;m Melvin.
             <br />
             Software Engineer <br />
             based in <span className=" text-primaryRed">Indonesia.</span>
           </h1>
-          <p className=" font-sans text-base md:text-xl max-w-[750px] text-primaryGray dark:text-white">
+          <p className="text-base md:text-xl max-w-[750px] text-primaryGray dark:text-white">
             with 2 years of solid experience in web things. Currently, I&#39;m
             focused on building accessible financial planning and long-term
             investment platform at{" "}
