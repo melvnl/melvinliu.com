@@ -1,8 +1,19 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Container from "@/components/Container";
+import useSWR from "swr";
+
+async function fetcher(...args: any) {
+  const res = await fetch(args);
+
+  return res.json();
+}
 
 const Home: NextPage = () => {
+  const { data } = useSWR("/api/topTracks", fetcher);
+
+  console.log(data);
+
   return (
     <Container>
       <div className=" bg-primaryWhite dark:bg-darkBlack">
