@@ -261,13 +261,17 @@ const Support: NextPage = () => {
           What People Say about me 👇
         </h6>
         <div className=" w-full md:w-1/2">
-          {entries?.map((entry: any) => (
-            <RecommendationEntry
-              key={entry.id}
-              entry={entry}
-              user={session?.user}
-            />
-          ))}
+          {!entries ? (
+            <LoadingSpinner />
+          ) : (
+            entries.map((entry: any) => (
+              <RecommendationEntry
+                key={entry.id}
+                entry={entry}
+                user={session?.user}
+              />
+            ))
+          )}
         </div>
       </div>
     </Container>
