@@ -120,7 +120,10 @@ const Support: NextPage = () => {
   };
 
   return (
-    <Container>
+    <Container
+      title="Recommendation – Melvin Liu"
+      description="List of recommendation received from peers and colleagues"
+    >
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
           Give Me Your Recommendation

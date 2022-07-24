@@ -15,7 +15,10 @@ const Dashboard: NextPage = () => {
   const { data } = useSWR("/api/topTracks", fetcher);
 
   return (
-    <Container>
+    <Container
+      title="Dashboard – Melvin Liu"
+      description="My personal dashboard to track various metrics across platforms like Spotify, Github, Youtube, and more."
+    >
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl items-center flex font-mono font-bold mb-4 text-primaryBlack dark:text-white">
           <SiSpotify size={20} color={"#1ED760"} className="mr-2" />
