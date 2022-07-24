@@ -9,7 +9,7 @@ async function fetcher(...args: any) {
 }
 
 export default function Spotify() {
-  const { data } = useSWR("/api//nowPlaying", fetcher);
+  const { data } = useSWR("/api/nowPlaying", fetcher);
 
   return (
     <>
