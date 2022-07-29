@@ -33,7 +33,7 @@ function NavItem({ href, text }: Nav) {
           isActive
             ? "font-semibold text-gray-800 dark:text-white "
             : "font-normal text-gray-600 dark:text-gray-300",
-          " hidden md:inline-block p-1 md:mr-7 sm:px-3 sm:py-2 sm:pl-0 rounded-sm hover:bg-bgHovered dark:hover:bg-gray-700 transition-all"
+          " hidden md:inline-block p-1 md:mr-7 sm:px-3 sm:py-2 sm:pl-0 rounded-sm transition-all"
         )}
       >
         <span className="capsize">{text}</span>
