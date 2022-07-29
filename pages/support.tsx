@@ -120,7 +120,10 @@ const Support: NextPage = () => {
   };
 
   return (
-    <Container>
+    <Container
+      title="Recommendation – Melvin Liu"
+      description="List of recommendation received from peers and colleagues"
+    >
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <h5 className="text-lg md:text-xl font-bold text-primaryBlack dark:text-white">
           Give Me Your Recommendation
@@ -261,13 +264,17 @@ const Support: NextPage = () => {
           What People Say about me 👇
         </h6>
         <div className=" w-full md:w-1/2">
-          {entries?.map((entry: any) => (
-            <RecommendationEntry
-              key={entry.id}
-              entry={entry}
-              user={session?.user}
-            />
-          ))}
+          {!entries ? (
+            <LoadingSpinner />
+          ) : (
+            entries.map((entry: any) => (
+              <RecommendationEntry
+                key={entry.id}
+                entry={entry}
+                user={session?.user}
+              />
+            ))
+          )}
         </div>
       </div>
     </Container>

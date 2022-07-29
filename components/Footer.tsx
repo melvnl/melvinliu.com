@@ -44,14 +44,6 @@ export default function Footer() {
           </div>
           <div className="">
             <ExternalLink
-              prefix="Instagram: "
-              href="https://www.instagram.com/mlven23/"
-            >
-              @mlven23
-            </ExternalLink>
-          </div>
-          <div className="">
-            <ExternalLink
               prefix="Linkedin: "
               href="https://www.linkedin.com/in/melvin-liu/"
             >
