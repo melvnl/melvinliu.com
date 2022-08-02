@@ -1,6 +1,6 @@
-import { useRouter } from "next/router";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { SpotifyFlag } from "@/constants/env";
+import { format } from "date-fns";
 import Spotify from "./Spotify";
 
 const ExternalLink = ({ prefix, href, children }: any) => (
@@ -18,22 +18,41 @@ const ExternalLink = ({ prefix, href, children }: any) => (
   </>
 );
 
-async function fetcher(...args: any) {
-  const res = await fetch(args);
+const BusyMessage = () => (
+  <div className=" flex items-center">
+    <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-red-400 opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+    <p className=" ml-1">Busy - Work</p>
+  </div>
+);
 
-  return res.json();
-}
+const AvailableMessage = () => (
+  <div className=" flex items-center">
+    <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-green-400 opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+    <p className=" ml-1">Available</p>
+  </div>
+);
 
 export default function Footer() {
-  const router = useRouter();
-
+  const currTime = new Date(
+    new Date().toLocaleString("en-US", {
+      timeZone: "Asia/Jakarta",
+    })
+  );
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
       <hr className="w-full border-1 border-gray-200 mb-8" />
       <div className="w-full flex flex-col md:flex-row ">
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/2 text-primaryBlack dark:text-white">
-          <h1 className=" mb-2 font-semibold">Contact</h1>
-          <div className="">email: melvinliu2000@gmail.com</div>
+          <h1 className=" mb-2 font-semibold">My Current Time</h1>
+          <div className=" mb-2">{format(currTime, "p")}</div>
+          {currTime.getHours() >= 13 && currTime.getHours() <= 21 && (
+            <BusyMessage />
+          )}
+          {(currTime.getHours() < 13 || currTime.getHours() > 21) && (
+            <AvailableMessage />
+          )}
         </div>
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Social</h1>
