@@ -5,7 +5,6 @@ import Container from "@/components/Container";
 import BlogCard from "@/components/BlogCard";
 import { InferGetStaticPropsType } from "next";
 import { useState } from "react";
-import Subscribe from "@/components/Subscribe";
 
 export default function Blog({
   posts,
@@ -77,7 +76,6 @@ export default function Blog({
             />
           ))}
         </div>
-        <Subscribe />
       </div>
     </Container>
   );
