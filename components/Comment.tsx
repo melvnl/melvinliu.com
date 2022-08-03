@@ -1,4 +1,4 @@
-import { Giscus } from "@giscus/react";
+import Giscus from "@giscus/react";
 
 export default function Comment() {
   return (

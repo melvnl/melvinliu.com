@@ -16,7 +16,7 @@
     "cy": "cypress open"
   },
   "dependencies": {
-    "@giscus/react": "^1.1.1",
+    "@giscus/react": "^2.2.0",
     "@prisma/client": "^3.10.0",
     "@tailwindcss/typography": "^0.5.0",
     "classnames": "^2.3.1",
