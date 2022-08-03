@@ -39,7 +39,7 @@ export default function Post({
               </a>
             </Link>
           </div>
-          <div className="right">
+          <div className="right w-full">
             <span className=" text-base">
               Published on {format(parseISO(date), "MMMM dd, yyyy")}
             </span>
@@ -51,11 +51,9 @@ export default function Post({
               title={title}
               href={`https://melvinliu.com/blog/${slug}`}
             />
-            <div className="prose dark:prose-invert">
-              <ReactMarkdown className=" w-full max-w-[550px] xl:max-w-[700px]">
-                {content}
-              </ReactMarkdown>
-            </div>
+            <ReactMarkdown className="prose dark:prose-invert w-full max-w-[550px] xl:max-w-[700px]">
+              {content}
+            </ReactMarkdown>
             {CommentFlag && <Comment />}
           </div>
         </div>
