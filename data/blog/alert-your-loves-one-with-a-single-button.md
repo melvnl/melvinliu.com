@@ -141,5 +141,5 @@ getAddressFromLatLon(Latitude: userLatitude, Longitude: userLongitude){ (success
 
 # Demo
 
-[![Demo](https://img.youtube.com/vi/PNHZ9oppUDA/0.jpg)](https://youtube.com/shorts/PNHZ9oppUDA)
-Click the image above
+Check the demonstration video
+[https://youtube.com/shorts/PNHZ9oppUDA](https://youtube.com/shorts/PNHZ9oppUDA)
