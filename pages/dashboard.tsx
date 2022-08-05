@@ -13,7 +13,9 @@ async function fetcher(...args: any) {
 
 const Dashboard: NextPage = () => {
   const { data } = useSWR("/api/topTracks", fetcher);
+  const { data: matchData } = useSWR("/api/valorant/matchHistory", fetcher);
 
+  console.log(matchData);
   return (
     <Container
       title="Dashboard – Melvin Liu"
