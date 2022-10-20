@@ -12,7 +12,7 @@ const Home: NextPage = () => {
             I&#39;m Melvin.
             <br />
             Software Engineer <br />
-            based in <span className=" text-primaryRed">Indonesia.</span>
+            based in <span className=" text-primaryRed">Indonesia🇮🇩</span>
           </h1>
           <p className="text-base md:text-xl max-w-[750px] text-primaryGray dark:text-white">
             with 2 years of solid experience in web things. Currently, I&#39;m
