@@ -3,10 +3,6 @@ import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import { Blog } from "@/lib/types";
 
-import { FiEye, FiClock } from "react-icons/fi";
-
-import ViewCounter from "./ViewCounter";
-
 export default function BlogCard({
   title,
   slug,
@@ -32,18 +28,15 @@ export default function BlogCard({
             <h4 className="w-full mb-2 text-lg font-bold text-primaryBlack dark:text-white md:text-2xl group-hover:text-primaryRed ">
               {title}
             </h4>
-            <div className="mb-2">
-              <div className="flex items-center">
-                <FiClock size={17} />
-                <span className="ml-1 mr-2">{read} read</span>
-                <FiEye size={17} />
-                <ViewCounter slug={slug} />
+            <div className="mb-6">
+              <div className="flex text-sm text-primaryGray items-center">
+                <span className="">
+                  {format(parseISO(date), "MMMM dd, yyyy")}
+                </span>
+                ·<span className="ml-1 mr-2">{read} read ☕</span>
               </div>
             </div>
-            <div className=" mt-4 mb-2">
-              <span className=" font-semibold">
-                {format(parseISO(date), "MMMM dd, yyyy")}
-              </span>
+            <div className=" text-base mb-2">
               <p>{description}</p>
             </div>
           </div>
