@@ -101,8 +101,10 @@ export default function Container(props: any) {
       </Head>
       <div
         className={cn(
-          onTop ? "" : "shadow-sm dark:shadow-gray-300 ",
-          "bg-primaryWhite dark:bg-darkBlack sticky top-0 z-50 md:border-b   md:border-0 px-2 xl:px-24 mb-4"
+          onTop
+            ? "bg-transparent"
+            : "bg-primaryWhite shadow-sm dark:shadow-gray-300 md:border-b  md:border-0 ",
+          "dark:bg-darkBlack sticky top-0 z-50 px-2 xl:px-24 mb-4"
         )}
       >
         <nav className=" flex justify-between items-center w-full relative  py-4 ">
