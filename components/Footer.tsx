@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="w-full flex flex-col md:flex-row ">
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">My Local Time</h1>
-          <div className=" mb-2">{format(currTime, "p")}</div>
+          <div className=" mb-2">{format(currTime, "p")} (UTC +07:00)</div>
           {currTime.getHours() >= 13 && currTime.getHours() <= 21 && (
             <BusyMessage />
           )}
