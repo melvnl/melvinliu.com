@@ -3,25 +3,11 @@
 
 echo '🏗️👷 Styling, testing and building your project before committing'
 
-# Format with Prettier before commiting
-yarn format ||
+# Format with Prettier & Check Eslint Standards before commiting
+yarn lint-staged ||
 (
-    echo 'Prettier format failied to run';
+    echo 'lint staged failed to run';
     false;
-)
-
-# Check Prettier standards
-yarn check-format ||
-(
-    echo 'Prettier Check Failed. Run npm run format, add changes and try commit again.';
-    false;
-)
-
-# Check ESLint Standards
-yarn check-lint ||
-(
-        echo 'ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
 )
 
 # Check tsconfig standards
