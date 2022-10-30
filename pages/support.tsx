@@ -267,7 +267,7 @@ const Support: NextPage = () => {
           What People Say about me 👇
         </h6>
         <div className=" w-full md:w-1/2">
-          {!entries ? (
+          {!entries && (
             <>
               <div className=" mb-4">
                 <Skeleton height={24} borderRadius={0} />
@@ -278,15 +278,15 @@ const Support: NextPage = () => {
                 <Skeleton height={24} borderRadius={0} />
               </div>
             </>
-          ) : (
+          )}
+          {entries &&
             entries.map((entry: any) => (
               <RecommendationEntry
                 key={entry.id}
                 entry={entry}
                 user={session?.user}
               />
-            ))
-          )}
+            ))}
         </div>
       </div>
     </Container>

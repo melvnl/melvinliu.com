@@ -29,7 +29,7 @@ const Dashboard: NextPage = () => {
         <p className="mb-8 text-gray-800 font-normal dark:text-white">
           Here&apos;s my daily jam updated daily via Spotify API.
         </p>
-        {!data ? (
+        {!data && (
           <div className=" flex flex-row">
             <Skeleton width={100} height={100} borderRadius={0} />
             <div className=" ml-4">
@@ -37,7 +37,8 @@ const Dashboard: NextPage = () => {
               <Skeleton width={200} height={24} borderRadius={0} />
             </div>
           </div>
-        ) : (
+        )}
+        {data &&
           data.map(
             (
               item: {
@@ -76,8 +77,7 @@ const Dashboard: NextPage = () => {
                 </div>
               </a>
             )
-          )
-        )}
+          )}
       </div>
     </Container>
   );

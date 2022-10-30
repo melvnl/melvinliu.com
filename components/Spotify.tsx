@@ -17,7 +17,7 @@ export default function Spotify() {
         <h1 className=" mb-2 font-semibold">Currently Listening to</h1>
       ) : null}
       <div className="flex border p-3 rounded-sm shadow-sm">
-        {data?.isPlaying ? (
+        {data?.isPlaying && (
           <>
             <div data-cy="spotify" className="relative w-full">
               <div className="flex">
@@ -37,7 +37,8 @@ export default function Spotify() {
               </div>
             </div>
           </>
-        ) : (
+        )}
+        {!data?.isPlaying && (
           <div className=" flex items-center">
             <svg className="h-12 w-12" viewBox="0 0 168 168">
               <path
