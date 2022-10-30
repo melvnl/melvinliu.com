@@ -3,6 +3,8 @@ import { SpotifyFlag } from "@/constants/env";
 import { format } from "date-fns";
 import Spotify from "./Spotify";
 
+import { useLocalTime } from "@/hooks/useLocalTime";
+
 const ExternalLink = ({ prefix, href, children }: any) => (
   <>
     <span className="text-primaryBlack dark:text-white">{prefix}</span>
@@ -35,11 +37,8 @@ const AvailableMessage = () => (
 );
 
 export default function Footer() {
-  const currTime = new Date(
-    new Date().toLocaleString("en-US", {
-      timeZone: "Asia/Jakarta",
-    })
-  );
+  const { currTime, currTimeInHour } = useLocalTime();
+
   return (
     <footer className="flex flex-col justify-center items-start mx-auto w-full mt-20 mb-8 ">
       <hr className="w-full border-1 border-gray-200 mb-8" />
@@ -47,12 +46,8 @@ export default function Footer() {
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">My Local Time</h1>
           <div className=" mb-2">{format(currTime, "p")} (UTC +07:00)</div>
-          {currTime.getHours() >= 13 && currTime.getHours() <= 21 && (
-            <BusyMessage />
-          )}
-          {(currTime.getHours() < 13 || currTime.getHours() > 21) && (
-            <AvailableMessage />
-          )}
+          {currTimeInHour >= 13 && currTimeInHour <= 21 && <BusyMessage />}
+          {(currTimeInHour < 13 || currTimeInHour > 21) && <AvailableMessage />}
         </div>
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Social</h1>
