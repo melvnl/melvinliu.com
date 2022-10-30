@@ -6,6 +6,9 @@ import useSWR, { useSWRConfig } from "swr";
 import { format } from "date-fns";
 import { useState } from "react";
 import { Form, FormState } from "@/lib/types";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import LoadingSpinner from "@/components/LoadingSpinner";
 
 import { FiGithub } from "react-icons/fi";
@@ -265,7 +268,16 @@ const Support: NextPage = () => {
         </h6>
         <div className=" w-full md:w-1/2">
           {!entries ? (
-            <LoadingSpinner />
+            <>
+              <div className=" mb-4">
+                <Skeleton height={24} borderRadius={0} />
+                <Skeleton height={24} borderRadius={0} />
+              </div>
+              <div className="">
+                <Skeleton height={24} borderRadius={0} />
+                <Skeleton height={24} borderRadius={0} />
+              </div>
+            </>
           ) : (
             entries.map((entry: any) => (
               <RecommendationEntry

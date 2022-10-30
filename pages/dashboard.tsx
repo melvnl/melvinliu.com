@@ -3,7 +3,9 @@ import Image from "next/image";
 import Container from "@/components/Container";
 import useSWR from "swr";
 import { SiSpotify } from "react-icons/si";
-import LoadingSpinner from "@/components/LoadingSpinner";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 async function fetcher(...args: any) {
   const res = await fetch(args);
@@ -27,9 +29,14 @@ const Dashboard: NextPage = () => {
         <p className="mb-8 text-gray-800 font-normal dark:text-white">
           Here&apos;s my daily jam updated daily via Spotify API.
         </p>
-        {}
         {!data ? (
-          <LoadingSpinner />
+          <div className=" flex flex-row">
+            <Skeleton width={100} height={100} borderRadius={0} />
+            <div className=" ml-4">
+              <Skeleton width={150} height={24} borderRadius={0} />
+              <Skeleton width={200} height={24} borderRadius={0} />
+            </div>
+          </div>
         ) : (
           data.map(
             (
