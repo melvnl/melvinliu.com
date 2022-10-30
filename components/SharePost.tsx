@@ -32,9 +32,7 @@ export default function SharePost({ title, read, href }: any) {
         </div>
         <div className="text-sm description">
           <p>By Melvin Liu</p>
-          <span className=" text-primaryGray dark:text-white">
-            Engineering, Design, Entrepreneurship
-          </span>
+          <span className=" text-primaryGray dark:text-white">Engineering</span>
         </div>
       </div>
       <div className=" ">
