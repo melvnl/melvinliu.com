@@ -12,6 +12,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
+    "postbuild": "next-sitemap",
     "prepare": "husky install",
     "cy": "cypress open"
   },
@@ -45,6 +46,7 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.0",
     "lint-staged": "^13.0.3",
+    "next-sitemap": "^3.1.29",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prisma": "^3.10.0",
