@@ -11,7 +11,7 @@ const ExternalLink = ({ prefix, href, children }: any) => (
     <a
       className="text-primaryRed "
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer me"
       href={href}
     >
       {children}
