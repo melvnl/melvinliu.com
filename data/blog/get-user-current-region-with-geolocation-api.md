@@ -32,9 +32,9 @@ https://geolocation-db.com/json/ will result in this :
   "country_name":"Indonesia",
   "city":"Denpasar",
   "postal":null,
-  "latitude":-8.65,
-  "longitude":115.2167,
-  "IPv4":"182.253.155.163",
+  "latitude": "coordinate",
+  "longitude": "coordinate",
+  "IPv4":"IP Address",
   "state":"Bali"
 }
 ```
