@@ -4,8 +4,8 @@ import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
 import { InferGetStaticPropsType } from "next";
-import Container from "../components/Container";
-import ProjectCard from "../components/ProjectCard";
+import Container from "@/components/Container";
+import ProjectCard from "@/components/ProjectCard";
 import ScrollToButton from "@/components/ScrollToButton";
 import { FaArrowDown } from "react-icons/fa";
 

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Container from "@/components/Container";
-import prisma from "../lib/prisma";
+import prisma from "@/lib/prisma";
 import { useSession, signIn, signOut } from "next-auth/react";
 import useSWR, { useSWRConfig } from "swr";
 import { format } from "date-fns";
