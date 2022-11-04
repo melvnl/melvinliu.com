@@ -74,7 +74,7 @@ export default function Container(props: any) {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4 md:px-8 xl:px-24 2xl:px-48">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -104,7 +104,7 @@ export default function Container(props: any) {
           onTop
             ? "bg-transparent"
             : "bg-primaryWhite shadow-sm dark:shadow-gray-300 md:border-b  md:border-0 ",
-          "dark:bg-darkBlack sticky top-0 z-50 px-2 xl:px-24 mb-4"
+          "dark:bg-darkBlack sticky top-0 z-50 first:mb-4"
         )}
       >
         <nav className=" flex justify-between items-center w-full relative  py-4 ">
@@ -152,7 +152,7 @@ export default function Container(props: any) {
           </button>
         </nav>
       </div>
-      <main className=" flex flex-col justify-center px-2 xl:px-24 mt-2 md:mt-8 pt-2 md:pt-4  ">
+      <main className=" flex flex-col justify-center mt-2 md:mt-8 pt-2 md:pt-4  ">
         {children}
         <Footer />
       </main>
