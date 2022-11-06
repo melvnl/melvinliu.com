@@ -24,13 +24,20 @@ let saidHello = !HelloFlag;
 
 function NavItem({ href, text }: Nav) {
   const router = useRouter();
-  const isActive = router.asPath === href;
 
+  const isActive = () => {
+    if (router.asPath.includes(href)) {
+      if (router.asPath === "/") return true;
+      else if (href.length > 1) return true;
+    }
+
+    return false;
+  };
   return (
     <NextLink href={href}>
       <a
         className={cn(
-          isActive
+          isActive()
             ? "font-semibold text-gray-800 dark:text-white "
             : "font-normal text-gray-600 dark:text-gray-300",
           " hidden md:inline-block p-1 md:mr-7 sm:px-3 sm:py-2 sm:pl-0 rounded-sm transition-all"
