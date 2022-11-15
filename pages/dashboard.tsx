@@ -53,9 +53,9 @@ export default function Dashboard({
                 <MdArticle size={20} className="mr-2" />
                 Latest Article
               </h5>
-              <div className=" flex flex-col md:flex-row gap-4">
+              <div className=" flex flex-col lg:flex-row gap-4">
                 {filteredBlogPosts.map((post) => (
-                  <div key={post.body.title} className="w-full md:w-1/2">
+                  <div key={post.body.title} className="w-full lg:w-1/2">
                     <BlogCard
                       key={post.body.title}
                       cover={post.body.cover}
