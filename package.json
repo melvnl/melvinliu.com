@@ -60,7 +60,7 @@
       "prettier -w",
       "eslint "
     ],
-    "./**/*.{json,css,scss,md,mdx}": [
+    "./**/*.{json,css,scss}": [
       "prettier -w"
     ]
   }
