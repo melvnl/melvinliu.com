@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { FaFacebook, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaTelegram,
+} from "react-icons/fa";
 
 function ShareLink({ href, children }: any) {
   return (
@@ -18,6 +24,8 @@ export default function SharePost({ title, read, href }: any) {
   const shareTwitter = `http://twitter.com/share?text=${title}&url=${href}`;
   const shareLinkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${href}`;
   const shareFacebook = `https://www.facebook.com/sharer/sharer.php?u=${href}&t=${title}`;
+  const shareWhatsapp = `whatsapp://send?text=Link: ${href}`;
+  const shareTelegram = `https://telegram.me/share/url?url=${href}&text=${title}`;
 
   return (
     <div className=" mb-10">
@@ -32,7 +40,9 @@ export default function SharePost({ title, read, href }: any) {
         </div>
         <div className="text-sm description">
           <p>By Melvin Liu</p>
-          <span className=" text-primaryGray dark:text-white">Engineering</span>
+          <span className=" text-primaryGray dark:text-white">
+            Software Design | Engineering | Architecture
+          </span>
         </div>
       </div>
       <div className=" ">
@@ -41,14 +51,20 @@ export default function SharePost({ title, read, href }: any) {
           share this post
         </h1>
         <div className=" flex items-center">
+          <ShareLink href={shareWhatsapp}>
+            <FaWhatsapp className="hover:text-gray-900" size={22} />
+          </ShareLink>
           <ShareLink href={shareTwitter}>
-            <FaTwitter className="hover:text-blue-500" size={22} />
+            <FaTwitter className="hover:text-gray-900" size={22} />
+          </ShareLink>
+          <ShareLink href={shareTelegram}>
+            <FaTelegram className="hover:text-gray-900" size={22} />
           </ShareLink>
           <ShareLink href={shareLinkedin}>
-            <FaLinkedinIn className="hover:text-blue-700" size={22} />
+            <FaLinkedinIn className="hover:text-gray-900" size={22} />
           </ShareLink>
           <ShareLink href={shareFacebook}>
-            <FaFacebook className="hover:text-blue-700" size={22} />
+            <FaFacebook className="hover:text-gray-900" size={22} />
           </ShareLink>
         </div>
         <hr className=" mt-8 max-w-[40px]" />
