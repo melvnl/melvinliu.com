@@ -266,6 +266,9 @@ const Support: NextPage = () => {
         <h6 className=" mt-10 mb-8 text-md md:text-lg font-bold text-primaryBlack dark:text-white">
           What People Say about me 👇
         </h6>
+        <p className=" mt-10 text-base font-regular text-primaryBlack dark:text-white">
+          {entries && `Total: ${entries?.length}`}
+        </p>
         <div className=" w-full md:w-1/2">
           {!entries && (
             <>
