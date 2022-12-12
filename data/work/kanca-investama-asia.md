@@ -1,5 +1,5 @@
 ---
-id: 6
+id: 9
 title: Kanca Investama Asia
 slug: kanca-investama-asia
 type: WEB DEV
