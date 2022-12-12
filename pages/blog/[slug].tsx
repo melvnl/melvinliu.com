@@ -11,9 +11,10 @@ import { useEffect } from "react";
 import Comment from "@/components/Comment";
 import { CommentFlag } from "@/constants/env";
 import { CountViewFlag } from "@/constants/env";
+import Head from "next/head";
 
 export default function Post({
-  meta: { title, slug, read, date },
+  meta: { title, cover, description, slug, read, date },
   content,
 }: any) {
   useEffect(() => {
@@ -30,6 +31,28 @@ export default function Post({
   return (
     <>
       <Container>
+        <Head>
+          <title>{`Blog - ${title}`}</title>
+          <meta name="robots" content="follow, index" />
+          <meta content={description} name="description" />
+          <meta
+            property="og:url"
+            content={`https://melvinliu.com/blog/${slug}`}
+          />
+          <link rel="canonical" href={`https://melvinliu.com/blog/${slug}`} />
+          <link rel="icon" href="/static/images/favicon.svg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Melvin Liu" />
+          <meta property="og:description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta property="og:image" content={cover} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@mlven23" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={cover} />
+          <meta property="article:published_time" content={date} />
+        </Head>
         <div className=" text-primaryBlack dark:text-white flex flex-col md:flex-row ">
           <div className="mb-8 w-32 md:w-[270px]">
             <Link href={`/blog`}>
