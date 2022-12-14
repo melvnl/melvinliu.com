@@ -4,7 +4,6 @@ slug: add-github-comment-widget-to-your-site
 cover: "/static/images/blogs/6.jpg"
 description: A comments system powered by GitHub Discussions. 💬 💎
 date: "2022-02-07"
-read: 4 min
 ---
 
 ## Problem
@@ -140,14 +139,14 @@ That's it folks! Hope this tutorial help, and happy hacking!
 
 **Reference:**
 
-https://giscus.app/  
-https://graphql.org/  
+https://giscus.app/
+https://graphql.org/
 https://www.freecodecamp.org/news/graphql-vs-rest-api/
 
 **You can find me on**
 
-Twitter: https://twitter.com/mlven23  
-GitHub: https://github.com/melvnl  
+Twitter: https://twitter.com/mlven23
+GitHub: https://github.com/melvnl
 LinkedIn: https://www.linkedin.com/in/melvin-liu/
 
 **Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

@@ -4,7 +4,6 @@ slug: send-message-to-discord-server
 cover: "/static/images/blogs/7.png"
 description: Send a message / notification to discord server from your project/app.
 date: "2022-03-02"
-read: 2 min
 ---
 
 ### Problem

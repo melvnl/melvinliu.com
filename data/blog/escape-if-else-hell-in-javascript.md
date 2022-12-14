@@ -4,7 +4,6 @@ slug: escape-if-else-hell-in-javascript
 cover: "/static/images/blogs/4.png"
 description: You probably need to refactor that deep nested conditional if-else statement.
 date: "2021-10-31"
-read: 2 min
 ---
 
 ### Backstory / Problem

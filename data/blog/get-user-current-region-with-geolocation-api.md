@@ -4,7 +4,6 @@ slug: get-user-current-region-with-geolocation-api
 cover: "/static/images/blogs/10.jpg"
 description: How to get user current region/country location with Geolocation API in javascript.
 date: "2022-11-01"
-read: 2 min
 ---
 
 ### Problem

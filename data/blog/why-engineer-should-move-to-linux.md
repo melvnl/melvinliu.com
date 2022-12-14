@@ -4,7 +4,6 @@ slug: why-engineer-should-move-to-linux
 cover: "/static/images/blogs/1.jpg"
 description: Bunch of technical reasons why Windows bad for software engineer.
 date: "2021-12-10"
-read: 2 min
 ---
 
 ### Backstory

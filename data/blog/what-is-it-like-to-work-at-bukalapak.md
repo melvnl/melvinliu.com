@@ -4,7 +4,6 @@ slug: what-is-it-like-to-work-at-bukalapak
 cover: "/static/images/blogs/5.jpg"
 description: Learn what is it like to be a software engineer in Indonesia first unicorn that goes IPO (from ex engineer perspective)
 date: "2022-01-24"
-read: 5 min
 ---
 
 # Introduction

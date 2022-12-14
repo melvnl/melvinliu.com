@@ -7,9 +7,9 @@ export type Blog = {
   title: string;
   slug: string;
   date: string;
-  read: string;
   description: string;
   cover: string;
+  content: string;
 };
 
 export type Project = {

@@ -4,7 +4,6 @@ slug: upload-file-to-strapi
 cover: "/static/images/blogs/3.png"
 description: Send form data to strapi backend is quite tricky, here is how!
 date: "2021-10-13"
-read: 2 min
 ---
 
 When I first started using Strapi as a CMS for one of my client, to give them a little freedom to manage their website content, the hardest part of the development was when I need to build a feature where there is a contact form which people can add and send an attachment (pdf/zip/image/etc.)

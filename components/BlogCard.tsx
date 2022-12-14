@@ -1,14 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
+import readingTime from "reading-time";
 import { Blog } from "@/lib/types";
 
 export default function BlogCard({
   title,
   slug,
   date,
-  read,
   description,
+  content,
   cover,
 }: Blog) {
   return (
@@ -33,7 +34,7 @@ export default function BlogCard({
                 <span className="">
                   {format(parseISO(date), "MMMM dd, yyyy")}
                 </span>
-                ·<span className="ml-1 mr-2">{read} read ☕</span>
+                ·<span className="ml-1 mr-2">{readingTime(content).text}</span>
               </div>
             </div>
             <div className=" text-base mb-2">

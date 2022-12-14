@@ -4,7 +4,6 @@ slug: alert-your-loves-one-with-a-single-button
 cover: "/static/images/blogs/9.jpg"
 description: Notify your loved one your whereabouts.
 date: "2022-08-03"
-read: 2 min
 ---
 
 # Problem

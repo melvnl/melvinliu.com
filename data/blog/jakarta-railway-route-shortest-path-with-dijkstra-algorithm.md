@@ -4,7 +4,6 @@ slug: jakarta-railway-route-shortest-path-with-dijkstra-algorithm
 cover: "/static/images/blogs/11.jpg"
 description: Who says we won't use data structure in day to day job as a software engineer? here's how Dijkstra Algorithm help hundreds of train passengers in Jakarta.
 date: "2022-12-12"
-read: 4 min
 ---
 
 ## Overview
@@ -84,15 +83,15 @@ In a summarized way, the algorithm…
 
 Dijkstra’s Algorithm Complexity can be vary depending on the implementation, but normaly it is O(n²) being n the number of vertexes. And the space complexity O(n).
 
-**Reference:**  
+**Reference:**
 [https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/](https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/)
 
 
 
 **You can find me on**
 
-Twitter: [https://twitter.com/mlven23](https://twitter.com/mlven23)  
-GitHub: [https://github.com/melvnl](https://github.com/melvnl)  
-LinkedIn: [https://www.linkedin.com/in/melvin-liu/](https://www.linkedin.com/in/melvin-liu/)  
+Twitter: [https://twitter.com/mlven23](https://twitter.com/mlven23)
+GitHub: [https://github.com/melvnl](https://github.com/melvnl)
+LinkedIn: [https://www.linkedin.com/in/melvin-liu/](https://www.linkedin.com/in/melvin-liu/)
 
 **Note**: If you have any questions, you can leave a message below by Sign In with your GitHub account 😉

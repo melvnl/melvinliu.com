@@ -71,8 +71,8 @@ export default function Blog({
               title={post.body.title}
               slug={post.body.slug}
               date={post.body.date}
-              read={post.body.read}
               description={post.body.description}
+              content={post.content}
             />
           ))}
         </div>
@@ -90,9 +90,9 @@ export async function getStaticProps() {
 
       const file = fs.readFileSync(path.join("data/blog", filename), "utf-8");
 
-      const { data: body } = matter(file);
+      const { data: body, content } = matter(file);
 
-      return { title, body };
+      return { title, body, content };
     })
     .sort(
       (a, b) => Number(new Date(b.body.date)) - Number(new Date(a.body.date))

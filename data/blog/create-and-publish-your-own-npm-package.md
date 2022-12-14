@@ -4,7 +4,6 @@ slug: create-and-publish-your-own-npm-package
 cover: "/static/images/blogs/8.jpg"
 description: How to create and publish your own NPM package in minutes!
 date: "2022-03-09"
-read: 2 min
 ---
 
 ## Overview
