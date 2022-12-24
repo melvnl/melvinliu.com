@@ -18,6 +18,9 @@ module.exports = {
         bgHovered: "#F7F6F4",
         darkBlack: "#1F2028",
       },
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
       fontFamily: {
         sans: ["Inter"],
       },
