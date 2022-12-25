@@ -1,6 +1,9 @@
 import { useState } from "react";
 import FormMessage from "./FormMessage";
 
+const description =
+  "But first, you need you to complete this form. Once you've done, I will contact you to discuss more.";
+
 export default function Form() {
   const [message, setMessage] = useState(false);
   const [formStatus, setFormStatus] = useState(0);
@@ -8,8 +11,7 @@ export default function Form() {
   const [data, setData] = useState({
     name: "",
     email: "",
-    entity: "",
-    timeframe: "2-3 months",
+    subject: "",
     brief: "",
   });
 
@@ -23,7 +25,7 @@ export default function Form() {
     await fetch("/api/discord", {
       body: JSON.stringify({
         type: "inquiry",
-        content: `someone send you an Inquiry! \n\nName: ${data.name}\nEmail: ${data.email}\nEntity: ${data.entity}\nTimeframe: ${data.timeframe}\nBrief: ${data.brief}`,
+        content: `someone send you an Inquiry! \n\nName: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\nBrief: ${data.brief}`,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -36,8 +38,7 @@ export default function Form() {
         setData({
           name: "",
           email: "",
-          entity: "",
-          timeframe: "2-3 months",
+          subject: "",
           brief: "",
         });
       })
@@ -47,8 +48,8 @@ export default function Form() {
   };
   return (
     <form className=" md:ml-20 w-full max-w-3xl" onSubmit={sendForm}>
-      <h1 className=" text-2xl md:text-5xl font-semibold text-primaryBlack dark:text-white mb-6">
-        Available for freelance projects
+      <h1 className=" text-lg font-normal text-primaryGray dark:text-white mb-6">
+        {description}
       </h1>
       <div className="flex flex-wrap mb-6">
         <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
@@ -62,7 +63,6 @@ export default function Form() {
             className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="name"
             type="text"
-            placeholder="Name"
             name="name"
             value={data.name}
             onChange={handleChange}
@@ -83,49 +83,27 @@ export default function Form() {
             name="email"
             value={data.email}
             onChange={handleChange}
-            placeholder="Email"
             required
           />
         </div>
       </div>
       <div className="flex flex-wrap  mb-6">
-        <div className="w-full md:w-1/2 md:px-3 md:pl-0 mb-6 md:mb-0">
+        <div className="w-full md:px-3 md:pl-0 mb-6 md:mb-0">
           <label
             className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
-            htmlFor="entity"
+            htmlFor="subject"
           >
-            Company/Brand
+            Subject
           </label>
           <input
             className="appearance-none block w-full bg-gray-200 text-gray-700 dark:text-white border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-            id="entity"
+            id="subject"
             type="text"
-            name="entity"
+            name="subject"
             onChange={handleChange}
-            value={data.entity}
-            placeholder="Who you represent, a brand / company"
+            value={data.subject}
             required
           />
-        </div>
-        <div className="w-full md:w-1/2 md:px-3 md:pl-0">
-          <label
-            className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
-            htmlFor="timeframe"
-          >
-            Time Frame
-          </label>
-          <select
-            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-sm leading-tight focus:outline-none focus:bg-white focus:border-gray-500 appearance-none"
-            id="timeframe"
-            onChange={handleChange}
-            name="timeframe"
-            value={data.timeframe}
-          >
-            <option>2 weeks</option>
-            <option>1 month</option>
-            <option>2-3 months</option>
-            <option>uncertain</option>
-          </select>
         </div>
       </div>
       <div className="flex flex-wrap  mb-6">
@@ -134,14 +112,13 @@ export default function Form() {
             className="block capitalize tracking-wide text-gray-700 dark:text-white text-base font-normal mb-2"
             htmlFor="brief"
           >
-            Project Brief
+            Brief
           </label>
           <textarea
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="brief"
             onChange={handleChange}
             name="brief"
-            placeholder="Tell me about your project objective"
             value={data.brief}
             required
             rows={12}
