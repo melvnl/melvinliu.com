@@ -1,27 +1,35 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import NextLink from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
+import dynamic from "next/dynamic";
 
 import Container from "@/components/Container";
 
+const ChatWidget = dynamic(() => import("@/components/ChatWidget"), {
+  ssr: false,
+});
 const featuredWorks = [
   {
     img: "/static/images/projects/featured/buka.png",
     title: "Bukalapak",
     description:
       "Helping public relations team having a tailored professional profile for BUKA Stock Initial Public Offering (IPO).",
+    href: "/featured/bukalapak",
   },
   {
     img: "/static/images/projects/featured/comute.png",
     title: "Comute",
     description:
       "Realizing the accessibility of traveling by train for deaf friends using Dijkstra's algorithm.",
+    href: "/featured/comute",
   },
   {
     img: "/static/images/projects/featured/makmur.png",
     title: "Makmur",
     description:
       "helping Indonesian people to make financial planning and long-term investments easily, and safely.",
+    href: "/featured/makmur",
   },
 ];
 
@@ -57,7 +65,7 @@ const Home: NextPage = () => {
             {featuredWorks.map((work) => (
               <div
                 key={`${work.title}-project`}
-                className="wrapper mb-5 rounded-2xl transform transition duration-500 hover:scale-110 hover:shadow-3xl p-5 cursor-pointer"
+                className="wrapper mb-5 rounded-2xl transform transition duration-500 md:hover:scale-110 md:hover:shadow-3xl md:p-5 cursor-pointer"
               >
                 <div className="img-wrapper mb-2 md:mb-8">
                   <Image
@@ -78,15 +86,24 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="">
-                    <p className=" text-lg font-semibold">See Details</p>
+                    <NextLink href={work.href}>
+                      <a className="">
+                        <p className=" text-lg font-semibold">See Details</p>
+                      </a>
+                    </NextLink>
                   </div>
-                  <BsArrowUpRight className="" size={24} />
+                  <NextLink href={work.href}>
+                    <a className="">
+                      <BsArrowUpRight className="" size={24} />
+                    </a>
+                  </NextLink>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <ChatWidget />
     </Container>
   );
 };

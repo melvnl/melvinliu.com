@@ -1,0 +1,17 @@
+.active {
+  color: #e16259;
+  font-weight: 700;
+}
+
+.active::after {
+  content: "";
+  width: 2px;
+  height: 40px;
+  display: block;
+  margin: 10px 0 10px 8px;
+}
+
+.active:after {
+  background-color: #e16259;
+  box-sizing: border-box;
+}
