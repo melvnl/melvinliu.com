@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import NextLink from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 
 import Container from "@/components/Container";
@@ -10,18 +11,21 @@ const featuredWorks = [
     title: "Bukalapak",
     description:
       "Helping public relations team having a tailored professional profile for BUKA Stock Initial Public Offering (IPO).",
+    href: "/work/bukalapak",
   },
   {
     img: "/static/images/projects/featured/comute.png",
     title: "Comute",
     description:
       "Realizing the accessibility of traveling by train for deaf friends using Dijkstra's algorithm.",
+    href: "/work/comute",
   },
   {
     img: "/static/images/projects/featured/makmur.png",
     title: "Makmur",
     description:
       "helping Indonesian people to make financial planning and long-term investments easily, and safely.",
+    href: "/work/makmur",
   },
 ];
 
@@ -78,9 +82,17 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="">
-                    <p className=" text-lg font-semibold">See Details</p>
+                    <NextLink href={work.href}>
+                      <a>
+                        <p className=" text-lg font-semibold">See Details</p>
+                      </a>
+                    </NextLink>
                   </div>
-                  <BsArrowUpRight className="" size={24} />
+                  <NextLink href={work.href}>
+                    <a>
+                      <BsArrowUpRight className="" size={24} />
+                    </a>
+                  </NextLink>
                 </div>
               </div>
             ))}

@@ -42,7 +42,7 @@ export default function Project({
               </a>
             </div>
             <hr className="mt-4" />
-            <div className=" prose md:prose-lg prose-a:text-primaryRed dark:prose-invert ">
+            <div className=" prose md:prose-lg max-w-none prose-a:text-primaryRed dark:prose-invert ">
               <ReactMarkdown className=" w-full">{content}</ReactMarkdown>
             </div>
           </div>
