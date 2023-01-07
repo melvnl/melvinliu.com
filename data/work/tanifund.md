@@ -1,12 +1,12 @@
 ---
 id: 2
 title: Tanifund
-slug: tanifund
+slug: /work/tanifund
 type: WEB DEV
 heading: May 2021 -  Aug 2021 | PT. Tani Fund Madani Indonesia
-cover: /static/images/projects/project/4.png
-banner: /static/images/projects/tanifund/banner.png
-description: A growing mission-driven Peer-to-Peer (P2P) lending company in Indonesia, focus on connecting agriculture stakeholders to working capital.
+cover: /static/images/projects/project/tanifund.png
+banner: /static/images/projects/tanifund/banner.svg
+description: A Peer-to-Peer (P2P) lending company in Indonesia, focus on connecting agriculture stakeholders to capital.
 link: "https://tanifund.com/"
 date: Dec 10, 2021
 ---
@@ -20,5 +20,23 @@ Founded in 2017, TaniFund along with TaniHub focus on connecting farmers with ma
 as part of [Tanihubgroup](https://www.linkedin.com/company/tanihub/), Tanifund ambitious in pushing dreams into reality: Connecting farms with people, together growing the future.
 
 ![Tanifund Partner](/static/images/projects/tanifund/farmer.jfif)
+> ## My Work
 
-## Description coming soon...
+I joined Tanifund in May 2021 - August 2021 as a Frontend Engineer Intern working on both tanifund.com (lender) and mitra.tanifund.com(borrower), I contribute to simple tasks such as updating the F.A.Q Page design, updating the new homepage banner carousel to a quite challenging task which is creating a referral form/system.
+
+> ## Proudest Works
+
+I created a referral registration form that submits user data and gives the user the referral code that they can share with other new users.
+
+![Tanifund Partner](/static/images/projects/tanifund/referral-1.jpeg)
+![Tanifund Partner](/static/images/projects/tanifund/referral-2.jpeg)
+
+
+> ## Technology
+
+List of technology I use in Tanifund
+
+- Vue.js/Nuxt.js
+- Bulma, SCSS
+- State Management (Vuex)
+- Testing (Jest, Testing Library)

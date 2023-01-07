@@ -1,12 +1,12 @@
 ---
 id: 5
 title: Makmur
-slug: makmur
+slug: work/makmur
 type: WEB DEV / MOBILE DEV
 heading: Mar 2022 - Present | PT. Inovasi Finansial Teknologi
-cover: "/static/images/projects/project/makmur.png"
+cover: "/static/images/projects/featured/makmur.png"
 banner: /static/images/projects/makmur/banner.svg
-description: Makmur is a technology-based investment application for Indonesian.
+description: helping Indonesian people to make financial planning and long-term investments easily, and safely.
 link: "https://www.makmur.id"
 date: Dec 10, 2021
 ---

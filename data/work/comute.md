@@ -1,10 +1,10 @@
 ---
 id: 6
 title: Comute App
-slug: comute-app
+slug: work/comute
 type: MOBILE DEV
 heading: Aug 2022 - Present | Comute App
-cover: /static/images/projects/project/comute.png
+cover: /static/images/projects/featured/comute.png
 banner: /static/images/projects/comute/banner.svg
 description: Deaf friend travel companion - Ready to help deaf person in Jakarta to travel with Train from the start until you arrive at the destination station!
 link: "https://apps.apple.com/id/app/comute/id6444108882"
