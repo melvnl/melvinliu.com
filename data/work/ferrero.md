@@ -17,6 +17,7 @@ date: Dec 10, 2021
 
 > ## My Work
 
+- Create several UI pages and Modal component
 - Implement Internationalization or i18n to render different languages for different country
 - Show dybnamic content depends on user country using https://geolocation-db.com API
 - Connect to strapi endpoint to POST user uploaded receipt

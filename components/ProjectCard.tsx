@@ -17,11 +17,11 @@ export default function ProjectCard({
       <div className="img-wrapper mb-2 md:mb-8">
         <Image quality={100} src={cover} width="608" height="620" alt={title} />
       </div>
-      <div className="description text-primaryBlack text-left dark:text-white text-base max-w-[577px] mb-6">
+      <div className="description text-primaryBlack text-left dark:text-white text-base max-w-[577px] md:h-[140px] mb-6">
         <h1 className=" text-2xl font-semibold text-primaryBlack dark:text-gray-300">
           {title}
         </h1>
-        <p className=" text-lg mt-2 font-normal">{description}</p>
+        <p className=" text-base lg:text-lg mt-2 font-normal">{description}</p>
       </div>
       <div className="flex justify-between items-center">
         <div className="">
