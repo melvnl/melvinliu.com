@@ -272,13 +272,12 @@ const Support: NextPage = () => {
         <div className=" w-full md:w-1/2">
           {!entries && (
             <>
-              <div className=" mb-4">
-                <Skeleton height={24} borderRadius={0} />
-                <Skeleton height={24} borderRadius={0} />
+              <div className=" my-4">
+                <Skeleton height={24} width={200} borderRadius={4} />
+                <Skeleton height={18} width={170} borderRadius={4} />
               </div>
               <div className="">
-                <Skeleton height={24} borderRadius={0} />
-                <Skeleton height={24} borderRadius={0} />
+                <Skeleton height={72} borderRadius={4} />
               </div>
             </>
           )}
