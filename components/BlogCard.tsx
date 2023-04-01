@@ -11,6 +11,7 @@ export default function BlogCard({
   description,
   content,
   cover,
+  blurUrl,
 }: Blog) {
   return (
     <Link href={`/blog/${slug}`}>
@@ -23,6 +24,8 @@ export default function BlogCard({
               height={140}
               alt={title}
               quality={100}
+              placeholder="blur"
+              blurDataURL={blurUrl}
             />
           </div>
           <div className=" py-4">

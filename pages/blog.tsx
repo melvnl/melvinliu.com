@@ -68,6 +68,7 @@ export default function Blog({
             <BlogCard
               key={post.body.title}
               cover={post.body.cover}
+              blurUrl={post.body.blurUrl}
               title={post.body.title}
               slug={post.body.slug}
               date={post.body.date}

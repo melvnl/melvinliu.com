@@ -9,6 +9,7 @@ export type Blog = {
   date: string;
   description: string;
   cover: string;
+  blurUrl: string;
   content: string;
 };
 
@@ -20,6 +21,7 @@ export type Project = {
   description: string;
   link: string;
   cover: string;
+  blurUrl: string;
   banner: string;
 };
 

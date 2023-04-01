@@ -42,6 +42,7 @@ export default function Works({
               <ProjectCard
                 key={work.body.title}
                 cover={work.body.cover}
+                blurUrl={work.body.blurUrl}
                 banner={work.body.banner}
                 title={work.body.title}
                 link={work.body.title}
