@@ -12,9 +12,10 @@ import Comment from "@/components/Comment";
 import { CommentFlag } from "@/constants/env";
 import { CountViewFlag } from "@/constants/env";
 import Head from "next/head";
+import readingTime from "reading-time";
 
 export default function Post({
-  meta: { title, cover, description, slug, read, date },
+  meta: { title, cover, description, slug, date },
   content,
 }: any) {
   useEffect(() => {
@@ -70,7 +71,7 @@ export default function Post({
               {title}
             </h1>
             <SharePost
-              read={read}
+              readTime={readingTime(content).text}
               title={title}
               href={`https://melvinliu.com/blog/${slug}`}
             />

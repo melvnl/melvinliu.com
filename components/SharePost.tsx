@@ -20,7 +20,7 @@ function ShareLink({ href, children }: any) {
   );
 }
 
-export default function SharePost({ title, read, href }: any) {
+export default function SharePost({ title, readTime, href }: any) {
   const shareTwitter = `http://twitter.com/share?text=${title}&url=${href}`;
   const shareLinkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${href}`;
   const shareFacebook = `https://www.facebook.com/sharer/sharer.php?u=${href}&t=${title}`;
@@ -46,7 +46,7 @@ export default function SharePost({ title, read, href }: any) {
         </div>
       </div>
       <div className=" ">
-        <p className=" mt-10 mb-5 text-base">{read} read</p>
+        <p className=" mt-10 mb-5 text-base">{readTime}</p>
         <h1 className="uppercase text-sm text-primaryGray dark:text-white mb-2">
           share this post
         </h1>
