@@ -73,7 +73,9 @@ Here follows an example of a BlurHash string, with the different parts labelled:
 A custom base 83 encoding is used. Values are encoded individually, using 1 to 4 digits, and concatenated together. Multiple-digit
 values are encoded in big-endian order, with the most significant digit first.
 
-The character used set is `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%*+,-.:;=?@[]^_{|}~`.
+The character used set is
+
+    0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%*+,-.:;=?@[]^_{|}~
 
 ### Discrete Cosine Transform
 
@@ -119,11 +121,10 @@ For dynamic images in a Next.js app, add the placeholder attribute with 'blur' a
         }
     />
 
-I personally use [https://blurred.dev](https://blurred.dev) a BlurHash data url generator. But if you need more customization or you need to run the blurhash encode and decode process on your web production state you can take a look at the documentation here [https://github.com/woltapp/blurhash/tree/master/TypeScript](https://github.com/woltapp/blurhash/tree/master/TypeScript).
+I personally use [https://blurred.dev](https://blurred.dev) a BlurHash data url generator. But if you need more customization or you need to run the blurhash encode and decode process on your web production state you can take a look at the documentation [here](https://github.com/woltapp/blurhash/tree/master/TypeScript).
 
-**Reference:**\
-[https://github.com/woltapp/blurhash/blob/master/Algorithm.md](https://github.com/woltapp/blurhash/blob/master/Algorithm.md)
-
+**Reference:**
+[https://github.com/woltapp/blurhash](https://github.com/woltapp/blurhash/blob/master/Algorithm.md)
 
 **You can find me on**\
 Twitter: [https://twitter.com/mlven23](https://twitter.com/mlven23)\
