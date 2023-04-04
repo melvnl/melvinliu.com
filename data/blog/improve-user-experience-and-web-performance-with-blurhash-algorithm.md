@@ -113,9 +113,9 @@ For dynamic images in a Next.js app, add the placeholder attribute with 'blur' a
     <Image
         src={featuredWorks[0].img}
         quality={100}
-        alt={images[0].title}
+        alt={featuredWorks[0].title}
         placeholder="blur"
-        blurDataURL={images[0].blurUrl
+        blurDataURL={featuredWorks[0].imgBlur
         width="608"
         height="620"
         }
