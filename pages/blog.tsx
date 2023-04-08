@@ -10,8 +10,10 @@ export default function Blog({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [searchValue, setSearchValue] = useState("");
-  const filteredBlogPosts = posts.filter((post) =>
-    post.title.toLowerCase().includes(searchValue.toLowerCase())
+  const filteredBlogPosts = posts.filter(
+    (post) =>
+      post.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+      post.body.description.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   return (
@@ -74,6 +76,7 @@ export default function Blog({
               date={post.body.date}
               description={post.body.description}
               content={post.content}
+              highlight={searchValue}
             />
           ))}
         </div>

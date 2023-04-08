@@ -2,7 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
 import readingTime from "reading-time";
-import { Blog } from "@/lib/types";
+import { Blog, highlightedTextPropTypes } from "@/lib/types";
+import React from "react";
+
+const getHighlightedText = ({ text, highlight }: highlightedTextPropTypes) => {
+  const textParts = text.split(new RegExp(`(${highlight})`, "gi"));
+
+  return textParts.map((textPart, index) => (
+    <React.Fragment key={index}>
+      {textPart.toLowerCase() === highlight.toLowerCase() ? (
+        <b className=" bg-primaryRed text-black">{textPart}</b>
+      ) : (
+        textPart
+      )}
+    </React.Fragment>
+  ));
+};
 
 export default function BlogCard({
   title,
@@ -12,6 +27,7 @@ export default function BlogCard({
   content,
   cover,
   blurUrl,
+  highlight,
 }: Blog) {
   return (
     <Link href={`/blog/${slug}`}>
@@ -30,7 +46,8 @@ export default function BlogCard({
           </div>
           <div className=" py-4">
             <h4 className="w-full mb-2 text-lg font-bold text-primaryBlack dark:text-white md:text-2xl group-hover:text-primaryRed ">
-              {title}
+              {highlight && getHighlightedText({ text: title, highlight })}
+              {!highlight && title}
             </h4>
             <div className="mb-6">
               <div className="flex text-sm text-primaryGray items-center">
@@ -41,7 +58,9 @@ export default function BlogCard({
               </div>
             </div>
             <div className=" text-base mb-2">
-              <p>{description}</p>
+              {highlight &&
+                getHighlightedText({ text: description, highlight })}
+              {!highlight && description}
             </div>
           </div>
         </div>

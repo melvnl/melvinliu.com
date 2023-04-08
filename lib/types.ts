@@ -11,6 +11,12 @@ export type Blog = {
   cover: string;
   blurUrl: string;
   content: string;
+  highlight?: string;
+};
+
+export type highlightedTextPropTypes = {
+  text: string;
+  highlight: string;
 };
 
 export type Project = {
