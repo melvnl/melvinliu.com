@@ -117,13 +117,7 @@ You might notice, that right-to-left will change the direction of your web appli
 For Tailwind v3 you can read [https://tailwindcss.com/blog/tailwindcss-v3#rtl-and-ltr-modifiers](https://tailwindcss.com/blog/tailwindcss-v3#rtl-and-ltr-modifiers), for v2 you can read [tailwindcss-rtl](https://github.com/20lives/tailwindcss-rtl)
 
 ### Best Practices
-this article from material design blog is sufficient as a handbook for best practices implementation in bidirectionality in both web and mobile app [https://m2.material.io/design/usability/bidirectionality.html](https://m2.material.io/design/usability/bidirectionality.html). Go check them out!
-
-**Reference:**\
-[https://developer.mozilla.org/en-US/docs/Glossary/RTL](https://developer.mozilla.org/en-US/docs/Glossary/RTL)
-[https://m2.material.io/design/usability/bidirectionality.html](https://m2.material.io/design/usability/bidirectionality.html)
-[https://tailwindcss.com/blog/tailwindcss-v3#rtl-and-ltr-modifiers](https://tailwindcss.com/blog/tailwindcss-v3#rtl-and-ltr-modifiers)
-[tailwindcss-rtl](https://github.com/20lives/tailwindcss-rtl)
+this [article](https://m2.material.io/design/usability/bidirectionality.html) from material design blog is sufficient as a handbook for best practices implementation in bidirectionality in both web and mobile app. Go check them out!
 
 **You can find me on**\
 Twitter: [https://twitter.com/mlven23](https://twitter.com/mlven23)\
