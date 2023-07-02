@@ -1,11 +1,14 @@
 import Image from "next/image";
+import { useState } from "react";
 import {
   FaFacebook,
   FaTwitter,
   FaLinkedinIn,
   FaWhatsapp,
   FaTelegram,
+  FaClipboard,
 } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
 
 function ShareLink({ href, children }: any) {
   return (
@@ -26,6 +29,16 @@ export default function SharePost({ title, readTime, href }: any) {
   const shareFacebook = `https://www.facebook.com/sharer/sharer.php?u=${href}&t=${title}`;
   const shareWhatsapp = `whatsapp://send?text=Link: ${href}`;
   const shareTelegram = `https://telegram.me/share/url?url=${href}&text=${title}`;
+
+  const [textCopied, setTextCopied] = useState(false);
+
+  const handleClick = () => {
+    navigator.clipboard.writeText(href);
+    setTextCopied(true);
+    setTimeout(() => {
+      setTextCopied(false);
+    }, 1500);
+  };
 
   return (
     <div className=" mb-10">
@@ -66,6 +79,17 @@ export default function SharePost({ title, readTime, href }: any) {
           <ShareLink href={shareFacebook}>
             <FaFacebook className="hover:text-gray-900" size={22} />
           </ShareLink>
+          <div
+            id="copytotext"
+            className="p-2 text-primaryGray dark:text-white rounded-sm hover:bg-gray-200 cursor-pointer"
+            onClick={() => handleClick()}
+          >
+            <FaClipboard className="hover:text-gray-900" size={22} />
+          </div>
+          <Tooltip
+            anchorSelect="#copytotext"
+            content={textCopied ? "Copied to clipboard!" : "Click to copy!"}
+          />
         </div>
         <hr className=" mt-8 max-w-[40px]" />
       </div>
