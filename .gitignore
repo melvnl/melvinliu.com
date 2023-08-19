@@ -43,3 +43,6 @@ sitemap*.xml
 
 # Sentry
 .sentryclirc
+
+# unlighthouse
+.unlighthouse
