@@ -1,6 +1,7 @@
 import "@/styles/tailwind.css";
 import "@/styles/theme.css";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react";
 
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class">
         <PageProgress color="#E16259" />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </SessionProvider>
   );
