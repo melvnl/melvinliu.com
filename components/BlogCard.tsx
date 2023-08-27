@@ -32,8 +32,8 @@ export default function BlogCard({
   return (
     <Link href={`/blog/${slug}`}>
       <a className="group">
-        <div className="flex flex-col w-full">
-          <div className="overflow-hidden rounded-md">
+        <div className="flex flex-col w-full max-w-[376px]">
+          <div className="rounded-md">
             <Image
               src={cover}
               width={380}
