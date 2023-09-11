@@ -34,12 +34,14 @@ export default function Project({
             </h1>
             <div className=" my-2 text-base md:text-lg">
               <p className="mb-2">{description}</p>
-              <a className=" flex items-center" href={link}>
-                <FaLink size={16} className=" text-primaryRed" />
-                <span className=" text-primaryRed ml-2 hover:underline">
-                  Open Live Site
-                </span>
-              </a>
+              {link && (
+                <a className=" flex items-center" href={link}>
+                  <FaLink size={16} className=" text-primaryRed" />
+                  <span className=" text-primaryRed ml-2 hover:underline">
+                    Open Live Site
+                  </span>
+                </a>
+              )}
             </div>
             <hr className="mt-4" />
             <div className=" prose md:prose-lg max-w-none prose-a:text-primaryRed dark:prose-invert ">
