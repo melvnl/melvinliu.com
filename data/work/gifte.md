@@ -22,5 +22,5 @@ date: Dec 10, 2021
 - Implement several animations using framer-motion
 - Create a door mask animation that will change dynamically.
 
-> ## Highlight
-![Highlight Anchor](/static/images/project/gifte/highlight.gif)
+> ## Highlight (GIF Image)
+![Highlight Anchor](/static/images/projects/gifte/highlight.gif)
