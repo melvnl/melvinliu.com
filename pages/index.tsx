@@ -47,16 +47,16 @@ const Home: NextPage = () => {
             based in <span className=" text-primaryRed">Indonesia🇮🇩</span>
           </h1>
           <p className="text-base md:text-xl max-w-[750px] text-primaryGray dark:text-white">
-            with 3 years of solid experience in web things. Currently, I&#39;m
-            focused on building accessible financial planning and long-term
-            investment platform at{" "}
+            with 4 years of solid experience in web things. Currently, I&#39;m
+            focused on building creating disruptive and meaningful products in
+            retail credit for Southeast Asia at{" "}
             <a
               className=" text-primaryRed hover:cursor-pointer hover:underline"
-              href="https://www.makmur.id"
+              href="https://kredivocorp.com/about/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Makmur.
+              Kredivo.
             </a>{" "}
             Feel free to explore my work.
           </p>

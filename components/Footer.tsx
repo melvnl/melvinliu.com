@@ -32,7 +32,7 @@ const AvailableMessage = () => (
   <div className=" flex items-center">
     <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-green-400 opacity-75"></span>
     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-    <p className=" ml-1">Available</p>
+    <p className=" ml-1">Available for hire</p>
   </div>
 );
 
@@ -46,8 +46,7 @@ export default function Footer() {
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">My Local Time</h1>
           <div className=" mb-2">{format(currTime, "p")} (UTC +07:00)</div>
-          {currTimeInHour >= 13 && currTimeInHour <= 21 && <BusyMessage />}
-          {(currTimeInHour < 13 || currTimeInHour > 21) && <AvailableMessage />}
+          {<AvailableMessage />}
         </div>
         <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
           <h1 className=" mb-2 font-semibold">Social</h1>
