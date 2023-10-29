@@ -34,11 +34,6 @@ export type Project = {
 export type message = {
   status: number;
 };
-export type Snippet = {
-  title: string;
-  slug: string;
-  description: string;
-};
 
 export enum Form {
   Initial,

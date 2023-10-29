@@ -7,10 +7,8 @@ import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { parseISO, format } from "date-fns";
-import { useEffect } from "react";
 import Comment from "@/components/Comment";
 import { CommentFlag } from "@/constants/env";
-import { CountViewFlag } from "@/constants/env";
 import Head from "next/head";
 import readingTime from "reading-time";
 
@@ -18,17 +16,6 @@ export default function Post({
   meta: { title, cover, description, slug, date },
   content,
 }: any) {
-  useEffect(() => {
-    const registerView = () =>
-      fetch(`/api/views/${slug}`, {
-        method: "POST",
-      });
-
-    if (CountViewFlag) {
-      registerView();
-    }
-  }, [slug]);
-
   return (
     <>
       <Container>
