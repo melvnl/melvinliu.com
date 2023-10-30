@@ -9,7 +9,6 @@ import Container from "@/components/Container";
 import useSWR from "swr";
 
 import { SiGithub } from "react-icons/si";
-import { SiSpotify } from "react-icons/si";
 import { MdArticle } from "react-icons/md";
 
 import GitHubCalendar from "react-github-calendar";
@@ -39,6 +38,30 @@ export default function Dashboard({
     >
       <div className=" bg-primaryWhite dark:bg-darkBlack">
         <div className=" flex flex-col md:flex-row justify-between">
+          {/* Articles */}
+          <div className=" w-full md:w-1/2 mt-8 md:mt-0 md:pr-10">
+            <h5 className="text-lg md:text-xl items-center flex font-mono font-bold mb-4 text-primaryBlack dark:text-white">
+              <MdArticle size={20} className="mr-2" />
+              Latest Article
+            </h5>
+            <div className=" flex flex-col lg:flex-row gap-4">
+              {filteredBlogPosts.map((post) => (
+                <div key={post.body.title} className="w-full lg:w-1/2">
+                  <BlogCard
+                    key={post.body.title}
+                    cover={post.body.cover}
+                    blurUrl={post.body.blurUrl}
+                    title={post.body.title}
+                    slug={post.body.slug}
+                    date={post.body.date}
+                    description={post.body.description}
+                    content={post.content}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* github activity */}
           <div className=" w-full md:w-1/2">
             <h5 className="text-lg md:text-xl items-center flex font-mono font-bold mb-4 text-primaryBlack dark:text-white">
@@ -46,87 +69,6 @@ export default function Dashboard({
               Github Activity
             </h5>
             <GitHubCalendar username="melvnl" />
-
-            {/* latest blog */}
-            <div className=" blog mt-10">
-              <h5 className="text-lg md:text-xl items-center flex font-mono font-bold mb-4 text-primaryBlack dark:text-white">
-                <MdArticle size={20} className="mr-2" />
-                Latest Article
-              </h5>
-              <div className=" flex flex-col lg:flex-row gap-4">
-                {filteredBlogPosts.map((post) => (
-                  <div key={post.body.title} className="w-full lg:w-1/2">
-                    <BlogCard
-                      key={post.body.title}
-                      cover={post.body.cover}
-                      blurUrl={post.body.blurUrl}
-                      title={post.body.title}
-                      slug={post.body.slug}
-                      date={post.body.date}
-                      description={post.body.description}
-                      content={post.content}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* spotify top track */}
-          <div className=" w-full md:w-1/2 mt-8 md:mt-0 md:pl-10">
-            <h5 className="text-lg md:text-xl items-center flex font-mono font-bold mb-4 text-primaryBlack dark:text-white">
-              <SiSpotify size={20} color={"#1ED760"} className="mr-2" />
-              Spotify Top Tracks
-            </h5>
-            {!data && (
-              <div className=" flex flex-row">
-                <Skeleton width={100} height={100} borderRadius={0} />
-                <div className=" ml-4">
-                  <Skeleton width={150} height={24} borderRadius={0} />
-                  <Skeleton width={200} height={24} borderRadius={0} />
-                </div>
-              </div>
-            )}
-            {data &&
-              data.map(
-                (
-                  item: {
-                    title: string;
-                    songUrl: string;
-                    album: string;
-                    artist: string;
-                  },
-                  index: number
-                ) => (
-                  <a
-                    key={item.title}
-                    href={item.songUrl}
-                    target="_blank"
-                    className=" cursor-pointer"
-                    rel="noreferrer"
-                  >
-                    <div className="p-2 mb-4 flex">
-                      <span className=" font-mono text-md font-bold text-primaryGray w-8">
-                        {index + 1}
-                      </span>
-                      <Image
-                        src={item.album}
-                        width={96}
-                        height={96}
-                        alt={item.title}
-                      />
-                      <div className=" ml-3">
-                        <h1 className=" text-base md:text-lg font-mono font-bold text-primaryBlack dark:text-white">
-                          {item.artist}
-                        </h1>
-                        <p className=" text-sm md:text-base font-normal text-gray-800 dark:text-white">
-                          {item.title}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                )
-              )}
           </div>
         </div>
       </div>

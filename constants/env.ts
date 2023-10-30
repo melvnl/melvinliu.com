@@ -7,12 +7,6 @@ export const isProd = process.env.NODE_ENV === "production";
 export const HelloFlag = isProd;
 
 /**
- * Show Spotify Component on footer
- * @see Footer.tsx
- */
-export const SpotifyFlag = isProd;
-
-/**
  * Show Giscus Component
  * @see Comment.tsx
  */

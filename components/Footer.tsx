@@ -1,7 +1,5 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { SpotifyFlag } from "@/constants/env";
 import { format } from "date-fns";
-import Spotify from "./Spotify";
 
 import { useLocalTime } from "@/hooks/useLocalTime";
 
@@ -71,9 +69,6 @@ export default function Footer() {
               melvnl
             </ExternalLink>
           </div>
-        </div>
-        <div className="flex flex-col mb-4 md:mb-0 md:w-1/4 text-primaryBlack dark:text-white">
-          {SpotifyFlag && <Spotify />}
         </div>
       </div>
     </footer>
