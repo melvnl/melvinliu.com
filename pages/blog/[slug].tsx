@@ -4,6 +4,7 @@ import path from "path";
 import Container from "@/components/Container";
 import SharePost from "@/components/SharePost";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import matter from "gray-matter";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { parseISO, format } from "date-fns";
@@ -62,7 +63,10 @@ export default function Post({
               title={title}
               href={`https://melvinliu.com/blog/${slug}`}
             />
-            <ReactMarkdown className="prose dark:prose-invert w-full max-w-[550px] xl:max-w-[700px]">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              className="prose dark:prose-invert w-full max-w-[550px] xl:max-w-[700px]"
+            >
               {content}
             </ReactMarkdown>
             {CommentFlag && <Comment />}
