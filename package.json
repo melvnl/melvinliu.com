@@ -31,9 +31,10 @@
     "react-github-calendar": "^3.3.4",
     "react-icons": "^4.3.1",
     "react-loading-skeleton": "^3.1.0",
-    "react-markdown": "^7.1.1",
+    "react-markdown": "8.0.7",
     "react-tooltip": "^5.16.1",
     "reading-time": "^1.5.0",
+    "remark-gfm": "3.0.1",
     "swr": "^1.1.2",
     "use-delayed-render": "^0.0.7"
   },
