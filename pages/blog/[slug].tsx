@@ -12,6 +12,8 @@ import Comment from "@/components/Comment";
 import { CommentFlag } from "@/constants/env";
 import Head from "next/head";
 import readingTime from "reading-time";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
 
 export default function Post({
   meta: { title, cover, description, slug, date },
@@ -65,7 +67,9 @@ export default function Post({
             />
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              className="prose dark:prose-invert w-full max-w-[550px] xl:max-w-[700px]"
+              // @ts-ignore
+              rehypePlugins={[rehypeHighlight]}
+              className="prose dark:prose-invert prose-pre:bg-transparent prose-pre:p-0 w-full max-w-[550px] xl:max-w-[700px]"
             >
               {content}
             </ReactMarkdown>
