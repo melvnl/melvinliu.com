@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import BlogCard from "@/components/BlogCard";
 import { InferGetStaticPropsType } from "next";
 import { useState } from "react";
+import generateRssFeed from "@/lib/rss";
 
 export default function Blog({
   posts,
@@ -101,6 +102,8 @@ export async function getStaticProps() {
     .sort(
       (a, b) => Number(new Date(b.body.date)) - Number(new Date(a.body.date))
     );
+
+  generateRssFeed(posts);
 
   return { props: { posts: posts } };
 }
