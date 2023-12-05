@@ -33,7 +33,7 @@ It is stated that you need to uninstall pre-existing node version, but based on 
 
 After the installation you can open your command prompt and check whether nvm is recognized
 
-```
+```bash
 C:\Users\YourUsername>nvm -v
 
 Running version 1.1.8.
@@ -43,7 +43,7 @@ If nvm is not recognized as internal command or external command, try to re-open
 
 Then, You can type **nvm list** in order to see list of Node.js version on your machine.
 
-```
+```bash
 C:\Users\YourUsername>nvm list
 
   * 14.18.0 (Currently using 64-bit executable)

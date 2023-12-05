@@ -25,13 +25,13 @@ Before we dive into creating aliases, let's take a moment to ensure you know how
 
 For Bash users:
 
-```
+```bash
 vim ~/.bashrc
 ```
 
 For MacOS users:
 
-```
+```bash
 vim ~/.zshrc
 ```
 
@@ -40,7 +40,7 @@ vim ~/.zshrc
 
 Have you ever found yourself frequently navigating to specific directories deep within your file system? Creating aliases for these paths can save you time. For example, you can add the following aliases to your configuration file:
 
-```
+```bash
 alias openproject='cd ~/Documents/projects/parent-project-folder/project-folder/sub-project-folder/your-targeted-folder'
 ```
 
@@ -49,7 +49,7 @@ Now, instead of typing cd ~/Documents/projects/parent-project-folder/project-fol
 # Quick Parent Directory Navigation:
 
 Another useful alias is one that takes you up one level in the directory hierarchy. You can add the following alias:
-```
+```bash
 alias ..='cd ..'
 ```
 
@@ -60,7 +60,7 @@ Managing SSH connections can be made more efficient with aliases as well. Here a
 1. SSH to Remote Servers:
 
 Do you frequently SSH into specific remote servers which you can't remember since you have more than two or three remote servers? Create aliases like this:
-```
+```bash
 alias myserver='ssh user@the-ip-address'
 ```
 Now, you can simply type 'myserver' to initiate an SSH connection.
@@ -68,7 +68,7 @@ Now, you can simply type 'myserver' to initiate an SSH connection.
 
 2. SCP File Transfer:
 Simplify file transfers with SCP using aliases:
-```
+```bash
 alias scpfile='scp user@myserver.example.com:/path/to/source/file /path/to/destination'
 ```
 
@@ -77,7 +77,7 @@ Using scpfile will copy a file from your local machine to a remote server or vic
 # Applying Changes
 After adding your aliases to your .bashrc or .zshrc file, save the changes and exit your text editor. To apply these changes immediately, you can either restart your terminal or use the source command:
 
-```
+```bash
 source ~/.bashrc  # For Bash users
 source ~/.zshrc  # For Zsh users
 ```

@@ -1,17 +1,88 @@
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
+import { useState } from "react";
 import Container from "@/components/Container";
 import SharePost from "@/components/SharePost";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import matter from "gray-matter";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltLeft, FaCheck } from "react-icons/fa";
+import { BiSolidCopy } from "react-icons/bi";
 import { parseISO, format } from "date-fns";
 import Comment from "@/components/Comment";
 import { CommentFlag } from "@/constants/env";
 import Head from "next/head";
 import readingTime from "reading-time";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
+import classNames from "classnames";
+import { Tooltip } from "react-tooltip";
+
+const flattenMarkdownChildren = (children: any) => {
+  return children
+    .map((child: any) => {
+      if (typeof child === "object" && child.props && child.props.children) {
+        if (Array.isArray(child.props.children)) {
+          return flattenMarkdownChildren(child.props.children);
+        }
+        return child.props.children;
+      }
+      return child;
+    })
+    .join("");
+};
+
+const CodeBlock = ({ children }: any) => {
+  const markdownContent = children
+    .map((child: any) => {
+      if (typeof child === "object" && child.props && child.props.children) {
+        if (Array.isArray(child.props.children)) {
+          return flattenMarkdownChildren(child.props.children);
+        }
+        return child.props.children[0];
+      }
+      return child;
+    })
+    .join("");
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(markdownContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="relative">
+      <pre>
+        <code>{children}</code>
+      </pre>
+      <Tooltip
+        anchorSelect="#copyCode"
+        place="left"
+        content={copied ? "Copied" : ""}
+      />
+      <button
+        id="copyCode"
+        onClick={handleCopy}
+        className={classNames(
+          copied
+            ? "border-[#03873A]"
+            : "border-[#363B42] hover:border-[#8B949F]",
+          "absolute top-3 right-3 border bg-[#21262D] rounded-md p-1 w-7 h-7 "
+        )}
+      >
+        {copied ? (
+          <FaCheck size={14} color="#03873A" className=" ml-auto mr-auto" />
+        ) : (
+          <BiSolidCopy size={18} color="#7D8590" />
+        )}
+      </button>
+    </div>
+  );
+};
 
 export default function Post({
   meta: { title, cover, description, slug, date },
@@ -65,7 +136,12 @@ export default function Post({
             />
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              className="prose dark:prose-invert w-full max-w-[550px] xl:max-w-[700px]"
+              // @ts-ignore
+              rehypePlugins={[rehypeHighlight]}
+              className="prose dark:prose-invert prose-pre:bg-transparent prose-pre:p-0 w-full max-w-[550px] xl:max-w-[700px]"
+              components={{
+                pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
+              }}
             >
               {content}
             </ReactMarkdown>

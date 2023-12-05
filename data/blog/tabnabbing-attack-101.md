@@ -32,7 +32,7 @@ Let the code talk for itslef!
 Below is an example written in plain HTML
 
 ### Legitimate website code
-```
+```js
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +47,7 @@ Below is an example written in plain HTML
 ```
 
 ### Malicious website code
-```
+```js
 <!DOCTYPE html>
 <html lang="en">
 <head>

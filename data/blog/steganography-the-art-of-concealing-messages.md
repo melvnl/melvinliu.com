@@ -119,7 +119,7 @@ Joining the last bits of these pixels we'll have: **01100001**, converting this 
 
 ## Let the code talks
 
-```
+```python
 import argparse
 from stegano import lsb
 from PIL import Image
@@ -164,7 +164,7 @@ if __name__ == "__main__":
 
 or even you can directly use stegano library as a command line
 
-```
+```python
 $ stegano-lsb hide -i "image path" -m "Secret Message" -o "image path output"
 $ stegano-lsb reveal -i "image path output"
 Secret Message
