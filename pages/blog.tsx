@@ -27,7 +27,7 @@ export default function Blog({
           Blog
         </h1>
         <p className="mb-4 text-gray-600 text-lg font-semibold dark:text-white ">
-          Thoughts, career hacks, software-engineering, and front-end
+          Thoughts, career hacks, software-engineering, and back-end
           development.
         </p>
         <span className=" text-base text-primaryGray dark:text-white max-w-2xl">
